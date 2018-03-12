@@ -1,50 +1,42 @@
-React Native Starter Kit
-========================
+# In Your Land
 
-A starter kit for React Native apps inspired on [kyt](https://github.com/NYTimes/kyt) by [@pzhine](https://github.com/pzhine).
+Dual channel video installation with interactive tablet app companion and website.
 
-Includes the following:
-- ES6 Stage 3
-- ESlint
-- React Native
-- Redux
-- React Router v4
-- Webfonts
-- Haul, a Webpack-based React native bundler
-- Webpack with SVG, JSON and font loaders
-- Common app components: App, Nav
-- Transition components: Fade
-- Utility components: Raw, ScrollManager
-- Testing with Enzyme and Jest (using react-native-mock)
-- Storybook for prototyping
-- Back end API scaffold using Express
+## Documentation
 
-Getting Started
----------------
-1. Install the dependencies:
+* [config](docs/config.md)
+* [server](docs/server.md)
+* [client](docs/client.md)
+
+## Getting Started
+
+1.  Install the dependencies:
+
 ```
 yarn install
 ```
 
-2. Configure the site in `/src/content/config.json` and add a custom favicon in `/src/public`
-3. Add some menu items in `/src/content/menu.json`
-4. Test your setup
+3.  Run the development bundler and development web server
+
 ```
-yarn test
+yarn dev
 ```
 
-5. Run the Haul bundler and then launch the simulator
+2.  Build the native app
+
 ```
-yarn haul
-yarn start
+react-native run-ios
 ```
 
-6. Run the Storybook component prototyping app
+## Storybook
+
+To run the Storybook component prototyping app:
+
 ```
 yarn storybook
 react-native run-ios
 ```
 
-Questions/comments?
---------------------------
+## Questions/comments?
+
 Happy to help: paul@hine.works
