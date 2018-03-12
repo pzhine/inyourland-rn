@@ -1,0 +1,26 @@
+[
+  {
+    "startTime": 0,
+    "thumbFilename": "blackduck.png",
+    "locationId": "wavehill",
+    "subjectId": "americanblackduck"
+  },
+  {
+    "startTime": 10000,
+    "thumbFilename": "blackduck.png",
+    "locationId": "wavehill",
+    "subjectId": "americanblackduck"
+  },
+  {
+    "startTime": 40000,
+    "thumbFilename": "blackduck.png",
+    "locationId": "wavehill",
+    "subjectId": "americanblackduck"
+  },
+  {
+    "startTime": 70000,
+    "thumbFilename": "blackduck.png",
+    "locationId": "wavehill",
+    "subjectId": "americanblackduck"
+  }
+]

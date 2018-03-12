@@ -1,0 +1,27 @@
+$content-width: 900px;
+
+$mobile-width: 600px;
+$desktop-width: $content-width;
+
+$padding: 15px;
+
+$nav-height: 65px;
+$nav-background: #FFA15A;
+$nav-color: #fff;
+
+$light-font: "NHaasGroteskDSPro-35XLt", "Helvetica", sans-serif;
+$medium-font: "NHaasGroteskDSPro-55Rg", "Helvetica", sans-serif;
+$bold-font: "NHaasGroteskDSPro-75Bd", "Helvetica", sans-serif;
+
+$body-background: #F5EEE4;
+$body-color: #808080;
+$body-font: $medium-font;
+
+$link-color: #ADBAC9;
+
+$modal-background: #fff;
+$modal-color: $link-color;
+
+$transition-quick: 300ms;
+$transition-super-quick: 50ms;
+$ease: ease-in-out;
