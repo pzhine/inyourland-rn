@@ -3,5 +3,20 @@
     "locationId": "wavehill",
     "latlongzoom": "40.8869006,-73.9275451,14z",
     "name": "Wave Hill"
+  },
+  {
+    "locationId": "govsisland",
+    "latlongzoom": "40.6885844,-74.0237632,16z",
+    "name": "Governors Island"
+  },
+  {
+    "locationId": "jamaica",
+    "latlongzoom": "40.6163835,-73.8285487,17z",
+    "name": "Jamaica Bay Wildlife Refuge"
+  },
+  {
+    "locationId": "centralpark",
+    "latlongzoom": "40.7790301,-73.9716046,16z",
+    "name": "Central Park"
   }
 ]

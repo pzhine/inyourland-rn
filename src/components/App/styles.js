@@ -6,20 +6,17 @@ const styles = {
     height: '100%',
     backgroundColor: variables.colors.appBackground,
   },
-  lightText: {
-    fontFamily: 'AvenirNext-UltraLight',
-    color: variables.colors.appText,
-    fontWeight: variables.fonts.lightWeight,
+  titleText: {
+    ...mixins.titleFont,
   },
-  mediumText: {
-    fontFamily: variables.fonts.appFamily,
-    color: variables.colors.appText,
-    fontWeight: variables.fonts.mediumWeight,
+  button: {
+    ...mixins.button,
   },
-  heavyText: {
-    fontFamily: variables.fonts.appFamily,
-    color: variables.colors.appText,
-    fontWeight: variables.fonts.heavyWeight,
+  buttonText: {
+    ...mixins.buttonFont,
+  },
+  paragraphText: {
+    ...mixins.paragraphFont,
   },
 }
 

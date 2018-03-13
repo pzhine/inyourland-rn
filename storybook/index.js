@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import { AppRegistry } from 'react-native'
 import { getStorybookUI, configure } from '@storybook/react-native'
 
+console.disableYellowBox = true
+
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/)
 function loadStories() {
@@ -24,5 +26,5 @@ class StorybookUIHMRRoot extends Component {
   }
 }
 
-AppRegistry.registerComponent('k9', () => StorybookUIHMRRoot)
+AppRegistry.registerComponent('inyourland-rn', () => StorybookUIHMRRoot)
 export default StorybookUIHMRRoot

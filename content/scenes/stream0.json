@@ -1,26 +1,38 @@
 [
   {
     "startTime": 0,
-    "thumbFilename": "blackduck.png",
-    "locationId": "wavehill",
-    "subjectId": "americanblackduck"
+    "thumbFilename": "redtailedhawk.jpg",
+    "locationId": "govsisland",
+    "subjectId": "redtailedhawk"
   },
   {
-    "startTime": 10000,
-    "thumbFilename": "blackduck.png",
-    "locationId": "wavehill",
-    "subjectId": "americanblackduck"
+    "startTime": 57506,
+    "thumbFilename": "pipingplover.jpg",
+    "locationId": "jamaica",
+    "subjectId": "pipingplover"
   },
   {
-    "startTime": 40000,
-    "thumbFilename": "blackduck.png",
-    "locationId": "wavehill",
-    "subjectId": "americanblackduck"
+    "startTime": 71685,
+    "thumbFilename": "robin.jpg",
+    "locationId": "centralpark",
+    "subjectId": "robin"
   },
   {
-    "startTime": 70000,
-    "thumbFilename": "blackduck.png",
-    "locationId": "wavehill",
-    "subjectId": "americanblackduck"
+    "startTime": 100626,
+    "thumbFilename": "grackle.jpg",
+    "locationId": "centralpark",
+    "subjectId": "grackle"
+  },
+  {
+    "startTime": 106464,
+    "thumbFilename": "greategret.jpg",
+    "locationId": "jamaica",
+    "subjectId": "greategret"
+  },
+  {
+    "startTime": 112343.619683069224354,
+    "thumbFilename": "butterfly.jpg",
+    "locationId": "centralpark",
+    "subjectId": "butterfly"
   }
 ]
