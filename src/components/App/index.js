@@ -6,8 +6,10 @@ import styles from './styles'
 
 const App = () => (
   <Provider store={store}>
-    <View style={styles}>
-      <Text>Hello world</Text>
+    <View style={styles.container}>
+      <Text style={styles.lightText}>Light Text Testing</Text>
+      <Text style={styles.mediumText}>Medium Text Testing</Text>
+      <Text style={styles.heavyText}>Heavy Text Testing</Text>
     </View>
   </Provider>
 )

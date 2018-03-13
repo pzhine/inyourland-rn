@@ -73,5 +73,8 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|react-router-native|my-project|react-native-button)/)"
     ]
+  },
+  "rnpm": {
+    "assets": ["./assets/fonts/"]
   }
 }

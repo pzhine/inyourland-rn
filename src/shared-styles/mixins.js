@@ -1,6 +1,6 @@
 export default {
   centerBoth: {
-    flex: 1,
+    display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
