@@ -3,13 +3,7 @@ import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import Carousel from './'
 import scenes from '../../../content/scenes/stream0.json'
-import { mixins } from '../../shared-styles'
-
-const containerStyle = {
-  ...mixins.centerBoth,
-}
-
-const Decorate = ({ story }) => <View style={containerStyle}>{story}</View>
+import storyStyles from '../../../storybook/styles'
 
 class AutoPlay extends Component {
   constructor(props) {
@@ -20,13 +14,10 @@ class AutoPlay extends Component {
   }
   componentDidMount() {
     setInterval(() => {
-      let nextIndex = this.state.currentIndex + 1
-      if (nextIndex >= scenes.length) {
-        nextIndex = 0
-      }
+      const nextIndex = this.state.currentIndex + this.props.interval
       console.log('AUTOPLAY', nextIndex)
       this.setState({ currentIndex: nextIndex })
-    }, 3000)
+    }, 1500)
   }
   render() {
     return <Carousel scenes={scenes} currentIndex={this.state.currentIndex} />
@@ -34,6 +25,7 @@ class AutoPlay extends Component {
 }
 
 storiesOf('Carousel', module)
-  .addDecorator(story => <Decorate story={story()} />)
+  .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('default', () => <Carousel scenes={scenes} currentIndex={0} />)
-  .add('autoPlay', () => <AutoPlay />)
+  .add('autoPlay forward', () => <AutoPlay interval={1} />)
+  .add('autoPlay reverse', () => <AutoPlay interval={-1} />)

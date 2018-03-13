@@ -35,7 +35,7 @@ export default function transitionProps({ propsToTransition }) {
               }))
           ) {
             // store post transition props to pass on
-            this.postTransProps[key] = pre[key]
+            this.postTransProps[key] = post[key]
             // reset timer in case prop is already transitioning
             clearTimeout(this.transProps[key])
             // start transition timer

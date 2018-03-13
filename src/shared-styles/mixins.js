@@ -5,31 +5,35 @@ export default {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  titleFont: {
+  titleText: {
     fontFamily: 'System',
     fontWeight: '100',
     color: 'rgba(255,255,255,1)',
-    fontSize: 30,
+    fontSize: 50,
   },
-  buttonFont: {
+  buttonText: {
     fontFamily: 'System',
     fontWeight: 'normal',
     color: 'rgba(255,255,255,0.75)',
-    fontSize: 18,
+    fontSize: 30,
   },
-  paragraphFont: {
+  paragraphText: {
     fontFamily: 'HiraginoSans-W3',
     fontWeight: 'normal',
     color: 'rgba(255,255,255,0.75)',
-    fontSize: 14,
+    fontSize: 24,
+    lineHeight: 28,
+    textAlign: 'justify',
+    width: 525,
   },
   button: {
+    flexGrow: 0,
     borderRadius: 15,
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.75)',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingLeft: 50,
+    paddingRight: 50,
+    paddingTop: 15,
+    paddingBottom: 15,
   },
 }

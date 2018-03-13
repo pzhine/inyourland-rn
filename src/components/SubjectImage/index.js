@@ -18,7 +18,6 @@ const SubjectImage = ({ style, children, isActive }) => {
         ...(isActive ? defaultStyles.active : {}),
       }}
     >
-      {shadowImage}
       {image}
     </View>
   )

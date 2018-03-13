@@ -1,4 +1,4 @@
-import { variables, mixins } from '../../shared-styles'
+import { mixins, variables } from '../src/shared-styles'
 
 const styles = {
   container: {

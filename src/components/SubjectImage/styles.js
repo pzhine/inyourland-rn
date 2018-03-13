@@ -14,7 +14,6 @@ const styles = {
     zIndex: 1,
     opacity: 0.7,
     padding: 20,
-    transformOrigin: 'center, center',
     transform: [{ scaleX: 1.15 }, { scaleY: 1.15 }],
     borderRadius: 10,
   },

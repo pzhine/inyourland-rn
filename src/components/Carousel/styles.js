@@ -1,6 +1,6 @@
 const styles = {
   carousel: {
-    display: 'flex',
+    flexDirection: 'row',
   },
   slide: {
     marginRight: 5,
