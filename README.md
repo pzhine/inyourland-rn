@@ -16,16 +16,10 @@ Dual channel video installation with interactive tablet app companion and websit
 yarn install
 ```
 
-3.  Run the development bundler and development web server
+2.  Run the development bundler and development web server, build the native app and launch the simulator
 
 ```
 yarn dev
-```
-
-2.  Build the native app
-
-```
-react-native run-ios
 ```
 
 ## Storybook

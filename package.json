@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "kyt dev & haul start --platform ios",
+    "dev":
+      "kyt dev & haul start --platform ios & react-native run-ios --simulator \"iPad Air\"",
     "dev-server": "kyt dev",
     "dev-ios": "haul start --platform ios",
     "test": "jest",
