@@ -1,22 +1,30 @@
 [
   {
     "locationId": "wavehill",
-    "latlongzoom": "40.8869006,-73.9275451,14z",
-    "name": "Wave Hill"
+    "name": "Wave Hill",
+    "origin": [-815, -248],
+    "scale": 1,
+    "pin": [429, 186]
   },
   {
     "locationId": "govsisland",
-    "latlongzoom": "40.6885844,-74.0237632,16z",
-    "name": "Governors Island"
+    "name": "Governors Island",
+    "origin": [-502, -1482],
+    "scale": 1,
+    "pin": [274, 152]
   },
   {
     "locationId": "jamaica",
-    "latlongzoom": "40.6163835,-73.8285487,17z",
-    "name": "Jamaica Bay Wildlife Refuge"
+    "name": "Jamaica Bay Wildlife Refuge",
+    "origin": [-1272, -1868],
+    "scale": 1,
+    "pin": [351, 166]
   },
   {
     "locationId": "centralpark",
-    "latlongzoom": "40.7790301,-73.9716046,16z",
-    "name": "Central Park"
+    "name": "Central Park",
+    "origin": [-535, -988],
+    "scale": 1,
+    "pin": [459, 163]
   }
 ]
