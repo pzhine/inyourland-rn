@@ -6,7 +6,7 @@ import { getStorybookUI, configure } from '@storybook/react-native'
 console.disableYellowBox = true
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src/components/Hotspot', true, /.stories.js$/)
+const req = require.context('../src/components/Map', true, /.stories.js$/)
 function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
