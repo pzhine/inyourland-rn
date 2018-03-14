@@ -15,26 +15,46 @@ const getLocation = locationId =>
 storiesOf('Map', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   // .add('default', () => <Map location={getLocation(scenes[0].locationId)} />)
-  // .add('autoPlay', () => (
-  //   <AutoPlay interval={1}>
-  //     {sceneIndex => (
-  //       <Map
-  //         location={getLocation(
-  //           scenes[absmod(sceneIndex, scenes.length)].locationId
-  //         )}
-  //       />
-  //     )}
-  //   </AutoPlay>
-  // ))
-  .add('autoPlay with Carousel', () => (
+  .add('autoPlay', () => (
     <AutoPlay interval={1}>
-      {sceneIndex => [
+      {sceneIndex => (
         <Map
           location={getLocation(
             scenes[absmod(sceneIndex, scenes.length)].locationId
           )}
-        />,
-        <Carousel scenes={scenes} currentIndex={sceneIndex} />,
-      ]}
+        />
+      )}
     </AutoPlay>
   ))
+// .add('autoPlay with Carousel', () => (
+//   <AutoPlay interval={1}>
+//     {sceneIndex => [
+//       <Map
+//         location={getLocation(
+//           scenes[absmod(sceneIndex, scenes.length)].locationId
+//         )}
+//       />,
+//       <Carousel scenes={scenes} currentIndex={sceneIndex} />,
+//     ]}
+//   </AutoPlay>
+// ))
+// .add('autoPlay with Carousel and Hotspot', () => (
+//   <AutoPlay interval={1}>
+//     {sceneIndex => {
+//       const loc = getLocation(
+//         scenes[absmod(sceneIndex, scenes.length)].locationId
+//       )
+//       return [
+//         <Map location={loc} />,
+//         <Carousel scenes={scenes} currentIndex={sceneIndex} />,
+//         <Hotspot
+//           left={loc.pin[0]}
+//           top={loc.pin[1]}
+//           radius={24}
+//           ripples={3}
+//           color={variables.colors.hotspot}
+//         />,
+//       ]
+//     }}
+//   </AutoPlay>
+// ))

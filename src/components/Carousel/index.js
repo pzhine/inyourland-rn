@@ -35,14 +35,14 @@ const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
 
 class Carousel extends Component {
   state = {
-    slideTransition: new Animated.Value(0),
+    slideAnimation: new Animated.Value(0),
   }
   onChangeIndex(index) {
     console.log('INDEX_CHANGED', index)
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.currentIndex !== nextProps.currentIndex) {
-      this.setState({ slideTransition: new Animated.Value(0) })
+      this.setState({ slideAnimation: new Animated.Value(0) })
       this.elem.setNativeProps({ style: { transform: [{ translateX: 0 }] } })
     }
   }
@@ -54,7 +54,7 @@ class Carousel extends Component {
       const { nextValue } = transitions.currentIndex
       const slideCoefficient = nextValue > currentIndex ? -1 : 1
       console.log('TRANSITION', currentIndex, nextValue)
-      Animated.timing(this.state.slideTransition, {
+      Animated.timing(this.state.slideAnimation, {
         toValue:
           (styles.slide.marginLeft + subjectImageStyles.image.width + 5) *
           slideCoefficient,
@@ -78,7 +78,7 @@ class Carousel extends Component {
           width: stripWidth,
           transform: [
             {
-              translateX: this.state.slideTransition,
+              translateX: this.state.slideAnimation,
             },
           ],
         }}
