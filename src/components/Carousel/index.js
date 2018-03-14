@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Image, View, Animated, Easing } from 'react-native'
-import defaultStyles from './styles'
+import { Image, View, Animated } from 'react-native'
+import styles from './styles'
 import SubjectImage from '../SubjectImage'
 import getImageUrl from '../../lib/scene/getImageUrl'
 import range from '../../lib/range'
@@ -9,14 +9,29 @@ import transitionProps from '../../hoc/transitionProps'
 import subjectImageStyles from '../SubjectImage/styles'
 
 const TRANSITION_DURATION = 400
+const SHADOW_SCALE = 1.4
 
-const Slide = ({ scene, isActive }) => (
-  <View style={defaultStyles.slide}>
-    <SubjectImage isActive={isActive}>
-      <Image source={{ uri: getImageUrl(scene.thumbFilename) }} />
-    </SubjectImage>
-  </View>
-)
+const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
+  slideRange.map(index => (
+    <View
+      style={{
+        ...styles.slide,
+        transform: [{ scaleX: scale }, { scaleY: scale }],
+      }}
+      key={index}
+    >
+      <SubjectImage isActive={absmod(index, scenes.length) === activeIndex}>
+        <Image
+          source={{
+            uri: getImageUrl(
+              scenes[absmod(index, scenes.length)].thumbFilename,
+              { blur }
+            ),
+          }}
+        />
+      </SubjectImage>
+    </View>
+  ))
 
 class Carousel extends Component {
   state = {
@@ -41,19 +56,26 @@ class Carousel extends Component {
       console.log('TRANSITION', currentIndex, nextValue)
       Animated.timing(this.state.slideTransition, {
         toValue:
-          (defaultStyles.slide.marginLeft + subjectImageStyles.image.width) *
+          (styles.slide.marginLeft + subjectImageStyles.image.width) *
           slideCoefficient,
         duration: TRANSITION_DURATION,
         useNativeDriver: true,
       }).start()
     }
 
-    const slides = range(currentIndex - 3, currentIndex + 3)
+    const slideRange = range(currentIndex - 3, currentIndex + 3)
+    const stripWidth =
+      (subjectImageStyles.image.width +
+        subjectImageStyles.image.marginLeft * 2) *
+      slideRange.length *
+      SHADOW_SCALE
     return (
       <Animated.View
         ref={elem => (this.elem = elem)}
         style={{
-          ...defaultStyles.carousel,
+          ...styles.carousel,
+          alignItems: 'center',
+          width: stripWidth,
           transform: [
             {
               translateX: this.state.slideTransition,
@@ -61,13 +83,21 @@ class Carousel extends Component {
           ],
         }}
       >
-        {slides.map(index => (
-          <Slide
-            scene={scenes[absmod(index, scenes.length)]}
-            key={index}
-            isActive={absmod(index, scenes.length) === activeIndex}
+        <View style={styles.blurLayer}>
+          <Slides
+            slideRange={slideRange}
+            scenes={scenes}
+            activeIndex={activeIndex}
+            scale={SHADOW_SCALE}
+            blur
           />
-        ))}
+        </View>
+        <Slides
+          slideRange={slideRange}
+          scenes={scenes}
+          activeIndex={activeIndex}
+          scale={1}
+        />
       </Animated.View>
     )
   }

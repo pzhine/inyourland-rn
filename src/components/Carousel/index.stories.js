@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, Image } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import Carousel from './'
 import scenes from '../../../content/scenes/stream0.json'
@@ -17,7 +17,7 @@ class AutoPlay extends Component {
       const nextIndex = this.state.currentIndex + this.props.interval
       console.log('AUTOPLAY', nextIndex)
       this.setState({ currentIndex: nextIndex })
-    }, 1500)
+    }, 3000)
   }
   render() {
     return <Carousel scenes={scenes} currentIndex={this.state.currentIndex} />
@@ -25,7 +25,22 @@ class AutoPlay extends Component {
 }
 
 storiesOf('Carousel', module)
-  .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
+  .addDecorator(story => (
+    <View style={storyStyles.container}>
+      <Image
+        source={{ uri: 'http://localhost:3000/media/_testmapbg.png' }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          width: 768,
+          height: 1024,
+        }}
+      />
+      {story()}
+    </View>
+  ))
   .add('default', () => <Carousel scenes={scenes} currentIndex={0} />)
   .add('autoPlay forward', () => <AutoPlay interval={1} />)
   .add('autoPlay reverse', () => <AutoPlay interval={-1} />)

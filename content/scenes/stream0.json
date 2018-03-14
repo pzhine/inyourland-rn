@@ -1,37 +1,37 @@
 [
   {
     "startTime": 0,
-    "thumbFilename": "redtailedhawk.jpg",
+    "thumbFilename": "redtailedhawk",
     "locationId": "govsisland",
     "subjectId": "redtailedhawk"
   },
   {
     "startTime": 57506,
-    "thumbFilename": "pipingplover.jpg",
+    "thumbFilename": "pipingplover",
     "locationId": "jamaica",
     "subjectId": "pipingplover"
   },
   {
     "startTime": 71685,
-    "thumbFilename": "robin.jpg",
+    "thumbFilename": "robin",
     "locationId": "centralpark",
     "subjectId": "robin"
   },
   {
     "startTime": 100626,
-    "thumbFilename": "grackle.jpg",
+    "thumbFilename": "grackle",
     "locationId": "centralpark",
     "subjectId": "grackle"
   },
   {
     "startTime": 106464,
-    "thumbFilename": "greategret.jpg",
+    "thumbFilename": "greategret",
     "locationId": "jamaica",
     "subjectId": "greategret"
   },
   {
     "startTime": 112343.619683069224354,
-    "thumbFilename": "butterfly.jpg",
+    "thumbFilename": "butterfly",
     "locationId": "centralpark",
     "subjectId": "butterfly"
   }

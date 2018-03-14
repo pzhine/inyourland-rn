@@ -1,7 +1,10 @@
 import config from '../../../config.json'
 
-function getImageUrl(srcFilename) {
-  return config.mediaBaseUrl + srcFilename
+function getImageUrl(srcFilename, options) {
+  return (
+    config.mediaBaseUrl +
+    (options.blur ? `${srcFilename}_blur.png` : `${srcFilename}.jpg`)
+  )
 }
 
 export default getImageUrl
