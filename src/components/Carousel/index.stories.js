@@ -5,12 +5,13 @@ import Carousel from './'
 import scenes from '../../../content/scenes/stream0.json'
 import AutoPlay from '../../../storybook/AutoPlay'
 import storyStyles from '../../../storybook/styles'
+import getImageUrl from '../../lib/scene/getImageUrl'
 
 storiesOf('Carousel', module)
   .addDecorator(story => (
     <View style={storyStyles.container}>
       <Image
-        source={{ uri: 'http://localhost:3000/media/_testmapbg.png' }}
+        source={{ uri: getImageUrl('nyc', { map: true }) }}
         style={{
           position: 'absolute',
           top: 0,

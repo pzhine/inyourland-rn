@@ -56,9 +56,9 @@ class Carousel extends Component {
       console.log('TRANSITION', currentIndex, nextValue)
       Animated.timing(this.state.slideTransition, {
         toValue:
-          (styles.slide.marginLeft + subjectImageStyles.image.width) *
+          (styles.slide.marginLeft + subjectImageStyles.image.width + 5) *
           slideCoefficient,
-        duration: TRANSITION_DURATION,
+        duration: TRANSITION_DURATION - 50,
         useNativeDriver: true,
       }).start()
     }
