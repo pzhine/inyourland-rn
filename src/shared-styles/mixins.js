@@ -11,6 +11,12 @@ export default {
     color: 'rgba(255,255,255,1)',
     fontSize: 50,
   },
+  locationText: {
+    fontFamily: 'System',
+    fontWeight: '100',
+    color: 'rgba(255,255,255,1)',
+    fontSize: 50,
+  },
   buttonText: {
     fontFamily: 'System',
     fontWeight: 'normal',

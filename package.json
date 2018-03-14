@@ -8,7 +8,8 @@
     "dev-ios": "react-native run-ios --simulator \"iPad Air\"",
     "test": "jest",
     "haul": "haul",
-    "storybook": "storybook start -p 7007 --haul webpack.haul.storybook.js --platform ios"
+    "storybook":
+      "storybook start -p 7007 --haul webpack.haul.storybook.js --platform ios"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -73,8 +74,6 @@
     ]
   },
   "rnpm": {
-    "assets": [
-      "./assets/fonts/"
-    ]
+    "assets": ["./assets/fonts/"]
   }
 }
