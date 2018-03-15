@@ -4,12 +4,12 @@
     "name": "American Black Duck",
     "bio": [
       {
-        "title": "About",
+        "sectionId": "about",
         "content":
           "A close relative of the Mallard, the Black Duck is better adapted to wooded country. With the clearing of forest, it has steadily lost ground to spreading populations of Mallards. In its stronghold along the Atlantic Coast it is a hardy bird, wintering farther north than most dabbling ducks. It is among the few dabblers to prosper in tidewater areas; pairs and small parties of Black Ducks are often seen flying over the salt marsh, their white wing linings flashing in bright contrast to their dark bodies."
       },
       {
-        "title": "Habitat",
+        "sectionId": "habitat",
         "content":
           "American Black Ducks breed mostly in freshwater wetlands throughout northeastern North America, including beaver ponds, brooks lined by speckled alder, shallow lakes with reeds and sedges, bogs in boreal forests, and wooded swamps. They may also nest in saltmarshes. They mostly spend the winter in saltwater wetlands, but also in beaver ponds, flooded timber, agricultural fields, and riverine habitats. They often take refuge from hunting and other disturbances by moving to fresh and brackish impoundments on conservation land."
       }
@@ -20,12 +20,12 @@
     "name": "Red Tailed Hawk",
     "bio": [
       {
-        "title": "About",
+        "sectionId": "about",
         "content":
           "This is probably the most common hawk in North America. If you’ve got sharp eyes you’ll see several individuals on almost any long car ride, anywhere. Red-tailed Hawks soar above open fields, slowly turning circles on their broad, rounded wings. Other times you’ll see them atop telephone poles, eyes fixed on the ground to catch the movements of a vole or a rabbit, or simply waiting out cold weather before climbing a thermal updraft into the sky."
       },
       {
-        "title": "Habitat",
+        "sectionId": "habitat",
         "content":
           "Red-tailed Hawks occupy just about every type of open habitat on the continent. This includes desert, scrublands, grasslands, roadsides, fields and pastures, parks, broken woodland, and (in Mexico) tropical rainforest."
       }
@@ -36,12 +36,12 @@
     "name": "Piping Plover",
     "bio": [
       {
-        "title": "About",
+        "sectionId": "about",
         "content":
           "Little round Piping Plovers hide in plain sight on sandy ocean and lake shores, blending right in with their sandy gray backs. It's not until they scurry down the sand on their orange legs that you're likely to spot these big-eyed shorebirds with a sharp black collar and an orange bill. They nest in soft sand away from the water's edge along the Atlantic Coast, Great Plains, and Great Lakes. They are endangered due to habitat loss, disturbance, and predation."
       },
       {
-        "title": "Habitat",
+        "sectionId": "habitat",
         "content":
           "Piping Plovers breed in two different regions in the United States: along ocean shores in the Northeast and along lakeshores, rivers, and alkali wetlands in the northern Great Plains and Great Lakes. They nest above the high water line in sandy areas with sparse vegetation including marshes, ocean shores, bays, spoil islands, reservoirs, alkali lakes, and rivers. In the winter they forage on coastal beaches, sandflats, and mudflats that are exposed during low tide."
       }
@@ -52,12 +52,12 @@
     "name": "American Robin",
     "bio": [
       {
-        "title": "About",
+        "sectionId": "about",
         "content":
           "The quintessential early bird, American Robins are common sights on lawns across North America, where you often see them tugging earthworms out of the ground. Robins are popular birds for their warm orange breast, cheery song, and early appearance at the end of winter. Though they’re familiar town and city birds, American Robins are at home in wilder areas, too, including mountain forests and Alaskan wilderness."
       },
       {
-        "title": "Habitat",
+        "sectionId": "habitat",
         "content":
           "American Robins are common birds across the continent. You’ll find them on lawns, fields, and city parks, as well as in more wild places like woodlands, forests, mountains up to near treeline, recently burned forests, and tundra. During winter many robins move to moist woods where berry-producing trees and shrubs are common."
       }
@@ -68,12 +68,12 @@
     "name": "Common Grackle",
     "bio": [
       {
-        "title": "About",
+        "sectionId": "about",
         "content":
           "Common Grackles are blackbirds that look like they've been slightly stretched. They're taller and longer tailed than a typical blackbird, with a longer, more tapered bill and glossy-iridescent bodies. Grackles walk around lawns and fields on their long legs or gather in noisy groups high in trees, typically evergreens. They eat many crops (notably corn) and nearly anything else as well, including garbage. In flight their long tails trail behind them, sometimes folded down the middle into a shallow V shape."
       },
       {
-        "title": "Habitat",
+        "sectionId": "habitat",
         "content":
           "Common Grackles do well in human landscapes, using scattered trees for nesting and open ground for foraging. Typical natural habitats include open woodland, forest edge, grassland, meadows, swamps, marshes, and palmetto hammocks. They are also very common near agricultural fields and feedlots, suburbs, city parks, cemeteries, pine plantations, and hedgerows. Unbroken tracts of forest are the only places where you are unlikely to find Common Grackles."
       }
@@ -88,12 +88,12 @@
     "name": "Great Egret",
     "bio": [
       {
-        "title": "About",
+        "sectionId": "about",
         "content":
           "The elegant Great Egret is a dazzling sight in many a North American wetland. Slightly smaller and more svelte than a Great Blue Heron, these are still large birds with impressive wingspans. They hunt in classic heron fashion, standing immobile or wading through wetlands to capture fish with a deadly jab of their yellow bill. Great Egrets were hunted nearly to extinction for their plumes in the late nineteenth century, sparking conservation movements and some of the first laws to protect birds."
       },
       {
-        "title": "Habitat",
+        "sectionId": "habitat",
         "content":
           "Great Egrets live in freshwater, brackish, and marine wetlands. During the breeding season they live in colonies in trees or shrubs with other waterbirds, ranging across the southeastern states and in scattered spots throughout the rest of the U.S. and southern Canada. The colonies are located on lakes, ponds, marshes, estuaries, impoundments, and islands. Great Egrets use similar habitats for migration stopover sites and wintering grounds. They hunt in marshes, swamps, streams, rivers, ponds, lakes, impoundments, lagoons, tidal flats, canals, ditches, fish-rearing ponds, flooded farm fields, and sometimes upland habitats."
       }

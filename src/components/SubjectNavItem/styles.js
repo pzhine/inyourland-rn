@@ -11,10 +11,13 @@ const styles = {
   },
   text: {
     ...mixins.navText,
+    marginLeft: 15,
+    marginRight: 15,
+    fontWeight: '100',
   },
   active: {
     position: 'absolute',
-    fontWeight: 'bold',
+    fontWeight: '300',
   },
 }
 

@@ -30,6 +30,6 @@ storiesOf('SubjectNavItem', module)
   ))
   .add('default', () =>
     subjects[0].bio.map(section => (
-      <SubjectNavItem section={section} key={section.title} />
+      <SubjectNavItem section={section} key={section.sectionId} />
     ))
   )

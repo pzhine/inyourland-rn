@@ -31,10 +31,8 @@ class RouteTransition extends React.Component {
       nextProps.transitions.location.isActive &&
       !this.state.isTransitioning
     ) {
-      console.log('SET isTransitioning flag')
       this.setState({ isTransitioning: true })
       setTimeout(() => {
-        console.log('clear isTransitioning flag')
         this.setState({ isTransitioning: false })
       }, this.props.holdDuration)
     }

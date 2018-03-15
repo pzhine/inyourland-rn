@@ -1,12 +1,11 @@
 import React from 'react'
-import { Animated, View, Text } from 'react-native'
+import { Animated } from 'react-native'
 import { withRouter } from 'react-router-native'
 import RouteTransition from '../../transitions/RouteTransition'
 import Button from '../Button'
 import styles from './styles'
 import { variables } from '../../shared-styles'
-
-const sectionPath = section => section.title.toLowerCase().replace(' ', '-')
+import bioSections from '../../../content/bioSections.json'
 
 const transitionStyle = ({
   animations,
@@ -41,13 +40,16 @@ const SubjectNavItem = ({ section, history }) => (
     }}
   >
     {({ animations, match, nextMatch, isTransitioning }) => {
-      const isActive = sectionPath(section) === match.params.section
+      const isActive = section.sectionId === match.params.section
       const isActiveNext =
-        nextMatch && sectionPath(section) === nextMatch.params.section
+        nextMatch && section.sectionId === nextMatch.params.section
+      const sectionTitle = bioSections.find(
+        s => s.sectionId === section.sectionId
+      ).title
       return (
         <Button
           isDisabled={isActive || isTransitioning}
-          onPress={() => history.push(sectionPath(section))}
+          onPress={() => history.push(section.sectionId)}
           style={styles.button}
         >
           <Animated.Text
@@ -56,7 +58,7 @@ const SubjectNavItem = ({ section, history }) => (
               ...transitionStyle({ animations, isActive, isActiveNext }),
             }}
           >
-            {section.title.toUpperCase()}
+            {sectionTitle.toUpperCase()}
           </Animated.Text>
           <Animated.Text
             style={{
@@ -70,7 +72,7 @@ const SubjectNavItem = ({ section, history }) => (
               }),
             }}
           >
-            {section.title.toUpperCase()}
+            {sectionTitle.toUpperCase()}
           </Animated.Text>
         </Button>
       )

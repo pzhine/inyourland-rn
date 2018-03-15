@@ -27,8 +27,8 @@ export default {
     fontFamily: 'HiraginoSans-W3',
     fontWeight: 'normal',
     color: 'rgba(255,255,255,0.75)',
-    fontSize: 24,
-    lineHeight: 28,
+    fontSize: 23,
+    lineHeight: 27,
     textAlign: 'justify',
     width: 525,
   },
@@ -47,5 +47,12 @@ export default {
     paddingRight: 50,
     paddingTop: 15,
     paddingBottom: 15,
+  },
+  fillContainerAbsolute: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
   },
 }
