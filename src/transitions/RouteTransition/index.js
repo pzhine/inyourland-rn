@@ -17,21 +17,32 @@ class RouteTransition extends React.Component {
       ),
     }
   }
+  resetAnimation(animKey) {
+    const animationsInState = { ...this.state.animations }
+    animationsInState[animKey] = new Animated.Value(
+      this.props.animations[animKey].range[1]
+    )
+    this.setState({ animations: animationsInState })
+  }
   componentWillReceiveProps(nextProps) {
     const { location, animations } = this.props
     if (location.pathname !== nextProps.location.pathname) {
       Object.keys(animations).forEach(animKey => {
-        const { method, range, duration } = animations[animKey]
-        method(this.state.animations[animKey], {
-          duration: duration / 2,
-          toValue: range[1],
-        }).start()
+        const { method, range, duration, oneWay } = animations[animKey]
+        if (!oneWay) {
+          method(this.state.animations[animKey], {
+            duration: duration / 2,
+            toValue: range[1],
+          }).start()
+        } else {
+          this.resetAnimation(animKey)
+        }
       })
     }
   }
   render() {
     const { animations, transitions, children, location, match } = this.props
-    if (transitions.location.isActive) {
+    if (transitions.location.isActive && !transitions.location.isInterruption) {
       Object.keys(animations).forEach(animKey => {
         const { method, range, duration } = animations[animKey]
         method(this.state.animations[animKey], {

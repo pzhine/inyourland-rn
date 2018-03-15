@@ -32,6 +32,12 @@ export default {
     textAlign: 'justify',
     width: 525,
   },
+  navText: {
+    fontFamily: 'System',
+    fontWeight: '300',
+    fontSize: 24,
+    color: 'rgb(255,255,255)',
+  },
   button: {
     flexGrow: 0,
     borderRadius: 15,
