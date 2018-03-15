@@ -1,7 +1,8 @@
 import React from 'react'
-import { Animated, View, Text, TouchableHighlight } from 'react-native'
+import { Animated, View, Text } from 'react-native'
 import { withRouter } from 'react-router-native'
 import RouteTransition from '../../transitions/RouteTransition'
+import Button from '../Button'
 import styles from './styles'
 import { variables } from '../../shared-styles'
 
@@ -28,38 +29,35 @@ const transitionStyle = ({
 }
 
 const SubjectNavItem = ({ section, history }) => (
-  <View style={styles.subjectNavItem}>
-    <RouteTransition
-      holdDuration={variables.transitions.fadeRoute.duration}
-      animations={{
-        fade: {
-          range: [0, 1],
-          method: Animated.timing,
-          duration: variables.transitions.fadeRoute.duration,
-          oneWay: true,
-        },
-      }}
-    >
-      {({ animations, match, nextMatch, isTransitioning }) => {
-        const isActive = sectionPath(section) === match.params.section
-        const isActiveNext =
-          nextMatch && sectionPath(section) === nextMatch.params.section
-        return [
-          <Animated.View
-            style={transitionStyle({ animations, isActive, isActiveNext })}
-            key={0}
+  <RouteTransition
+    holdDuration={variables.transitions.fadeRoute.duration}
+    animations={{
+      fade: {
+        range: [0, 1],
+        method: Animated.timing,
+        duration: variables.transitions.fadeRoute.duration,
+        oneWay: true,
+      },
+    }}
+  >
+    {({ animations, match, nextMatch, isTransitioning }) => {
+      const isActive = sectionPath(section) === match.params.section
+      const isActiveNext =
+        nextMatch && sectionPath(section) === nextMatch.params.section
+      return (
+        <Button
+          isDisabled={isActive || isTransitioning}
+          onPress={() => history.push(sectionPath(section))}
+          style={styles.button}
+        >
+          <Animated.Text
+            style={{
+              ...styles.text,
+              ...transitionStyle({ animations, isActive, isActiveNext }),
+            }}
           >
-            <TouchableHighlight
-              onPress={() => {
-                if (!isTransitioning) {
-                  history.push(sectionPath(section))
-                }
-              }}
-              style={styles.button}
-            >
-              <Text style={styles.text}>{section.title.toUpperCase()}</Text>
-            </TouchableHighlight>
-          </Animated.View>,
+            {section.title.toUpperCase()}
+          </Animated.Text>
           <Animated.Text
             style={{
               ...styles.text,
@@ -71,14 +69,13 @@ const SubjectNavItem = ({ section, history }) => (
                 isVisibleOnActive: true,
               }),
             }}
-            key={1}
           >
             {section.title.toUpperCase()}
-          </Animated.Text>,
-        ]
-      }}
-    </RouteTransition>
-  </View>
+          </Animated.Text>
+        </Button>
+      )
+    }}
+  </RouteTransition>
 )
 
 export default withRouter(SubjectNavItem)

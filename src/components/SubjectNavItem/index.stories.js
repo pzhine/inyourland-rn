@@ -10,6 +10,7 @@ const navContainerStyle = {
   flexDirection: 'row',
   width: '100%',
   justifyContent: 'space-around',
+  height: 150,
 }
 
 storiesOf('SubjectNavItem', module)
