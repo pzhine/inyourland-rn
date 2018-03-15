@@ -7,6 +7,8 @@ import range from '../../lib/range'
 import absmod from '../../lib/absmod'
 import transitionProps from '../../hoc/transitionProps'
 import subjectImageStyles from '../SubjectImage/styles'
+import { mixins } from '../../shared-styles'
+import subjects from '../../../content/subjects.json'
 
 const TRANSITION_DURATION = 400
 const SHADOW_SCALE = 1.4
@@ -36,6 +38,7 @@ const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
 class Carousel extends Component {
   state = {
     slideAnimation: new Animated.Value(0),
+    infoAnimation: new Animated.Value(1),
   }
   onChangeIndex(index) {
     console.log('INDEX_CHANGED', index)
@@ -44,6 +47,11 @@ class Carousel extends Component {
     if (this.props.currentIndex !== nextProps.currentIndex) {
       this.setState({ slideAnimation: new Animated.Value(0) })
       this.elem.setNativeProps({ style: { transform: [{ translateX: 0 }] } })
+      Animated.timing(this.state.infoAnimation, {
+        toValue: 1,
+        duration: 300,
+        useNativeDriver: true,
+      }).start()
     }
   }
   render() {
@@ -56,9 +64,14 @@ class Carousel extends Component {
       console.log('TRANSITION', currentIndex, nextValue)
       Animated.timing(this.state.slideAnimation, {
         toValue:
-          (styles.slide.marginLeft + subjectImageStyles.image.width) *
+          (styles.slide.marginLeft + subjectImageStyles.image.width + 5) *
           slideCoefficient,
-        duration: TRANSITION_DURATION,
+        duration: TRANSITION_DURATION - 50,
+        useNativeDriver: true,
+      }).start()
+      Animated.timing(this.state.infoAnimation, {
+        toValue: 0,
+        duration: 300,
         useNativeDriver: true,
       }).start()
     }
@@ -69,7 +82,7 @@ class Carousel extends Component {
         subjectImageStyles.image.marginLeft * 2) *
       slideRange.length *
       SHADOW_SCALE
-    return (
+    return [
       <Animated.View
         ref={elem => (this.elem = elem)}
         style={{
@@ -98,8 +111,26 @@ class Carousel extends Component {
           activeIndex={activeIndex}
           scale={1}
         />
-      </Animated.View>
-    )
+      </Animated.View>,
+      <Animated.Text
+        style={{
+          ...mixins.titleText,
+          ...styles.title,
+          opacity: this.state.infoAnimation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, 1],
+          }),
+        }}
+      >
+        {subjects
+          .find(
+            s =>
+              s.subjectId ===
+              scenes[absmod(currentIndex, scenes.length)].subjectId
+          )
+          .name.toUpperCase()}
+      </Animated.Text>,
+    ]
   }
 }
 

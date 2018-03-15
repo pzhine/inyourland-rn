@@ -21,6 +21,13 @@ const styles = {
     zIndex: -1,
     opacity: 0.6,
   },
+  title: {
+    position: 'absolute',
+    left: 0,
+    top: 575,
+    right: 0,
+    textAlign: 'center',
+  },
 }
 
 export default styles

@@ -17,7 +17,7 @@
   },
   {
     "subjectId": "redtailedhawk",
-    "name": "American Black Duck",
+    "name": "Red Tailed Hawk",
     "bio": [
       {
         "title": "About",
@@ -82,5 +82,21 @@
   {
     "subjectId": "butterfly",
     "name": "Butterfly"
+  },
+  {
+    "subjectId": "greategret",
+    "name": "Great Egret",
+    "bio": [
+      {
+        "title": "About",
+        "content":
+          "The elegant Great Egret is a dazzling sight in many a North American wetland. Slightly smaller and more svelte than a Great Blue Heron, these are still large birds with impressive wingspans. They hunt in classic heron fashion, standing immobile or wading through wetlands to capture fish with a deadly jab of their yellow bill. Great Egrets were hunted nearly to extinction for their plumes in the late nineteenth century, sparking conservation movements and some of the first laws to protect birds."
+      },
+      {
+        "title": "Habitat",
+        "content":
+          "Great Egrets live in freshwater, brackish, and marine wetlands. During the breeding season they live in colonies in trees or shrubs with other waterbirds, ranging across the southeastern states and in scattered spots throughout the rest of the U.S. and southern Canada. The colonies are located on lakes, ponds, marshes, estuaries, impoundments, and islands. Great Egrets use similar habitats for migration stopover sites and wintering grounds. They hunt in marshes, swamps, streams, rivers, ponds, lakes, impoundments, lagoons, tidal flats, canals, ditches, fish-rearing ponds, flooded farm fields, and sometimes upland habitats."
+      }
+    ]
   }
 ]

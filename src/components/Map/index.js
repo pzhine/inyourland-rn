@@ -3,7 +3,7 @@ import { Animated } from 'react-native'
 import transitionProps from '../../hoc/transitionProps'
 import getImageUrl from '../../lib/scene/getImageUrl'
 import styles from './styles'
-import { variables } from '../../shared-styles'
+import { variables, mixins } from '../../shared-styles'
 import Hotspot from '../Hotspot'
 
 const MOVE_TRANSITION_DURATION = 1000
@@ -11,7 +11,7 @@ const MOVE_TRANSITION_DURATION = 1000
 class Map extends Component {
   state = {
     moveAnimation: new Animated.Value(0),
-    infoAnimation: new Animated.Value(1),
+    infoAnimation: new Animated.Value(2),
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.location !== nextProps.location) {
@@ -20,8 +20,8 @@ class Map extends Component {
       })
     }
     Animated.timing(this.state.infoAnimation, {
-      toValue: 1,
-      duration: 300,
+      toValue: 2,
+      duration: 400,
       useNativeDriver: true,
     }).start()
   }
@@ -41,7 +41,6 @@ class Map extends Component {
         toValue: 1,
         friction: 10,
         delay: 400,
-        // duration: MOVE_TRANSITION_DURATION,
         useNativeDriver: true,
       }).start()
     }
@@ -69,12 +68,11 @@ class Map extends Component {
       />,
       <Animated.View
         style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          right: 0,
-          bottom: 0,
-          opacity: this.state.infoAnimation,
+          ...styles.hotspot,
+          opacity: this.state.infoAnimation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, 1],
+          }),
         }}
       >
         <Hotspot
@@ -85,6 +83,18 @@ class Map extends Component {
           ripples={3}
         />
       </Animated.View>,
+      <Animated.Text
+        style={{
+          ...mixins.locationText,
+          ...styles.locationName,
+          opacity: this.state.infoAnimation.interpolate({
+            inputRange: [1, 2],
+            outputRange: [0, 1],
+          }),
+        }}
+      >
+        {location.name}
+      </Animated.Text>,
     ]
   }
 }
