@@ -15,6 +15,7 @@ class LocationName extends Component {
       Animated.timing(this.state.infoAnimation, {
         toValue: 1,
         duration: TRANSITION_DURATION,
+        delay: TRANSITION_DURATION / 4,
         useNativeDriver: true,
       }).start()
     }

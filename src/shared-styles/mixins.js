@@ -15,7 +15,7 @@ export default {
     fontFamily: 'System',
     fontWeight: '100',
     color: 'rgba(255,255,255,1)',
-    fontSize: 50,
+    fontSize: 40,
   },
   buttonText: {
     fontFamily: 'System',
