@@ -18,7 +18,7 @@ export default function transitionProps({ propsToTransition }) {
         }
       }
       transitionProps({ pre, post }) {
-        const toTransition = propsToTransition({ pre, post })
+        const toTransition = propsToTransition({ pre, post, ...this.props })
         const normalProps = {}
         Object.keys(pre).forEach(key => {
           // only transition props that have changed

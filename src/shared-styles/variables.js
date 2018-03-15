@@ -8,5 +8,8 @@ export default {
     currentIndex: {
       duration: 400,
     },
+    fadeRoute: {
+      duration: 400,
+    },
   },
 }

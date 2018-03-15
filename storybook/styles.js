@@ -6,6 +6,10 @@ const styles = {
     height: '100%',
     backgroundColor: variables.colors.appBackground,
   },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+  },
 }
 
 export default styles
