@@ -1,6 +1,6 @@
 import React from 'react'
-import { Animated, View, Text } from 'react-native'
-import { Link, withRouter } from 'react-router-native'
+import { Animated, View, Text, TouchableHighlight } from 'react-native'
+import { withRouter } from 'react-router-native'
 import RouteTransition from '../../transitions/RouteTransition'
 import styles from './styles'
 import { variables } from '../../shared-styles'
@@ -27,7 +27,7 @@ const transitionStyle = ({
   }
 }
 
-const SubjectNavItem = ({ section }) => (
+const SubjectNavItem = ({ section, history }) => (
   <View style={styles.subjectNavItem}>
     <RouteTransition
       holdDuration={variables.transitions.fadeRoute.duration}
@@ -40,19 +40,25 @@ const SubjectNavItem = ({ section }) => (
         },
       }}
     >
-      {({ animations, match, nextMatch }) => {
+      {({ animations, match, nextMatch, isTransitioning }) => {
         const isActive = sectionPath(section) === match.params.section
         const isActiveNext =
           nextMatch && sectionPath(section) === nextMatch.params.section
-        console.log(match.params, isActive)
         return [
           <Animated.View
             style={transitionStyle({ animations, isActive, isActiveNext })}
             key={0}
           >
-            <Link to={sectionPath(section)}>
+            <TouchableHighlight
+              onPress={() => {
+                if (!isTransitioning) {
+                  history.push(sectionPath(section))
+                }
+              }}
+              style={styles.button}
+            >
               <Text style={styles.text}>{section.title.toUpperCase()}</Text>
-            </Link>
+            </TouchableHighlight>
           </Animated.View>,
           <Animated.Text
             style={{

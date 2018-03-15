@@ -9,7 +9,7 @@ export default {
       duration: 400,
     },
     fadeRoute: {
-      duration: 2000,
+      duration: 400,
     },
   },
 }

@@ -43,8 +43,6 @@ export default function transitionProps({ propsToTransition }) {
               // remove the prop from the queue and post-trans props
               delete this.transProps[key]
               delete this.postTransProps[key]
-              // clear interrupted flag
-              delete this.interruptedProps[key]
               // update the prop
               this.setState({
                 propsToRender: {

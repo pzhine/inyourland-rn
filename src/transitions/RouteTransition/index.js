@@ -8,6 +8,7 @@ class RouteTransition extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      isTransitioning: false,
       animations: Object.keys(props.animations).reduce(
         (animMap, animKey) => ({
           ...animMap,
@@ -26,6 +27,17 @@ class RouteTransition extends React.Component {
   }
   componentWillReceiveProps(nextProps) {
     const { location, animations } = this.props
+    if (
+      nextProps.transitions.location.isActive &&
+      !this.state.isTransitioning
+    ) {
+      console.log('SET isTransitioning flag')
+      this.setState({ isTransitioning: true })
+      setTimeout(() => {
+        console.log('clear isTransitioning flag')
+        this.setState({ isTransitioning: false })
+      }, this.props.holdDuration)
+    }
     if (location.pathname !== nextProps.location.pathname) {
       Object.keys(animations).forEach(animKey => {
         const { method, range, duration, oneWay } = animations[animKey]
@@ -42,7 +54,7 @@ class RouteTransition extends React.Component {
   }
   render() {
     const { animations, transitions, children, location, match } = this.props
-    if (transitions.location.isActive && !transitions.location.isInterruption) {
+    if (transitions.location.isActive) {
       Object.keys(animations).forEach(animKey => {
         const { method, range, duration } = animations[animKey]
         method(this.state.animations[animKey], {
@@ -57,6 +69,7 @@ class RouteTransition extends React.Component {
       nextMatch:
         transitions.location.nextValue &&
         matchPath(transitions.location.nextValue.pathname, match.path),
+      isTransitioning: this.state.isTransitioning,
     }
     if (typeof children === 'function') {
       return <React.Fragment>{this.props.children(childProps)}</React.Fragment>
