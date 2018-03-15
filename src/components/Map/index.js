@@ -3,7 +3,7 @@ import { Animated } from 'react-native'
 import transitionProps from '../../hoc/transitionProps'
 import getImageUrl from '../../lib/scene/getImageUrl'
 import styles from './styles'
-import { variables, mixins } from '../../shared-styles'
+import { variables } from '../../shared-styles'
 import Hotspot from '../Hotspot'
 
 const MOVE_TRANSITION_DURATION = 1000
@@ -11,7 +11,7 @@ const MOVE_TRANSITION_DURATION = 1000
 class Map extends Component {
   state = {
     moveAnimation: new Animated.Value(0),
-    infoAnimation: new Animated.Value(2),
+    infoAnimation: new Animated.Value(1),
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.location !== nextProps.location) {
@@ -20,7 +20,7 @@ class Map extends Component {
       })
     }
     Animated.timing(this.state.infoAnimation, {
-      toValue: 2,
+      toValue: 1,
       duration: 400,
       useNativeDriver: true,
     }).start()
@@ -32,15 +32,15 @@ class Map extends Component {
     if (transitions.location.isActive) {
       nextLocation = transitions.location.nextValue
       console.log('TRANSITION', location.locationId, nextLocation.locationId)
-      Animated.timing(this.state.infoAnimation, {
-        toValue: 0,
-        duration: 300,
-        useNativeDriver: true,
-      }).start()
       Animated.spring(this.state.moveAnimation, {
         toValue: 1,
         friction: 10,
         delay: 400,
+        useNativeDriver: true,
+      }).start()
+      Animated.timing(this.state.infoAnimation, {
+        toValue: 0,
+        duration: 400,
         useNativeDriver: true,
       }).start()
     }
@@ -83,18 +83,6 @@ class Map extends Component {
           ripples={3}
         />
       </Animated.View>,
-      <Animated.Text
-        style={{
-          ...mixins.locationText,
-          ...styles.locationName,
-          opacity: this.state.infoAnimation.interpolate({
-            inputRange: [1, 2],
-            outputRange: [0, 1],
-          }),
-        }}
-      >
-        {location.name}
-      </Animated.Text>,
     ]
   }
 }

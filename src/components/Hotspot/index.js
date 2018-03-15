@@ -56,7 +56,7 @@ class Hotspot extends React.Component {
     super(props)
     this.state = {
       rippleAnimations: range(0, props.ripples - 1).map(
-        idx => new Animated.Value(0)
+        () => new Animated.Value(0)
       ),
     }
   }

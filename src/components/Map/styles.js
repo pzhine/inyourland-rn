@@ -1,17 +1,10 @@
 const styles = {
   map: {
     width: 3000,
-    height: 3000,
+    height: 2926,
     position: 'absolute',
     left: 0,
     top: 0,
-  },
-  locationName: {
-    position: 'absolute',
-    left: 0,
-    top: 650,
-    right: 0,
-    textAlign: 'center',
   },
   hotspot: {
     position: 'absolute',

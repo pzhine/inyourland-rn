@@ -6,6 +6,6 @@ import Hotspot from './'
 
 storiesOf('Hotspot', module).add('default', () => (
   <View style={{ ...storyStyles.container }}>
-    <Hotspot left={200} top={150} radius={35} color="#0069FF" ripples={3} />
+    <Hotspot left={0} top={0} radius={35} color="#0069FF" ripples={3} />
   </View>
 ))

@@ -7,10 +7,10 @@ import range from '../../lib/range'
 import absmod from '../../lib/absmod'
 import transitionProps from '../../hoc/transitionProps'
 import subjectImageStyles from '../SubjectImage/styles'
-import { mixins } from '../../shared-styles'
+import { mixins, variables } from '../../shared-styles'
 import subjects from '../../../content/subjects.json'
 
-const TRANSITION_DURATION = 400
+const TRANSITION_DURATION = variables.transitions.currentIndex.duration
 const SHADOW_SCALE = 1.4
 
 const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
@@ -49,7 +49,7 @@ class Carousel extends Component {
       this.elem.setNativeProps({ style: { transform: [{ translateX: 0 }] } })
       Animated.timing(this.state.infoAnimation, {
         toValue: 1,
-        duration: 300,
+        duration: TRANSITION_DURATION,
         useNativeDriver: true,
       }).start()
     }
@@ -71,7 +71,7 @@ class Carousel extends Component {
       }).start()
       Animated.timing(this.state.infoAnimation, {
         toValue: 0,
-        duration: 300,
+        duration: TRANSITION_DURATION,
         useNativeDriver: true,
       }).start()
     }
