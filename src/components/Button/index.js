@@ -46,7 +46,7 @@ class Button extends React.Component {
               ...styles.highlight,
               opacity: this.state.highlightAnimation.interpolate({
                 inputRange: [0, 1],
-                outputRange: [0, 0.7],
+                outputRange: [0, 0.5],
               }),
             }}
           />

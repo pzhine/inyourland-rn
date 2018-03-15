@@ -23,6 +23,18 @@ const styles = {
     top: 350,
     alignSelf: 'center',
   },
+  backButton: {
+    ...mixins.centerBoth,
+    position: 'absolute',
+    left: 30,
+    top: 25,
+    width: 60,
+    height: 60,
+  },
+  backArrow: {
+    width: 32,
+    height: 36,
+  },
 }
 
 export default styles
