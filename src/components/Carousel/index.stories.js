@@ -24,14 +24,14 @@ storiesOf('Carousel', module)
       {story()}
     </View>
   ))
-  .add('default', () => <Carousel scenes={scenes} currentIndex={0} />)
+  .add('default', () => <Carousel scenes={scenes} currentSceneIndex={0} />)
   .add('autoPlay forward', () => (
-    <AutoPlay interval={1}>
+    <AutoPlay interval={1} propToIncrement="currentSceneIndex">
       <Carousel scenes={scenes} />
     </AutoPlay>
   ))
   .add('autoPlay reverse', () => (
-    <AutoPlay interval={-1}>
+    <AutoPlay interval={-1} propToIncrement="currentSceneIndex">
       <Carousel scenes={scenes} />
     </AutoPlay>
   ))

@@ -2,47 +2,22 @@ import React from 'react'
 import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import Map from './'
-import LocationName from '../LocationName'
-import Carousel from '../Carousel'
 import AutoPlay from '../../../storybook/AutoPlay'
 import scenes from '../../../content/scenes/stream0.json'
-import locations from '../../../content/locations.json'
 import storyStyles from '../../../storybook/styles'
-import absmod from '../../lib/absmod'
-
-const getLocation = locationId =>
-  locations.find(loc => loc.locationId === locationId)
+import SceneTransition from '../../transitions/SceneTransition'
 
 storiesOf('Map', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
-  .add('default', () => <Map location={getLocation(scenes[0].locationId)} />)
-  .add('autoPlay', () => (
-    <AutoPlay interval={1}>
-      {sceneIndex => (
-        <Map
-          location={getLocation(
-            scenes[absmod(sceneIndex, scenes.length)].locationId
-          )}
-        />
-      )}
-    </AutoPlay>
+  .add('default', () => (
+    <SceneTransition scenes={scenes} currentSceneIndex={0}>
+      <Map />
+    </SceneTransition>
   ))
-  .add('autoPlay with Carousel and LocationName', () => (
-    <AutoPlay interval={1}>
-      {sceneIndex => [
-        <Map
-          key={0}
-          location={getLocation(
-            scenes[absmod(sceneIndex, scenes.length)].locationId
-          )}
-        />,
-        <Carousel scenes={scenes} currentIndex={sceneIndex} key={1} />,
-        <LocationName
-          key={2}
-          location={getLocation(
-            scenes[absmod(sceneIndex, scenes.length)].locationId
-          )}
-        />,
-      ]}
+  .add('autoPlay', () => (
+    <AutoPlay interval={1} propToIncrement="currentSceneIndex">
+      <SceneTransition scenes={scenes}>
+        <Map />
+      </SceneTransition>
     </AutoPlay>
   ))

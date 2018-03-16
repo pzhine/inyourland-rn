@@ -1,54 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Animated } from 'react-native'
-import transitionProps from '../../hoc/transitionProps'
-import { variables, mixins } from '../../shared-styles'
+import { mixins } from '../../shared-styles'
+import getLocation from '../../lib/scene/getLocation'
 import styles from './styles'
 
-const TRANSITION_DURATION = variables.transitions.currentIndex.duration
-
-class LocationName extends Component {
-  state = {
-    infoAnimation: new Animated.Value(1),
-  }
-  componentWillReceiveProps(nextProps) {
-    const { transitions } = nextProps
-    if (transitions.location.becameActiveSince(this.props.transitions)) {
-      Animated.timing(this.state.infoAnimation, {
-        toValue: 0,
-        duration: TRANSITION_DURATION,
-        useNativeDriver: true,
-      }).start()
-    }
-    if (this.props.location !== nextProps.location) {
-      Animated.timing(this.state.infoAnimation, {
-        toValue: 1,
-        duration: TRANSITION_DURATION,
-        delay: TRANSITION_DURATION / 4,
-        useNativeDriver: true,
-      }).start()
-    }
-  }
-  render() {
-    const { location } = this.props
-    return (
-      <Animated.Text
-        style={{
-          ...mixins.locationText,
-          ...styles.locationName,
-          opacity: this.state.infoAnimation,
-        }}
-      >
-        {location.name}
-      </Animated.Text>
-    )
-  }
+const LocationName = ({ locationId, animations }) => {
+  const location = getLocation(locationId)
+  return (
+    <Animated.Text
+      style={{
+        ...mixins.locationText,
+        ...styles.locationName,
+        opacity: animations.locationInfo,
+      }}
+    >
+      {location.name}
+    </Animated.Text>
+  )
 }
 
-export default transitionProps({
-  propsToTransition: () => ({
-    location: {
-      duration: TRANSITION_DURATION,
-      compare: ({ pre, post }) => pre === post,
-    },
-  }),
-})(LocationName)
+export default LocationName

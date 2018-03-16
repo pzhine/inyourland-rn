@@ -5,8 +5,8 @@ export default {
     hotspot: '#0069FF',
   },
   transitions: {
-    currentIndex: {
-      duration: 400,
+    locationId: {
+      hold: 1000,
     },
     fadeRoute: {
       duration: 400,

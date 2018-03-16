@@ -14,11 +14,16 @@ export default function transitionProps({ propsToTransition }) {
         this.postTransProps = {}
 
         this.state = {
-          propsToRender: props,
+          propsToRender: { ...Wrapped.defaultProps, ...props },
         }
       }
       transitionProps({ pre, post }) {
-        const toTransition = propsToTransition({ pre, post, ...this.props })
+        const toTransition = propsToTransition({
+          ...Wrapped.defaultProps,
+          pre,
+          post,
+          ...this.props,
+        })
         const normalProps = {}
         Object.keys(pre).forEach(key => {
           // only transition props that have changed

@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, Animated } from 'react-native'
 import range from '../../lib/range'
+import getLocation from '../../lib/scene/getLocation'
+import styles from './styles'
 
 const RIPPLE_DURATION = 3000
 const RIPPLE_STAGGER = 1000
 
-const styles = ({ left, top, radius }) => ({
+const dotStyles = ({ left, top, radius }) => ({
   position: 'absolute',
   left: left - radius / 2,
   top: top - radius / 2,
@@ -17,7 +19,7 @@ const styles = ({ left, top, radius }) => ({
 const Dot = ({ left, top, radius, color }) => (
   <View
     style={{
-      ...styles({ left, top, radius }),
+      ...dotStyles({ left, top, radius }),
       backgroundColor: color,
     }}
   />
@@ -26,7 +28,7 @@ const Dot = ({ left, top, radius, color }) => (
 const Ripple = ({ left, top, radius, color, scale, opacity }) => (
   <Animated.View
     style={{
-      ...styles({ left, top, radius }),
+      ...dotStyles({ left, top, radius }),
       borderWidth: 2,
       borderColor: color,
       opacity,
@@ -79,14 +81,24 @@ class Hotspot extends React.Component {
     }, RIPPLE_DURATION + (isFirst ? RIPPLE_STAGGER * index : 0))
   }
   render() {
-    return [
-      <Dot {...this.props} key={0} />,
-      <Ripples
-        {...this.props}
-        animations={this.state.rippleAnimations}
-        key={1}
-      />,
-    ]
+    const { locationId, animations } = this.props
+    const location = getLocation(locationId)
+    const coords = { left: location.pin[0], top: location.pin[1] }
+    return (
+      <Animated.View
+        style={{
+          ...styles.hotspot,
+          opacity: animations.locationInfo,
+        }}
+      >
+        <Dot {...this.props} {...coords} />
+        <Ripples
+          {...this.props}
+          {...coords}
+          animations={this.state.rippleAnimations}
+        />
+      </Animated.View>
+    )
   }
 }
 

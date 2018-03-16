@@ -23,9 +23,13 @@ class AutoPlay extends React.Component {
       )
     }
     return React.cloneElement(React.Children.only(this.props.children), {
-      currentIndex: this.state.currentIndex,
+      [this.props.propToIncrement]: this.state.currentIndex,
     })
   }
+}
+
+AutoPlay.defaultProperties = {
+  propToIncrement: 'currentIndex',
 }
 
 export default AutoPlay

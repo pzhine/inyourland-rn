@@ -7,10 +7,10 @@ import range from '../../lib/range'
 import absmod from '../../lib/absmod'
 import transitionProps from '../../hoc/transitionProps'
 import subjectImageStyles from '../SubjectImage/styles'
-import { mixins, variables } from '../../shared-styles'
+import { mixins } from '../../shared-styles'
 import subjects from '../../../content/subjects.json'
 
-const TRANSITION_DURATION = variables.transitions.currentIndex.duration
+const TRANSITION_DURATION = 400
 const SHADOW_SCALE = 1.4
 
 const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
@@ -44,12 +44,13 @@ class Carousel extends Component {
     console.log('INDEX_CHANGED', index)
   }
   componentWillReceiveProps(nextProps) {
-    const { currentIndex, transitions } = nextProps
+    const { currentSceneIndex, transitions } = nextProps
     // calculate transition properties
-    if (transitions.currentIndex.becameActiveSince(this.props.transitions)) {
-      const { nextValue } = transitions.currentIndex
-      const slideCoefficient = nextValue > currentIndex ? -1 : 1
-      console.log('TRANSITION', currentIndex, nextValue)
+    if (
+      transitions.currentSceneIndex.becameActiveSince(this.props.transitions)
+    ) {
+      const { nextValue } = transitions.currentSceneIndex
+      const slideCoefficient = nextValue > currentSceneIndex ? -1 : 1
       Animated.timing(this.state.slideAnimation, {
         toValue:
           (styles.slide.marginLeft + subjectImageStyles.image.width + 5) *
@@ -63,7 +64,7 @@ class Carousel extends Component {
         useNativeDriver: true,
       }).start()
     }
-    if (this.props.currentIndex !== nextProps.currentIndex) {
+    if (this.props.currentSceneIndex !== nextProps.currentSceneIndex) {
       this.setState({ slideAnimation: new Animated.Value(0) })
       this.elem.setNativeProps({ style: { transform: [{ translateX: 0 }] } })
       Animated.timing(this.state.infoAnimation, {
@@ -74,9 +75,9 @@ class Carousel extends Component {
     }
   }
   render() {
-    const { activeIndex, currentIndex, scenes } = this.props
+    const { activeIndex, currentSceneIndex, scenes } = this.props
 
-    const slideRange = range(currentIndex - 3, currentIndex + 3)
+    const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =
       (subjectImageStyles.image.width +
         subjectImageStyles.image.marginLeft * 2) *
@@ -127,7 +128,7 @@ class Carousel extends Component {
             .find(
               s =>
                 s.subjectId ===
-                scenes[absmod(currentIndex, scenes.length)].subjectId
+                scenes[absmod(currentSceneIndex, scenes.length)].subjectId
             )
             .name.toUpperCase()}
         </Animated.Text>
@@ -139,7 +140,7 @@ class Carousel extends Component {
 // export default Carousel
 export default transitionProps({
   propsToTransition: () => ({
-    currentIndex: {
+    currentSceneIndex: {
       duration: TRANSITION_DURATION,
       compare: ({ pre, post }) => pre === post,
     },

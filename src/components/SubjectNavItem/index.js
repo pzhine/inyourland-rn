@@ -1,31 +1,13 @@
 import React from 'react'
 import { Animated } from 'react-native'
 import { withRouter } from 'react-router-native'
-import RouteTransition from '../../transitions/RouteTransition'
+import RouteTransition, {
+  transitionStyle,
+} from '../../transitions/RouteTransition'
 import Button from '../Button'
 import styles from './styles'
 import { variables } from '../../shared-styles'
 import bioSections from '../../../content/bioSections.json'
-
-const transitionStyle = ({
-  animations,
-  isActive,
-  isActiveNext,
-  isVisibleOnActive,
-}) => {
-  if (!isActive && !isActiveNext) {
-    return { opacity: isVisibleOnActive ? 0 : 1 }
-  }
-  return {
-    opacity: animations.fade.interpolate({
-      inputRange: [0, 1],
-      outputRange:
-        (isActive && isVisibleOnActive) || (isActiveNext && !isVisibleOnActive)
-          ? [0, 1]
-          : [1, 0],
-    }),
-  }
-}
 
 const SubjectNavItem = ({ section, history }) => (
   <RouteTransition
@@ -40,6 +22,7 @@ const SubjectNavItem = ({ section, history }) => (
     }}
   >
     {({ animations, match, nextMatch, isTransitioning }) => {
+      console.log('subjectnavitem.render', match, nextMatch)
       const isActive = section.sectionId === match.params.section
       const isActiveNext =
         nextMatch && section.sectionId === nextMatch.params.section
