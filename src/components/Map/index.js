@@ -13,25 +13,21 @@ class Map extends Component {
     moveAnimation: new Animated.Value(0),
     infoAnimation: new Animated.Value(1),
   }
-  componentWillReceiveProps(nextProps) {
-    if (this.props.location !== nextProps.location) {
-      this.setState({
-        moveAnimation: new Animated.Value(0),
-      })
-    }
-    Animated.timing(this.state.infoAnimation, {
-      toValue: 1,
-      duration: 400,
-      useNativeDriver: true,
-    }).start()
+  constructor(props) {
+    super(props)
+    this.nextLocation = props.location
   }
-  render() {
-    const { location, transitions } = this.props
-    let nextLocation = location
+  componentWillReceiveProps(nextProps) {
+    const { location, transitions } = nextProps
+    this.nextLocation = location
     // calculate transition properties
-    if (transitions.location.isActive) {
-      nextLocation = transitions.location.nextValue
-      console.log('TRANSITION', location.locationId, nextLocation.locationId)
+    if (transitions.location.becameActiveSince(this.props.transitions)) {
+      this.nextLocation = transitions.location.nextValue
+      console.log(
+        'TRANSITION',
+        location.locationId,
+        this.nextLocation.locationId
+      )
       Animated.spring(this.state.moveAnimation, {
         toValue: 1,
         friction: 10,
@@ -44,46 +40,69 @@ class Map extends Component {
         useNativeDriver: true,
       }).start()
     }
-    return [
-      <Animated.Image
-        source={{ uri: getImageUrl('nyc', { map: true }) }}
-        style={{
-          ...styles.map,
-          transform: [
-            { scale: location.scale },
-            {
-              translateX: this.state.moveAnimation.interpolate({
-                inputRange: [0, 1],
-                outputRange: [location.origin[0], nextLocation.origin[0]],
-              }),
-            },
-            {
-              translateY: this.state.moveAnimation.interpolate({
-                inputRange: [0, 1],
-                outputRange: [location.origin[1], nextLocation.origin[1]],
-              }),
-            },
-          ],
-        }}
-      />,
-      <Animated.View
-        style={{
-          ...styles.hotspot,
-          opacity: this.state.infoAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, 1],
-          }),
-        }}
-      >
-        <Hotspot
-          left={location.pin[0]}
-          top={location.pin[1]}
-          color={variables.colors.hotspot}
-          radius={24}
-          ripples={3}
+    if (this.props.location !== nextProps.location) {
+      this.setState({
+        moveAnimation: new Animated.Value(0),
+      })
+    }
+    if (transitions.location.becameInactiveSince(this.props.transitions)) {
+      Animated.timing(this.state.infoAnimation, {
+        toValue: 1,
+        duration: 400,
+        useNativeDriver: true,
+      }).start()
+    }
+  }
+  render() {
+    const { location } = this.props
+    return (
+      <React.Fragment>
+        <Animated.Image
+          source={{ uri: getImageUrl('nyc', { map: true }) }}
+          style={{
+            ...styles.map,
+            transform: [
+              { scale: location.scale },
+              {
+                translateX: this.state.moveAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [
+                    location.origin[0],
+                    this.nextLocation.origin[0],
+                  ],
+                }),
+              },
+              {
+                translateY: this.state.moveAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [
+                    location.origin[1],
+                    this.nextLocation.origin[1],
+                  ],
+                }),
+              },
+            ],
+          }}
         />
-      </Animated.View>,
-    ]
+        <Animated.View
+          style={{
+            ...styles.hotspot,
+            opacity: this.state.infoAnimation.interpolate({
+              inputRange: [0, 1],
+              outputRange: [0, 1],
+            }),
+          }}
+        >
+          <Hotspot
+            left={location.pin[0]}
+            top={location.pin[1]}
+            color={variables.colors.hotspot}
+            radius={24}
+            ripples={3}
+          />
+        </Animated.View>,
+      </React.Fragment>
+    )
   }
 }
 

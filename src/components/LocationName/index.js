@@ -11,6 +11,14 @@ class LocationName extends Component {
     infoAnimation: new Animated.Value(1),
   }
   componentWillReceiveProps(nextProps) {
+    const { transitions } = nextProps
+    if (transitions.location.becameActiveSince(this.props.transitions)) {
+      Animated.timing(this.state.infoAnimation, {
+        toValue: 0,
+        duration: TRANSITION_DURATION,
+        useNativeDriver: true,
+      }).start()
+    }
     if (this.props.location !== nextProps.location) {
       Animated.timing(this.state.infoAnimation, {
         toValue: 1,
@@ -21,14 +29,7 @@ class LocationName extends Component {
     }
   }
   render() {
-    const { transitions, location } = this.props
-    if (transitions.location.isActive) {
-      Animated.timing(this.state.infoAnimation, {
-        toValue: 0,
-        duration: TRANSITION_DURATION,
-        useNativeDriver: true,
-      }).start()
-    }
+    const { location } = this.props
     return (
       <Animated.Text
         style={{

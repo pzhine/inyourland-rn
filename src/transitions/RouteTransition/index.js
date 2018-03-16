@@ -28,6 +28,19 @@ class RouteTransition extends React.Component {
   componentWillReceiveProps(nextProps) {
     const { location, animations } = this.props
     if (
+      nextProps.transitions.location.becameActiveSince(
+        this.props.transitions.location
+      )
+    ) {
+      Object.keys(animations).forEach(animKey => {
+        const { method, range, duration } = animations[animKey]
+        method(this.state.animations[animKey], {
+          duration: duration / 2,
+          toValue: range[0],
+        }).start()
+      })
+    }
+    if (
       nextProps.transitions.location.isActive &&
       !this.state.isTransitioning
     ) {
@@ -51,16 +64,7 @@ class RouteTransition extends React.Component {
     }
   }
   render() {
-    const { animations, transitions, children, location, match } = this.props
-    if (transitions.location.isActive) {
-      Object.keys(animations).forEach(animKey => {
-        const { method, range, duration } = animations[animKey]
-        method(this.state.animations[animKey], {
-          duration: duration / 2,
-          toValue: range[0],
-        }).start()
-      })
-    }
+    const { transitions, children, location, match } = this.props
     const childProps = {
       animations: this.state.animations,
       match: matchPath(location.pathname, match.path),

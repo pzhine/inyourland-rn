@@ -80,8 +80,12 @@ class Hotspot extends React.Component {
   }
   render() {
     return [
-      <Dot {...this.props} />,
-      <Ripples {...this.props} animations={this.state.rippleAnimations} />,
+      <Dot {...this.props} key={0} />,
+      <Ripples
+        {...this.props}
+        animations={this.state.rippleAnimations}
+        key={1}
+      />,
     ]
   }
 }

@@ -31,12 +31,14 @@ storiesOf('Map', module)
     <AutoPlay interval={1}>
       {sceneIndex => [
         <Map
+          key={0}
           location={getLocation(
             scenes[absmod(sceneIndex, scenes.length)].locationId
           )}
         />,
-        <Carousel scenes={scenes} currentIndex={sceneIndex} />,
+        <Carousel scenes={scenes} currentIndex={sceneIndex} key={1} />,
         <LocationName
+          key={2}
           location={getLocation(
             scenes[absmod(sceneIndex, scenes.length)].locationId
           )}

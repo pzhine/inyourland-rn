@@ -75,8 +75,12 @@ export default function transitionProps({ propsToTransition }) {
               (t, k) => ({
                 ...t,
                 [k]: {
-                  isActive: Boolean(this.transProps[k]),
+                  isActive: !!this.transProps[k],
                   nextValue: this.postTransProps[k],
+                  becameActiveSince: prevTransitions =>
+                    !!this.transProps[k] && !prevTransitions[k].isActive,
+                  becameInactiveSince: prevTransitions =>
+                    !this.transProps[k] && prevTransitions[k].isActive,
                 },
               }),
               {}
