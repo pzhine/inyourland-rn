@@ -10,7 +10,7 @@ class AutoPlay extends React.Component {
   componentDidMount() {
     setInterval(() => {
       const nextIndex = this.state.currentIndex + this.props.interval
-      console.log('AUTOPLAY', nextIndex)
+      // console.log('AUTOPLAY', nextIndex)
       this.setState({ currentIndex: nextIndex })
     }, 3000)
   }

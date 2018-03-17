@@ -7,6 +7,8 @@ import AutoPlay from '../../../storybook/AutoPlay'
 import storyStyles from '../../../storybook/styles'
 import getImageUrl from '../../lib/scene/getImageUrl'
 
+const route = { animations: {}, screen: 'navigator', subjectIndex: 0 }
+
 storiesOf('Carousel', module)
   .addDecorator(story => (
     <View style={storyStyles.container}>
@@ -24,14 +26,16 @@ storiesOf('Carousel', module)
       {story()}
     </View>
   ))
-  .add('default', () => <Carousel scenes={scenes} currentSceneIndex={0} />)
+  .add('default', () => (
+    <Carousel scenes={scenes} currentSceneIndex={0} route={route} />
+  ))
   .add('autoPlay forward', () => (
     <AutoPlay interval={1} propToIncrement="currentSceneIndex">
-      <Carousel scenes={scenes} />
+      <Carousel scenes={scenes} route={route} />
     </AutoPlay>
   ))
   .add('autoPlay reverse', () => (
     <AutoPlay interval={-1} propToIncrement="currentSceneIndex">
-      <Carousel scenes={scenes} />
+      <Carousel scenes={scenes} route={route} />
     </AutoPlay>
   ))

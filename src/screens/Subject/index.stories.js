@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react-native'
 import storyStyles from '../../../storybook/styles'
 import Subject from './'
 
-storiesOf('@SCREENS/Subject', module)
+storiesOf('screens/Subject', module)
   .addDecorator(story => (
     <NativeRouter>
       <View style={storyStyles.container}>

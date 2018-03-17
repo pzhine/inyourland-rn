@@ -1,9 +1,7 @@
 import React from 'react'
 import { Animated } from 'react-native'
 import { withRouter } from 'react-router-native'
-import RouteTransition, {
-  transitionStyle,
-} from '../../transitions/RouteTransition'
+import RouteTransition from '../../transitions/RouteTransition'
 import Button from '../Button'
 import styles from './styles'
 import { variables } from '../../shared-styles'
@@ -13,19 +11,23 @@ const SubjectNavItem = ({ section, history }) => (
   <RouteTransition
     holdDuration={variables.transitions.fadeRoute.duration}
     animations={{
-      fade: {
+      showActive: {
         range: [0, 1],
         method: Animated.timing,
         duration: variables.transitions.fadeRoute.duration,
-        oneWay: true,
+        isIn: nextMatch => nextMatch.params.section === section.sectionId,
+      },
+      showInactive: {
+        range: [0, 1],
+        method: Animated.timing,
+        duration: variables.transitions.fadeRoute.duration,
+        isIn: nextMatch => nextMatch.params.section !== section.sectionId,
       },
     }}
   >
     {({ animations, match, nextMatch, isTransitioning }) => {
       console.log('subjectnavitem.render', match, nextMatch)
       const isActive = section.sectionId === match.params.section
-      const isActiveNext =
-        nextMatch && section.sectionId === nextMatch.params.section
       const sectionTitle = bioSections.find(
         s => s.sectionId === section.sectionId
       ).title
@@ -38,7 +40,7 @@ const SubjectNavItem = ({ section, history }) => (
           <Animated.Text
             style={{
               ...styles.text,
-              ...transitionStyle({ animations, isActive, isActiveNext }),
+              opacity: animations.showInactive,
             }}
           >
             {sectionTitle.toUpperCase()}
@@ -47,12 +49,7 @@ const SubjectNavItem = ({ section, history }) => (
             style={{
               ...styles.text,
               ...styles.active,
-              ...transitionStyle({
-                animations,
-                isActive,
-                isActiveNext,
-                isVisibleOnActive: true,
-              }),
+              opacity: animations.showActive,
             }}
           >
             {sectionTitle.toUpperCase()}

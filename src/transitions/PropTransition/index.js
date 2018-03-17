@@ -4,55 +4,59 @@ import transitionProps from '../../hoc/transitionProps'
 
 class PropTransition extends React.Component {
   constructor(props) {
+    const { animations, propToWatch } = props
     super(props)
+
     this.state = {
       isTransitioning: false,
-      animations: Object.keys(props.animations).reduce(
+      animations: Object.keys(animations).reduce(
         (animMap, animKey) => ({
           ...animMap,
-          [animKey]: new Animated.Value(props.animations[animKey].range[1]),
+          [animKey]: new Animated.Value(
+            animations[animKey].range[
+              !animations[animKey].isIn ||
+              animations[animKey].isIn(props[propToWatch])
+                ? 1
+                : 0
+            ]
+          ),
         }),
         {}
       ),
     }
   }
-  resetAnimation(animKey) {
+  resetAnimation({ animKey, nextValue }) {
+    // console.log('reset', nextValue)
     const animationsInState = { ...this.state.animations }
+    const animation = this.props.animations[animKey]
     animationsInState[animKey] = new Animated.Value(
-      this.props.animations[animKey].range[1]
+      animation.range[animation.isIn(nextValue) ? 1 : 0]
     )
     this.setState({ animations: animationsInState })
   }
   componentWillReceiveProps(nextProps) {
     const { animations, propToWatch } = this.props
-    if (
-      nextProps.transitions[propToWatch].becameActiveSince(
-        this.props.transitions
-      )
-    ) {
+    const propTransition = nextProps.transitions[propToWatch]
+    if (propTransition.becameActiveSince(this.props.transitions)) {
       Object.keys(animations).forEach(animKey => {
         const {
           method,
           range,
           duration,
-          oneWay,
-          outDelay,
           inDelay,
+          isIn,
           ...options
         } = animations[animKey]
         method(this.state.animations[animKey], {
           duration: duration / 2,
-          toValue: range[0],
-          delay: outDelay || 0,
+          toValue: range[isIn && isIn(propTransition.nextValue) ? 1 : 0],
+          delay: inDelay || 0,
           useNativeDriver: true,
           ...options,
         }).start()
       })
     }
-    if (
-      nextProps.transitions[propToWatch].isActive &&
-      !this.state.isTransitioning
-    ) {
+    if (propTransition.isActive && !this.state.isTransitioning) {
       this.setState({ isTransitioning: true })
       setTimeout(() => {
         this.setState({ isTransitioning: false })
@@ -69,21 +73,20 @@ class PropTransition extends React.Component {
           method,
           range,
           duration,
-          oneWay,
           outDelay,
-          inDelay,
+          isIn,
           ...options
         } = animations[animKey]
-        if (!oneWay) {
+        if (!isIn) {
           method(this.state.animations[animKey], {
             duration: duration / 2,
             toValue: range[1],
-            delay: inDelay || 0,
+            delay: outDelay || 0,
             useNativeDriver: true,
             ...options,
           }).start()
         } else {
-          this.resetAnimation(animKey)
+          this.resetAnimation({ animKey, nextValue: nextProps[propToWatch] })
         }
       })
     }

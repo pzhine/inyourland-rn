@@ -24,9 +24,27 @@ export const transitionStyle = ({
 
 const RouteTransition = ({ children, ...props }) => {
   const { match } = props
+  const animations = Object.keys(props.animations).reduce(
+    (map, animKey) => ({
+      ...map,
+      [animKey]: {
+        ...props.animations[animKey],
+        isIn:
+          props.animations[animKey].isIn &&
+          (nextValue => {
+            console.log('isIn', nextValue.pathname, match.path)
+            return props.animations[animKey].isIn(
+              matchPath(nextValue.pathname, match.path)
+            )
+          }),
+      },
+    }),
+    {}
+  )
   return (
     <PropTransition
       {...props}
+      animations={animations}
       propToWatch="location"
       propsAreEqual={({ pre, post }) => pre.pathname === post.pathname}
       childProps={({ parentProps, childProps }) => {

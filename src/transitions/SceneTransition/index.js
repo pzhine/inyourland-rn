@@ -15,7 +15,7 @@ const SceneTransition = ({ children, scenes, currentSceneIndex }) => {
           method: Animated.spring,
           range: [0, 1],
           friction: 10,
-          outDelay: 400,
+          inDelay: 400,
           oneWay: true,
         },
         locationInfo: {

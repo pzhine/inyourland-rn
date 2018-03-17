@@ -13,8 +13,17 @@ import subjects from '../../../content/subjects.json'
 const TRANSITION_DURATION = 400
 const SHADOW_SCALE = 1.4
 
-const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
-  slideRange.map(index => (
+const Slides = ({
+  slideRange,
+  scenes,
+  activeSubjectIndex,
+  scale,
+  blur,
+  activeAnimation,
+}) => {
+  const middleIndex = Math.ceil(slideRange / 2)
+  const isSubjectMode = !!activeSubjectIndex
+  return slideRange.map(index => (
     <View
       style={{
         ...styles.slide,
@@ -22,7 +31,11 @@ const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
       }}
       key={index}
     >
-      <SubjectImage isActive={absmod(index, scenes.length) === activeIndex}>
+      <SubjectImage
+        isActive={isSubjectMode && index === middleIndex}
+        isVisible={!isSubjectMode || index === middleIndex}
+        activeAnimation={activeAnimation}
+      >
         <Image
           source={{
             uri: getImageUrl(
@@ -34,6 +47,7 @@ const Slides = ({ slideRange, scenes, activeIndex, scale, blur }) =>
       </SubjectImage>
     </View>
   ))
+}
 
 class Carousel extends Component {
   state = {
@@ -75,7 +89,7 @@ class Carousel extends Component {
     }
   }
   render() {
-    const { activeIndex, currentSceneIndex, scenes } = this.props
+    const { currentSceneIndex, scenes, route } = this.props
 
     const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =
@@ -102,7 +116,8 @@ class Carousel extends Component {
             <Slides
               slideRange={slideRange}
               scenes={scenes}
-              activeIndex={activeIndex}
+              activeSubjectIndex={route.subjectIndex}
+              activeAnimation={route.animations.navigatorToSubject}
               scale={SHADOW_SCALE}
               blur
             />
@@ -110,7 +125,8 @@ class Carousel extends Component {
           <Slides
             slideRange={slideRange}
             scenes={scenes}
-            activeIndex={activeIndex}
+            activeSubjectIndex={route.subjectIndex}
+            activeAnimation={route.animations.navigatorToSubject}
             scale={1}
           />
         </Animated.View>

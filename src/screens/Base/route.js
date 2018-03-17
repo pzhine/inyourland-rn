@@ -6,13 +6,13 @@ import Base from './'
 
 const BaseRoute = props => (
   <Route
-    path="/:one/:two"
+    path="/:screen?/:subjectIndex?/:sectionIndex?"
     exact
     render={() => (
       <RouteTransition
         holdDuration={500}
         animations={{
-          rootRoute: {
+          navigatorToSubject: {
             range: [0, 1],
             method: Animated.timing,
             duration: 500,
@@ -20,7 +20,14 @@ const BaseRoute = props => (
         }}
       >
         {({ animations, match }) => (
-          <Base {...props} routeAnimations={animations} routeMatch={match} />
+          <Base
+            {...props}
+            route={{
+              animations,
+              ...match.params,
+              screen: match.params.screen || 'navigator',
+            }}
+          />
         )}
       </RouteTransition>
     )}
