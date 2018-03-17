@@ -21,8 +21,8 @@ const Slides = ({
   activeAnimation,
   inactiveAnimation,
 }) => {
-  const middleIndex = Math.ceil(slideRange / 2)
-  return slideRange.map(index => (
+  const middleIndex = Math.floor(slideRange.length / 2)
+  return slideRange.map((index, count) => (
     <View
       style={{
         ...styles.slide,
@@ -30,7 +30,27 @@ const Slides = ({
       }}
       key={index}
     >
-      <SubjectImage activeAnimation={index === middleIndex && activeAnimation}>
+      <SubjectImage
+        activeAnimation={count === middleIndex && activeAnimation}
+        hideOnActive={blur}
+      >
+        {!blur &&
+          count === middleIndex && (
+            <Animated.Image
+              source={{
+                uri: getImageUrl(
+                  scenes[absmod(index, scenes.length)].thumbFilename,
+                  { blur: true }
+                ),
+              }}
+              style={{
+                opacity: activeAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, 0.7],
+                }),
+              }}
+            />
+          )}
         <Animated.Image
           source={{
             uri: getImageUrl(
@@ -38,7 +58,7 @@ const Slides = ({
               { blur }
             ),
           }}
-          style={{ opacity: inactiveAnimation }}
+          style={{ opacity: count === middleIndex ? 1 : inactiveAnimation }}
         />
       </SubjectImage>
     </View>
@@ -85,7 +105,7 @@ class Carousel extends Component {
     }
   }
   render() {
-    const { currentSceneIndex, scenes, routeAnimations } = this.props
+    const { currentSceneIndex, scenes, animations } = this.props
 
     const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =
@@ -94,11 +114,11 @@ class Carousel extends Component {
       slideRange.length *
       SHADOW_SCALE
     return (
-      <React.Fragment>
+      <View style={styles.carousel}>
         <Animated.View
           ref={elem => (this.elem = elem)}
           style={{
-            ...styles.carousel,
+            ...styles.slidesContainer,
             alignItems: 'center',
             width: stripWidth,
             transform: [
@@ -112,8 +132,8 @@ class Carousel extends Component {
             <Slides
               slideRange={slideRange}
               scenes={scenes}
-              activeAnimation={routeAnimations.showActive}
-              inactiveAnimation={routeAnimations.hideInactive}
+              activeAnimation={animations.activeAnimation}
+              inactiveAnimation={animations.inactiveAnimation}
               scale={SHADOW_SCALE}
               blur
             />
@@ -121,8 +141,8 @@ class Carousel extends Component {
           <Slides
             slideRange={slideRange}
             scenes={scenes}
-            activeAnimation={routeAnimations.showActive}
-            inactiveAnimation={routeAnimations.hideInactive}
+            activeAnimation={animations.activeAnimation}
+            inactiveAnimation={animations.inactiveAnimation}
             scale={1}
           />
         </Animated.View>
@@ -130,10 +150,30 @@ class Carousel extends Component {
           style={{
             ...mixins.titleText,
             ...styles.title,
-            opacity: this.state.infoAnimation.interpolate({
-              inputRange: [0, 1],
-              outputRange: [0, 1],
-            }),
+            opacity: Animated.add(
+              this.state.infoAnimation.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, 1],
+              }),
+              animations.activeFollowAnimation.interpolate({
+                inputRange: [0, 0.3, 0.7, 1],
+                outputRange: [0, -1, -1, 0],
+              })
+            ),
+            transform: [
+              {
+                translateY: animations.activeFollowAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, -350],
+                }),
+              },
+              {
+                scale: animations.activeFollowAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [1, 0.8],
+                }),
+              },
+            ],
           }}
         >
           {subjects
@@ -144,7 +184,7 @@ class Carousel extends Component {
             )
             .name.toUpperCase()}
         </Animated.Text>
-      </React.Fragment>
+      </View>
     )
   }
 }

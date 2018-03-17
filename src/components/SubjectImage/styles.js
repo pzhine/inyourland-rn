@@ -12,9 +12,7 @@ const styles = {
     ...dims,
     position: 'absolute',
     zIndex: 1,
-    opacity: 0.7,
-    padding: 20,
-    transform: [{ scaleX: 1.15 }, { scaleY: 1.15 }],
+    transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }],
     borderRadius: 10,
   },
   image: {

@@ -33,6 +33,9 @@ storiesOf('components/SubjectImage', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('default', () => (
     <SubjectImage>
+      <Animated.Image
+        source={{ uri: 'http://www.placecage.com/300/200.png' }}
+      />
       <Image source={{ uri: 'http://www.fillmurray.com/300/200.png' }} />
     </SubjectImage>
   ))
@@ -40,6 +43,9 @@ storiesOf('components/SubjectImage', module)
     <AutoPlay propToIncrement="toggle" interval={1}>
       <Transition>
         <SubjectImage>
+          <Animated.Image
+            source={{ uri: 'http://www.placecage.com/300/200.png' }}
+          />
           <Image source={{ uri: 'http://www.fillmurray.com/300/200.png' }} />
         </SubjectImage>
       </Transition>
