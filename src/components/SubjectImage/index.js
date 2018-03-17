@@ -33,7 +33,7 @@ const SubjectImage = ({ style, children, activeAnimation, hideOnActive }) => {
                 {
                   translateY: activeAnimation.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [0, -320],
+                    outputRange: [0, -300],
                   }),
                 },
               ],
