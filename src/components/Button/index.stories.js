@@ -5,7 +5,7 @@ import Button from './'
 import storyStyles from '../../../storybook/styles'
 import { mixins } from '../../shared-styles'
 
-storiesOf('Button', module)
+storiesOf('components/Button', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('default', () => (
     <Button

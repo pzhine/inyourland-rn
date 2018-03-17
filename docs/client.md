@@ -33,3 +33,9 @@
 
 * should show the phone entry modal if no phone exists in session
 * should save the like: `GET /session/:sessionid/like/:sceneindex`
+
+## Routes
+
+* should be `/` for scene navigator
+* should be `/subject/1/about` for subject content browser
+* should be `/share/1` for share screen

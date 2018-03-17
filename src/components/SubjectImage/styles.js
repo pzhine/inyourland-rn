@@ -23,9 +23,6 @@ const styles = {
     zIndex: 2,
     borderRadius: 10,
   },
-  active: {
-    transform: [{ translateY: -350 }],
-  },
 }
 
 export default styles

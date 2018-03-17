@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image, View, Animated } from 'react-native'
+import { View, Animated } from 'react-native'
 import styles from './styles'
 import SubjectImage from '../SubjectImage'
 import getImageUrl from '../../lib/scene/getImageUrl'
@@ -16,13 +16,12 @@ const SHADOW_SCALE = 1.4
 const Slides = ({
   slideRange,
   scenes,
-  activeSubjectIndex,
   scale,
   blur,
   activeAnimation,
+  inactiveAnimation,
 }) => {
   const middleIndex = Math.ceil(slideRange / 2)
-  const isSubjectMode = !!activeSubjectIndex
   return slideRange.map(index => (
     <View
       style={{
@@ -31,18 +30,15 @@ const Slides = ({
       }}
       key={index}
     >
-      <SubjectImage
-        isActive={isSubjectMode && index === middleIndex}
-        isVisible={!isSubjectMode || index === middleIndex}
-        activeAnimation={activeAnimation}
-      >
-        <Image
+      <SubjectImage activeAnimation={index === middleIndex && activeAnimation}>
+        <Animated.Image
           source={{
             uri: getImageUrl(
               scenes[absmod(index, scenes.length)].thumbFilename,
               { blur }
             ),
           }}
+          style={{ opacity: inactiveAnimation }}
         />
       </SubjectImage>
     </View>
@@ -89,7 +85,7 @@ class Carousel extends Component {
     }
   }
   render() {
-    const { currentSceneIndex, scenes, route } = this.props
+    const { currentSceneIndex, scenes, routeAnimations } = this.props
 
     const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =
@@ -116,8 +112,8 @@ class Carousel extends Component {
             <Slides
               slideRange={slideRange}
               scenes={scenes}
-              activeSubjectIndex={route.subjectIndex}
-              activeAnimation={route.animations.navigatorToSubject}
+              activeAnimation={routeAnimations.showActive}
+              inactiveAnimation={routeAnimations.hideInactive}
               scale={SHADOW_SCALE}
               blur
             />
@@ -125,8 +121,8 @@ class Carousel extends Component {
           <Slides
             slideRange={slideRange}
             scenes={scenes}
-            activeSubjectIndex={route.subjectIndex}
-            activeAnimation={route.animations.navigatorToSubject}
+            activeAnimation={routeAnimations.showActive}
+            inactiveAnimation={routeAnimations.hideInactive}
             scale={1}
           />
         </Animated.View>

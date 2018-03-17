@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native'
 import storyStyles from '../../../storybook/styles'
 import { mixins } from '../../shared-styles'
 
-storiesOf('App', module).add('default', () => (
+storiesOf('components/App', module).add('default', () => (
   <View style={{ ...storyStyles.container, justifyContent: 'space-around' }}>
     <Text style={mixins.titleText}>TITLE FONT</Text>
     <View style={mixins.button}>

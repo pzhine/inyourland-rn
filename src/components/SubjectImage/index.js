@@ -1,25 +1,33 @@
 import React from 'react'
-import { View } from 'react-native'
-import defaultStyles from './styles'
+import { Animated } from 'react-native'
+import styles from './styles'
 
-const SubjectImage = ({ style, children, isActive }) => {
-  const image = React.cloneElement(React.Children.only(children), {
-    style: defaultStyles.image,
-  })
-  const shadowImage = React.cloneElement(image, {
-    style: defaultStyles.shadowImage,
-    blurRadius: 13,
+const SubjectImage = ({ style, children, activeAnimation }) => {
+  const child = React.Children.only(children)
+  const image = React.cloneElement(child, {
+    style: { ...child.props.style, ...styles.image },
   })
   return (
-    <View
+    <Animated.View
       style={{
         ...style,
-        ...defaultStyles.container,
-        ...(isActive ? defaultStyles.active : {}),
+        ...styles.container,
+        ...(activeAnimation
+          ? {
+              transform: [
+                {
+                  translateY: activeAnimation.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [0, -350],
+                  }),
+                },
+              ],
+            }
+          : {}),
       }}
     >
       {image}
-    </View>
+    </Animated.View>
   )
 }
 

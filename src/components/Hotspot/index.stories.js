@@ -7,7 +7,7 @@ import AutoPlay from '../../../storybook/AutoPlay'
 import SceneTransition from '../../transitions/SceneTransition'
 import Hotspot from './'
 
-storiesOf('Hotspot', module)
+storiesOf('components/Hotspot', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('default', () => (
     <SceneTransition scenes={scenes} currentSceneIndex={0}>

@@ -9,7 +9,7 @@ import getImageUrl from '../../lib/scene/getImageUrl'
 
 const route = { animations: {}, screen: 'navigator', subjectIndex: 0 }
 
-storiesOf('Carousel', module)
+storiesOf('components/Carousel', module)
   .addDecorator(story => (
     <View style={storyStyles.container}>
       <Image

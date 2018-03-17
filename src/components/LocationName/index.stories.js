@@ -7,7 +7,7 @@ import SceneTransition from '../../transitions/SceneTransition'
 import scenes from '../../../content/scenes/stream0.json'
 import storyStyles from '../../../storybook/styles'
 
-storiesOf('LocationName', module)
+storiesOf('components/LocationName', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('autoPlay', () => (
     <AutoPlay interval={1} propToIncrement="currentSceneIndex">

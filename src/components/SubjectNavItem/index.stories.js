@@ -13,7 +13,7 @@ const navContainerStyle = {
   height: 150,
 }
 
-storiesOf('SubjectNavItem', module)
+storiesOf('components/SubjectNavItem', module)
   .addDecorator(story => (
     <NativeRouter>
       <View style={storyStyles.container}>

@@ -22,7 +22,6 @@ storiesOf('transitions/PropTransition', module)
         animations={{
           upAndDown: {
             isIn: val => val % 2,
-            oneWay: true,
             range: [0, 1],
             method: Animated.timing,
             duration: 500,

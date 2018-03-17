@@ -7,7 +7,7 @@ import scenes from '../../../content/scenes/stream0.json'
 import storyStyles from '../../../storybook/styles'
 import SceneTransition from '../../transitions/SceneTransition'
 
-storiesOf('Map', module)
+storiesOf('components/Map', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('default', () => (
     <SceneTransition scenes={scenes} currentSceneIndex={0}>
