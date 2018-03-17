@@ -46,7 +46,7 @@ const Subject = () => (
       const subject = subjects[match.params.index]
       return (
         <View style={styles.subject}>
-          <Button style={styles.backButton} onPress={() => history.push('/')}>
+          <Button style={styles.backButton} onPress={() => history.goBack()}>
             <Image
               style={styles.backArrow}
               source={require('../../../assets/arrow.png')}

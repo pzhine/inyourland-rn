@@ -21,14 +21,15 @@ const NavigatorRoute = props => (
           },
         }}
       >
-        {({ animations }) => (
+        {({ animations, isTransitioning }) => (
           <Animated.View
             style={{
               ...mixins.fillContainerAbsolute,
+              ...mixins.centerBoth,
               opacity: animations.inactiveAnimation,
             }}
           >
-            <Navigator {...props} />
+            <Navigator {...props} isTransitioning={isTransitioning} />
           </Animated.View>
         )}
       </RouteTransition>

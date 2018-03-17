@@ -25,13 +25,14 @@ const SceneTransition = ({ children, scenes, currentSceneIndex }) => {
         },
       }}
     >
-      {({ animations, currentValue, nextValue }) => {
+      {({ animations, currentValue, nextValue, isTransitioning }) => {
         const childProps = {
           animations,
           scenes,
           currentSceneIndex,
           locationId: currentValue,
           nextLocationId: nextValue,
+          isTransitioning,
         }
         return React.Children.map(children, child =>
           React.cloneElement(child, childProps)
