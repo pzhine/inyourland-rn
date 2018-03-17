@@ -3,7 +3,6 @@ import { Animated } from 'react-native'
 import { Route } from 'react-router-native'
 import RouteTransition from '../../transitions/RouteTransition'
 import Navigator from './'
-import { mixins } from '../../shared-styles'
 
 const NavigatorRoute = props => (
   <Route
@@ -13,6 +12,14 @@ const NavigatorRoute = props => (
       <RouteTransition
         holdDuration={500}
         animations={{
+          inactiveSpring: {
+            isIn: nextMatch => !nextMatch.params.screen,
+            range: [0, 1],
+            method: Animated.spring,
+            friction: 70,
+            tension: 8,
+            delay: 300,
+          },
           inactiveAnimation: {
             isIn: nextMatch => !nextMatch.params.screen,
             range: [0, 1],
@@ -21,17 +28,7 @@ const NavigatorRoute = props => (
           },
         }}
       >
-        {({ animations, isTransitioning }) => (
-          <Animated.View
-            style={{
-              ...mixins.fillContainerAbsolute,
-              ...mixins.centerBoth,
-              opacity: animations.inactiveAnimation,
-            }}
-          >
-            <Navigator {...props} isTransitioning={isTransitioning} />
-          </Animated.View>
-        )}
+        <Navigator {...props} />
       </RouteTransition>
     )}
   />
