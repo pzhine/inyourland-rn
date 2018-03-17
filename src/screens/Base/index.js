@@ -4,7 +4,7 @@ import Map from '../../components/Map'
 import Carousel from '../../components/Carousel'
 
 const Base = ({ ...props }) => {
-  console.log('route', props.route)
+  console.log('route', props.animations)
   return (
     <React.Fragment>
       <Map {...props} />

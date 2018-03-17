@@ -106,7 +106,12 @@ class PropTransition extends React.Component {
     if (typeof children === 'function') {
       return <React.Fragment>{this.props.children(childProps)}</React.Fragment>
     }
-    return React.cloneElement(React.Children.only(children), childProps)
+    const child = React.Children.only(children)
+    childProps.animations = {
+      ...child.props.animations,
+      ...childProps.animations,
+    }
+    return React.cloneElement(child, childProps)
   }
 }
 

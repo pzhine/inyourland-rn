@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
-import { NativeRouter, Route, Redirect } from 'react-router-native'
+import { NativeRouter, Redirect } from 'react-router-native'
 import BaseRoute from './route'
 import AutoPlay from '../../../storybook/AutoPlay'
 import scenes from '../../../content/scenes/stream0.json'
@@ -19,9 +19,17 @@ storiesOf('screens/Base', module)
       <BaseRoute />
     </SceneTransition>
   ))
-  .add('active subject', () => (
+  .add('nav to subject', () => (
     <SceneTransition scenes={scenes} currentSceneIndex={0}>
-      <Route exact path="/" render={() => <Redirect to="/subject/0/about" />} />
+      <AutoPlay interval={1}>
+        {currentIndex =>
+          currentIndex % 2 ? (
+            <Redirect to="/subject/0/about" />
+          ) : (
+            <Redirect to="/" />
+          )
+        }
+      </AutoPlay>
       <BaseRoute />
     </SceneTransition>
   ))
