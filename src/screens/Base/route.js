@@ -21,13 +21,6 @@ const BaseRoute = props => (
             inDelay: 300,
             outDelay: 300,
           },
-          mapBlurAnimation: {
-            isIn: nextMatch => nextMatch.params.screen === 'subject',
-            range: [0, 1],
-            method: Animated.timing,
-            duration: 1000,
-            useNativeDriver: false,
-          },
           activeFollowAnimation: {
             isIn: nextMatch => nextMatch.params.screen === 'subject',
             range: [0, 1],
@@ -37,7 +30,7 @@ const BaseRoute = props => (
             inDelay: 300,
           },
           inactiveAnimation: {
-            isIn: nextMatch => nextMatch.params.screen !== 'subject',
+            isIn: nextMatch => !nextMatch.params.screen,
             range: [0, 1],
             method: Animated.timing,
             duration: 1000,

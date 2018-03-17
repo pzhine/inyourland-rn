@@ -3,24 +3,31 @@ import { Animated } from 'react-native'
 import { Route } from 'react-router-native'
 import RouteTransition from '../../transitions/RouteTransition'
 import Navigator from './'
+import { mixins } from '../../shared-styles'
 
 const NavigatorRoute = props => (
   <Route
-    path="/"
+    path="/:screen?/:subjectIndex?/:sectionIndex?"
     exact
     render={() => (
       <RouteTransition
         holdDuration={500}
         animations={{
-          fadeRoute: {
+          inactiveAnimation: {
+            isIn: nextMatch => !nextMatch.params.screen,
             range: [0, 1],
             method: Animated.timing,
-            duration: 500,
+            duration: 1000,
           },
         }}
       >
-        {({ transitionOpacityOnMatch }) => (
-          <Animated.View style={transitionOpacityOnMatch(true)}>
+        {({ animations }) => (
+          <Animated.View
+            style={{
+              ...mixins.fillContainerAbsolute,
+              opacity: animations.inactiveAnimation,
+            }}
+          >
             <Navigator {...props} />
           </Animated.View>
         )}
