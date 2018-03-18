@@ -40,7 +40,7 @@ const Content = ({ subject }) => (
 
 const Subject = ({ subject, history }) => (
   <View style={styles.subject}>
-    <Button style={styles.backButton} onPress={() => history.goBack()}>
+    <Button style={styles.backButton} onPress={() => history.push('/')}>
       <Image
         style={styles.backArrow}
         source={require('../../../assets/arrow.png')}

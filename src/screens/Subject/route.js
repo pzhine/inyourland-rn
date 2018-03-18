@@ -11,14 +11,14 @@ const SubjectRoute = props => (
     path="/:screen?/:subjectId?/:sectionId?"
     children={() => (
       <RouteTransition
-        holdDuration={1000}
+        holdDuration={1500}
         animations={{
           inOutAnimation: {
             isIn: nextMatch => nextMatch.params.subjectId,
             range: [0, 1],
             method: Animated.timing,
-            duration: 1000,
-            inDelay: 400,
+            duration: 800,
+            inDelay: 700,
           },
         }}
       >
