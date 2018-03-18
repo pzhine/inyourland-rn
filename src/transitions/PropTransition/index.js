@@ -44,13 +44,14 @@ class PropTransition extends React.Component {
           range,
           duration,
           inDelay,
+          outDelay,
           isIn,
           ...options
         } = animations[animKey]
         method(this.state.animations[animKey], {
           duration: duration / 2,
           toValue: range[isIn && isIn(propTransition.nextValue) ? 1 : 0],
-          delay: inDelay || 0,
+          delay: isIn && isIn(propTransition.nextValue) ? inDelay : outDelay,
           useNativeDriver: true,
           ...options,
         }).start()

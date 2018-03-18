@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Animated, Image } from 'react-native'
+import { withRouter } from 'react-router-native'
 import styles from './styles'
 import { mixins, variables } from '../../shared-styles'
 import RouteTransition from '../../transitions/RouteTransition'
@@ -52,4 +53,4 @@ const Subject = ({ subject, history }) => (
   </View>
 )
 
-export default Subject
+export default withRouter(Subject)

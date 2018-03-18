@@ -25,18 +25,16 @@ const RouteTransition = ({ children, ...props }) => {
       animations={animations}
       propToWatch="location"
       propsAreEqual={({ pre, post }) => pre.pathname === post.pathname}
-      childProps={({ parentProps, childProps }) => {
-        console.log('routetransition.render', childProps.nextValue)
-        return {
-          match: matchPath(childProps.currentValue.pathname, match.path),
-          nextMatch:
-            parentProps.transitions.location.nextValue &&
-            matchPath(
-              parentProps.transitions.location.nextValue.pathname,
-              match.path
-            ),
-        }
-      }}
+      childProps={({ parentProps, childProps }) => ({
+        location: childProps.currentValue,
+        match: matchPath(childProps.currentValue.pathname, match.path),
+        nextMatch:
+          parentProps.transitions.location.nextValue &&
+          matchPath(
+            parentProps.transitions.location.nextValue.pathname,
+            match.path
+          ),
+      })}
     >
       {children}
     </PropTransition>

@@ -9,15 +9,16 @@ import { mixins } from '../../shared-styles'
 const SubjectRoute = props => (
   <Route
     path="/:screen?/:subjectId?/:sectionId?"
-    render={() => (
+    children={() => (
       <RouteTransition
-        holdDuration={500}
+        holdDuration={1000}
         animations={{
           inOutAnimation: {
             isIn: nextMatch => nextMatch.params.subjectId,
             range: [0, 1],
             method: Animated.timing,
-            duration: 500,
+            duration: 1000,
+            inDelay: 400,
           },
         }}
       >
@@ -29,22 +30,20 @@ const SubjectRoute = props => (
             subjectId = nextMatch.params.subjectId
             activeMatch = nextMatch
           }
-          return (
+          return subjectId ? (
             <Animated.View
               style={{
                 opacity: animations.inOutAnimation,
                 ...mixins.fillContainerAbsolute,
               }}
             >
-              {subjectId && (
-                <Subject
-                  {...props}
-                  match={activeMatch}
-                  subject={subjects.find(s => s.subjectId === subjectId)}
-                />
-              )}
+              <Subject
+                {...props}
+                match={activeMatch}
+                subject={subjects.find(s => s.subjectId === subjectId)}
+              />
             </Animated.View>
-          )
+          ) : null
         }}
       </RouteTransition>
     )}
