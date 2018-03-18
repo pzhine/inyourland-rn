@@ -1,15 +1,14 @@
 import React from 'react'
 import { Animated, Image, Text } from 'react-native'
-import { withRouter } from 'react-router-native'
 import Button from '../Button'
 import styles from './styles'
 
 const NavControls = ({
   isTransitioning,
   animations,
-  history,
-  scenes,
-  currentSceneIndex,
+  onNext,
+  onPrevious,
+  onDetails,
 }) => (
   <Animated.View
     style={{
@@ -23,9 +22,7 @@ const NavControls = ({
     <Button
       style={styles.prevButton}
       isDisabled={isTransitioning}
-      onPress={() => {
-        console.log('prev')
-      }}
+      onPress={onPrevious || (() => console.log('previous button pressed'))}
     >
       <Image
         style={styles.prevArrow}
@@ -35,18 +32,19 @@ const NavControls = ({
     <Button
       style={styles.detailsButton}
       isDisabled={isTransitioning}
-      onPress={() => {
-        history.push(`/subject/${scenes[currentSceneIndex].subjectId}/about`)
-      }}
+      onPress={
+        onDetails ||
+        (() => {
+          console.log('details button pressed')
+        })
+      }
     >
       <Text style={styles.detailsButtonText}>Discover</Text>
     </Button>
     <Button
       style={styles.prevButton}
       isDisabled={isTransitioning}
-      onPress={() => {
-        console.log('next')
-      }}
+      onPress={onNext || (() => console.log('next button pressed'))}
     >
       <Image
         style={styles.nextArrow}
@@ -56,4 +54,4 @@ const NavControls = ({
   </Animated.View>
 )
 
-export default withRouter(NavControls)
+export default NavControls

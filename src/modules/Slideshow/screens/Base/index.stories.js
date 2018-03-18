@@ -3,12 +3,12 @@ import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import { NativeRouter, Redirect } from 'react-router-native'
 import BaseRoute from './route'
-import AutoPlay from '../../../storybook/AutoPlay'
-import scenes from '../../../content/scenes/stream0.json'
-import storyStyles from '../../../storybook/styles'
-import SceneTransition from '../../transitions/SceneTransition'
+import AutoPlay from '../../../../../storybook/AutoPlay'
+import scenes from '../../../../../content/scenes/stream0.json'
+import storyStyles from '../../../../../storybook/styles'
+import SceneTransition from '../../../../transitions/SceneTransition'
 
-storiesOf('screens/Base', module)
+storiesOf('modules/Slideshow/Base', module)
   .addDecorator(story => (
     <NativeRouter>
       <View style={storyStyles.container}>{story()}</View>

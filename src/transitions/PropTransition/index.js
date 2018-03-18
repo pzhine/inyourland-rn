@@ -7,6 +7,7 @@ class PropTransition extends React.Component {
     const { animations, propToWatch } = props
     super(props)
 
+    this._isMounted = false
     this.state = {
       isTransitioning: false,
       animations: Object.keys(animations).reduce(
@@ -60,7 +61,9 @@ class PropTransition extends React.Component {
     if (propTransition.isActive && !this.state.isTransitioning) {
       this.setState({ isTransitioning: true })
       setTimeout(() => {
-        this.setState({ isTransitioning: false })
+        if (this._isMounted) {
+          this.setState({ isTransitioning: false })
+        }
       }, this.props.holdDuration)
     }
     if (
@@ -91,6 +94,12 @@ class PropTransition extends React.Component {
         }
       })
     }
+  }
+  componentDidMount() {
+    this._isMounted = true
+  }
+  componentWillUnmount() {
+    this._isMounted = false
   }
   render() {
     const { children, transitions, propToWatch } = this.props

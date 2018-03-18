@@ -10,23 +10,26 @@ import bioSections from '../../../content/bioSections.json'
 const SubjectNavItem = ({ section, history }) => (
   <RouteTransition
     holdDuration={variables.transitions.fadeRoute.duration}
+    path="/subject/(.*)/:sectionId"
     animations={{
       showActive: {
         range: [0, 1],
         method: Animated.timing,
         duration: variables.transitions.fadeRoute.duration,
-        isIn: nextMatch => nextMatch.params.sectionId === section.sectionId,
+        isIn: nextMatch =>
+          nextMatch && nextMatch.params.sectionId === section.sectionId,
       },
       showInactive: {
         range: [0, 1],
         method: Animated.timing,
         duration: variables.transitions.fadeRoute.duration,
-        isIn: nextMatch => nextMatch.params.sectionId !== section.sectionId,
+        isIn: nextMatch =>
+          nextMatch && nextMatch.params.sectionId !== section.sectionId,
       },
     }}
   >
     {({ animations, match, isTransitioning }) => {
-      const isActive = section.sectionId === match.params.sectionId
+      const isActive = match && section.sectionId === match.params.sectionId
       const sectionTitle = bioSections.find(
         s => s.sectionId === section.sectionId
       ).title

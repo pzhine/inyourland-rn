@@ -1,4 +1,4 @@
-import { mixins } from '../../shared-styles'
+import { mixins } from '../../../../shared-styles'
 
 const styles = {
   subject: {

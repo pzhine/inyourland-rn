@@ -22,9 +22,7 @@ storiesOf('components/SubjectNavItem', module)
           path="/"
           render={() => <Redirect to="/subject/americanblackduck/about" />}
         />
-        <View style={navContainerStyle}>
-          <Route path="/subject/:subjectId/:sectionId" render={() => story()} />
-        </View>
+        <View style={navContainerStyle}>{story()}</View>
       </View>
     </NativeRouter>
   ))
