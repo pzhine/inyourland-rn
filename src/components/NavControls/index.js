@@ -1,9 +1,16 @@
 import React from 'react'
 import { Animated, Image, Text } from 'react-native'
+import { withRouter } from 'react-router-native'
 import Button from '../Button'
 import styles from './styles'
 
-const NavControls = ({ isTransitioning, animations }) => (
+const NavControls = ({
+  isTransitioning,
+  animations,
+  history,
+  scenes,
+  currentSceneIndex,
+}) => (
   <Animated.View
     style={{
       ...styles.navControls,
@@ -29,7 +36,7 @@ const NavControls = ({ isTransitioning, animations }) => (
       style={styles.detailsButton}
       isDisabled={isTransitioning}
       onPress={() => {
-        console.log('details')
+        history.push(`/subject/${scenes[currentSceneIndex].subjectId}/about`)
       }}
     >
       <Text style={styles.detailsButtonText}>Discover</Text>
@@ -49,4 +56,4 @@ const NavControls = ({ isTransitioning, animations }) => (
   </Animated.View>
 )
 
-export default NavControls
+export default withRouter(NavControls)

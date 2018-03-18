@@ -15,19 +15,18 @@ const SubjectNavItem = ({ section, history }) => (
         range: [0, 1],
         method: Animated.timing,
         duration: variables.transitions.fadeRoute.duration,
-        isIn: nextMatch => nextMatch.params.section === section.sectionId,
+        isIn: nextMatch => nextMatch.params.sectionId === section.sectionId,
       },
       showInactive: {
         range: [0, 1],
         method: Animated.timing,
         duration: variables.transitions.fadeRoute.duration,
-        isIn: nextMatch => nextMatch.params.section !== section.sectionId,
+        isIn: nextMatch => nextMatch.params.sectionId !== section.sectionId,
       },
     }}
   >
-    {({ animations, match, nextMatch, isTransitioning }) => {
-      console.log('subjectnavitem.render', match, nextMatch)
-      const isActive = section.sectionId === match.params.section
+    {({ animations, match, isTransitioning }) => {
+      const isActive = section.sectionId === match.params.sectionId
       const sectionTitle = bioSections.find(
         s => s.sectionId === section.sectionId
       ).title

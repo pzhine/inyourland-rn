@@ -64,12 +64,11 @@ storiesOf('transitions/RouteTransition', module)
         },
       }}
     >
-      {({ animations }) => [
+      {({ animations, match, nextMatch }) => [
         <Animated.Text
-          key={1}
           style={{ ...storyStyles.text, opacity: animations.fade }}
         >
-          Only on 1
+          Only on 1 ({(nextMatch || match).params.pageNum})
         </Animated.Text>,
       ]}
     </RouteTransition>

@@ -20,8 +20,6 @@ const styles = {
   },
   prevButton: {
     ...arrowButton,
-
-    justifySelf: 'flex-start',
   },
   prevArrow: {
     ...arrowDims,

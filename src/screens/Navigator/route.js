@@ -6,7 +6,7 @@ import Navigator from './'
 
 const NavigatorRoute = props => (
   <Route
-    path="/:screen?/:subjectIndex?/:sectionIndex?"
+    path="/:screen?/:subjectId?/:sectionId?"
     exact
     render={() => (
       <RouteTransition

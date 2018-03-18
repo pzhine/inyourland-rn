@@ -20,10 +20,10 @@ storiesOf('components/SubjectNavItem', module)
         <Route
           exact
           path="/"
-          render={() => <Redirect to="/subject/0/about" />}
+          render={() => <Redirect to="/subject/americanblackduck/about" />}
         />
         <View style={navContainerStyle}>
-          <Route path="/subject/:index/:section" render={() => story()} />
+          <Route path="/subject/:subjectId/:sectionId" render={() => story()} />
         </View>
       </View>
     </NativeRouter>

@@ -6,7 +6,7 @@ import Base from './'
 
 const BaseRoute = props => (
   <Route
-    path="/:screen?/:subjectIndex?/:sectionIndex?"
+    path="/:screen?/:subjectId?/:sectionId?"
     exact
     render={() => (
       <RouteTransition
