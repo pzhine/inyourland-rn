@@ -83,6 +83,15 @@ storiesOf('components/Carousel', module)
       )}
     </AutoPlay>
   ))
+  .add('autoPlay forward with jumps', () => (
+    <AutoPlay interval={1} jumpEvery={4} jumpInterval={10}>
+      {currentIndex => (
+        <Transition toggle={0}>
+          <Carousel scenes={scenes} currentSceneIndex={currentIndex} />
+        </Transition>
+      )}
+    </AutoPlay>
+  ))
   .add('transition to subject', () => (
     <AutoPlay interval={1} propToIncrement="toggle">
       <Transition>

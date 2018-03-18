@@ -65,43 +65,78 @@ const Slides = ({
   ))
 }
 
+const sceneIndexDelta = (current, next) => Math.abs(next - current)
+
 class Carousel extends Component {
   state = {
     slideAnimation: new Animated.Value(0),
     infoAnimation: new Animated.Value(1),
-  }
-  onChangeIndex(index) {
-    console.log('INDEX_CHANGED', index)
+    resyncAnimation: new Animated.Value(1),
   }
   componentWillReceiveProps(nextProps) {
-    const { currentSceneIndex, transitions } = nextProps
+    const { currentSceneIndex, transitions, scenes } = nextProps
+    // const sceneIndexDelta = Math.abs(
+    //   absmod(currentSceneIndex, scenes.length) -
+    //     absmod(this.props.currentSceneIndex, scenes.length)
+    // )
+
     // calculate transition properties
     if (
       transitions.currentSceneIndex.becameActiveSince(this.props.transitions)
     ) {
       const { nextValue } = transitions.currentSceneIndex
-      const slideCoefficient = nextValue > currentSceneIndex ? -1 : 1
-      Animated.timing(this.state.slideAnimation, {
-        toValue:
-          (styles.slide.marginLeft + subjectImageStyles.image.width + 5) *
-          slideCoefficient,
-        duration: TRANSITION_DURATION - 50,
-        useNativeDriver: true,
-      }).start()
-      Animated.timing(this.state.infoAnimation, {
-        toValue: 0,
-        duration: TRANSITION_DURATION,
-        useNativeDriver: true,
-      }).start()
+
+      // start delta 1 animations
+      if (sceneIndexDelta(currentSceneIndex, nextValue, scenes.length) === 1) {
+        const slideCoefficient = nextValue > currentSceneIndex ? -1 : 1
+        Animated.timing(this.state.slideAnimation, {
+          toValue:
+            (styles.slide.marginLeft + subjectImageStyles.image.width + 5) *
+            slideCoefficient,
+          duration: TRANSITION_DURATION - 50,
+          useNativeDriver: true,
+        }).start()
+        Animated.timing(this.state.infoAnimation, {
+          toValue: 0,
+          duration: TRANSITION_DURATION,
+          useNativeDriver: true,
+        }).start()
+      } else {
+        console.log('carousel.render resync start')
+        // or start resync animation
+        Animated.timing(this.state.resyncAnimation, {
+          toValue: 0,
+          duration: TRANSITION_DURATION,
+          useNativeDriver: true,
+        }).start()
+      }
     }
+
+    // when the transition is complete, reset delta 1 animations
     if (this.props.currentSceneIndex !== nextProps.currentSceneIndex) {
-      this.setState({ slideAnimation: new Animated.Value(0) })
-      this.elem.setNativeProps({ style: { transform: [{ translateX: 0 }] } })
-      Animated.timing(this.state.infoAnimation, {
-        toValue: 1,
-        duration: TRANSITION_DURATION,
-        useNativeDriver: true,
-      }).start()
+      if (
+        sceneIndexDelta(
+          this.props.currentSceneIndex,
+          nextProps.currentSceneIndex,
+          scenes.length
+        ) === 1
+      ) {
+        this.setState({ slideAnimation: new Animated.Value(0) })
+        this.elem.setNativeProps({ style: { transform: [{ translateX: 0 }] } })
+        Animated.timing(this.state.infoAnimation, {
+          toValue: 1,
+          duration: TRANSITION_DURATION,
+          useNativeDriver: true,
+        }).start()
+      } else {
+        console.log('carousel.render resync end')
+        // or reset resync animation
+        Animated.timing(this.state.resyncAnimation, {
+          toValue: 1,
+          duration: TRANSITION_DURATION,
+          useNativeDriver: true,
+        }).start()
+      }
     }
   }
   render() {
@@ -121,6 +156,7 @@ class Carousel extends Component {
             ...styles.slidesContainer,
             alignItems: 'center',
             width: stripWidth,
+            opacity: this.state.resyncAnimation,
             transform: [
               {
                 translateX: this.state.slideAnimation,
