@@ -5,15 +5,13 @@
 ## Startup
 
 * should scan the network for chromecast devices
-* should start playing video sources and
+* should start playing video sources and for each stream
 
-  * query each chromecast for a current play position
+  * query chromecast for a current play position
   * set a timer for the next scene advance
 
 ## API
 
-* `GET /scene/:mediaid`
-  * returns current scene index for the specified stream
 * `GET /session/new`
   * should start session timer
   * returns a sessionid
@@ -30,12 +28,19 @@
 
 * should flag session as closed in the database
 
+## On client connect
+
+* should lookup `mediaId` in `media.json` by `clientIp` from `io.on('connect')`
+* should add/update `socketId` in `mediaMap` with key `mediaId`
+
 ## Scene timer
 
-* should emit a `sceneAdvance` event to socketIO listeners, with new scene index
-* should query each chromecast for a current play position
-* set a timer for the next scene advance
-* if chromecast is unresponsive or not playing, log alert notification and attempt restart
+* should lookup `socketId` in `mediaMap` by `mediaId` passed to timer
+* should emit a `sceneAdvance` event to socket listener, with new scene index
+* should query chromecast for current play position
+* should log alert notification and attempt restart if chromecast is unresponsive or not playing
+* should calculate time remaining for the current scene
+* should set a timer for the next scene advance
 
 ## Notifier
 

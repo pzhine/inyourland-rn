@@ -2,8 +2,7 @@
 
 ## Startup
 
-* should read mediaId from cookie or present list of media if no cookie
-* should query server for current scene and set `currentSceneIndex`
+* should lookup `mediaId` in `media.json` by `clientIp` from [react-native-network-info](https://github.com/pusherman/react-native-network-info)
 * should open a socketIO connection to server to listen for scene changes
 
 ## On user interaction
@@ -21,7 +20,7 @@
 
 ## On session timer
 
-* should query server for current scene and set `currentSceneIndex`
+* should set `currentSceneIndex` to latest from server
 * should redirect to navigator screen
 
 ## On scene change
