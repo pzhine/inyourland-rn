@@ -1,13 +1,10 @@
 import React from 'react'
 import { View, Animated, Image } from 'react-native'
 import { withRouter } from 'react-router-native'
-import { connect } from 'react-redux'
-import { compose } from 'redux'
 import styles from './styles'
 import { mixins } from '../../../../shared-styles'
 import SubjectNavItem from '../../../../components/SubjectNavItem'
 import Button from '../../../../components/Button'
-import actions from '../../../../redux/scene/actions'
 
 const Content = ({ subject, sectionId, animations }) => {
   const section = subject.bio.find(s => s.sectionId === sectionId)
@@ -30,7 +27,6 @@ const Subject = ({ subject, history, ...props }) => (
       style={styles.backButton}
       onPress={() => {
         history.push('/')
-        setTimeout(props.endInteraction, 1000)
       }}
     >
       <Image
@@ -45,4 +41,4 @@ const Subject = ({ subject, history, ...props }) => (
   </View>
 )
 
-export default compose(withRouter, connect(null, actions))(Subject)
+export default withRouter(Subject)

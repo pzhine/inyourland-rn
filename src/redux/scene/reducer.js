@@ -18,6 +18,18 @@ export default function sceneReducer(state = initialState, action) {
         currentSceneIndex: state.nextSceneIndex,
       }
     }
+    case 'NEXT_SCENE': {
+      return {
+        ...state,
+        currentSceneIndex: state.currentSceneIndex + 1,
+      }
+    }
+    case 'PREVIOUS_SCENE': {
+      return {
+        ...state,
+        currentSceneIndex: state.currentSceneIndex - 1,
+      }
+    }
     default: {
       return state
     }

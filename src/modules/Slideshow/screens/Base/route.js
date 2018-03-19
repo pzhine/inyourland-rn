@@ -14,8 +14,6 @@ const BaseRoute = props => (
         method: Animated.spring,
         friction: 170,
         tension: 5,
-        inDelay: 300,
-        outDelay: 300,
       },
       activeFollowAnimation: {
         isIn: nextMatch => nextMatch,

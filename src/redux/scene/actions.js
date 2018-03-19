@@ -9,4 +9,14 @@ export default {
       type: 'END_INTERACTION',
     }
   },
+  nextScene() {
+    return {
+      type: 'NEXT_SCENE',
+    }
+  },
+  previousScene() {
+    return {
+      type: 'PREVIOUS_SCENE',
+    }
+  },
 }

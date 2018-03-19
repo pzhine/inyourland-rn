@@ -3,15 +3,27 @@ import React from 'react'
 class AutoPlay extends React.Component {
   constructor(props) {
     super(props)
+    this.interval = this.props.interval || 1
+    this.currentIndex = 0
     this.state = {
       currentIndex: 0,
     }
   }
   componentDidMount() {
+    const { jumpEvery } = this.props
     setInterval(() => {
-      const nextIndex = this.state.currentIndex + this.props.interval
-      // console.log('AUTOPLAY', nextIndex)
-      this.setState({ currentIndex: nextIndex })
+      if (jumpEvery && !(this.currentIndex % jumpEvery)) {
+        this.currentIndex += this.props.jumpInterval
+      } else {
+        this.currentIndex += this.interval
+      }
+      if (this.props.onIncrement) {
+        this.props.onIncrement(this.currentIndex)
+      } else {
+        this.setState({
+          currentIndex: this.currentIndex,
+        })
+      }
     }, 3000)
   }
   render() {

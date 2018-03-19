@@ -192,7 +192,7 @@ class Carousel extends Component {
                 outputRange: [0, 1],
               }),
               animations.activeFollowAnimation.interpolate({
-                inputRange: [0, 0.3, 0.7, 1],
+                inputRange: [0, 0.2, 0.8, 1],
                 outputRange: [0, -1, -1, 0],
               })
             ),
@@ -200,7 +200,7 @@ class Carousel extends Component {
               {
                 translateY: animations.activeFollowAnimation.interpolate({
                   inputRange: [0, 1],
-                  outputRange: [0, -350],
+                  outputRange: [0, -340],
                 }),
               },
               {

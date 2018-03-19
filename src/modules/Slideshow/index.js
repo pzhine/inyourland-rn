@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, StatusBar } from 'react-native'
 import { withRouter } from 'react-router-native'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
@@ -13,6 +13,7 @@ import SceneTransition from '../../transitions/SceneTransition'
 
 const Slideshow = ({ currentSceneIndex, scenes }) => (
   <View style={styles.container}>
+    <StatusBar hidden />
     <SceneTransition scenes={scenes} currentSceneIndex={currentSceneIndex}>
       <BaseRoute />
       <NavigatorRoute />

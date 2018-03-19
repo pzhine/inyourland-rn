@@ -28,16 +28,22 @@ const RouteTransition = ({ children, ...props }) => {
       animations={animations}
       propToWatch="location"
       propsAreEqual={({ pre, post }) => pre.pathname === post.pathname}
-      childProps={({ parentProps, childProps }) => ({
-        location: childProps.currentValue,
-        match: matchPath(childProps.currentValue.pathname, pathToMatch),
-        nextMatch:
-          parentProps.transitions.location.nextValue &&
-          matchPath(
-            parentProps.transitions.location.nextValue.pathname,
-            pathToMatch
-          ),
-      })}
+      childProps={({ parentProps, childProps }) => {
+        const routeChildProps = {
+          location: childProps.currentValue,
+          match: matchPath(childProps.currentValue.pathname, pathToMatch),
+          nextMatch:
+            parentProps.transitions.location.nextValue &&
+            matchPath(
+              parentProps.transitions.location.nextValue.pathname,
+              pathToMatch
+            ),
+        }
+        routeChildProps.getParam = param =>
+          (routeChildProps.match && routeChildProps.match.params[param]) ||
+          (routeChildProps.nextMatch && routeChildProps.nextMatch.params[param])
+        return routeChildProps
+      }}
     >
       {children}
     </PropTransition>

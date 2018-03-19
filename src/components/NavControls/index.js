@@ -4,24 +4,16 @@ import Button from '../Button'
 import styles from './styles'
 
 const NavControls = ({
-  isTransitioning,
-  animations,
+  locationIsTransitioning,
   onNext,
   onPrevious,
   onDetails,
 }) => (
-  <Animated.View
-    style={{
-      ...styles.navControls,
-      opacity: animations.locationInfo.interpolate({
-        inputRange: [0, 1],
-        outputRange: [0.5, 1],
-      }),
-    }}
-  >
+  <Animated.View style={styles.navControls}>
     <Button
       style={styles.prevButton}
-      isDisabled={isTransitioning}
+      debounceWait={700}
+      isDisabled={locationIsTransitioning}
       onPress={onPrevious || (() => console.log('previous button pressed'))}
     >
       <Image
@@ -31,7 +23,6 @@ const NavControls = ({
     </Button>
     <Button
       style={styles.detailsButton}
-      isDisabled={isTransitioning}
       onPress={
         onDetails ||
         (() => {
@@ -43,7 +34,8 @@ const NavControls = ({
     </Button>
     <Button
       style={styles.prevButton}
-      isDisabled={isTransitioning}
+      debounceWait={700}
+      isDisabled={locationIsTransitioning}
       onPress={onNext || (() => console.log('next button pressed'))}
     >
       <Image

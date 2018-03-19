@@ -27,9 +27,8 @@ const Transition = ({ children, toggle }) => (
         isIn: val => val % 2,
         range: [0, 1],
         method: Animated.timing,
-        duration: 1000,
+        duration: 700,
         easing: Easing.inOut(Easing.sin),
-        inDelay: 300,
       },
       inactiveAnimation: {
         isIn: val => !(val % 2),

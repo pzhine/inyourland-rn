@@ -13,14 +13,14 @@ const NavigatorRoute = props => (
         range: [0, 1],
         method: Animated.spring,
         friction: 70,
-        tension: 8,
+        tension: 6,
         delay: 300,
       },
       inactiveAnimation: {
         isIn: nextMatch => !nextMatch,
         range: [0, 1],
         method: Animated.timing,
-        duration: 1000,
+        duration: 400,
       },
     }}
   >

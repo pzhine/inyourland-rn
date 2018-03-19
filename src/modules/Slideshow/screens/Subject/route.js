@@ -14,7 +14,7 @@ const SubjectRoute = props => (
         isIn: nextMatch => nextMatch.params.subjectId,
         range: [0, 1],
         method: Animated.timing,
-        duration: 800,
+        duration: 1000,
         inDelay: 700,
       },
       sectionAnimation: {
@@ -24,14 +24,8 @@ const SubjectRoute = props => (
       },
     }}
   >
-    {({ animations, match, nextMatch }) => {
-      // console.log('subjectroute.render', match, nextMatch)
-      let { subjectId } = match.params
-      let activeMatch = match
-      if (!subjectId && nextMatch) {
-        subjectId = nextMatch.params.subjectId
-        activeMatch = nextMatch
-      }
+    {({ animations, getParam }) => {
+      const subjectId = getParam('subjectId')
       return subjectId ? (
         <Animated.View
           style={{
@@ -42,7 +36,7 @@ const SubjectRoute = props => (
           <Subject
             {...props}
             subject={subjects.find(s => s.subjectId === subjectId)}
-            sectionId={activeMatch.params.sectionId}
+            sectionId={getParam('sectionId')}
             animations={animations}
           />
         </Animated.View>

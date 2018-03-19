@@ -3,43 +3,95 @@ import { Animated } from 'react-native'
 import PropTransition from '../PropTransition'
 import absmod from '../../lib/absmod'
 
-const SceneTransition = ({ children, scenes, currentSceneIndex }) => {
-  const { locationId } = scenes[absmod(currentSceneIndex, scenes.length)]
-  return (
-    <PropTransition
-      holdDuration={1000}
-      propToWatch="locationId"
-      locationId={locationId}
-      animations={{
-        mapMove: {
-          method: Animated.spring,
-          range: [0, 1],
-          friction: 10,
-          outDelay: 400,
-          oneWay: true,
-        },
-        locationInfo: {
-          range: [0, 1],
-          method: Animated.timing,
-          duration: 400,
-        },
-      }}
-    >
-      {({ animations, currentValue, nextValue, isTransitioning }) => {
-        const childProps = {
-          animations,
-          scenes,
-          currentSceneIndex,
-          locationId: currentValue,
-          nextLocationId: nextValue,
-          isTransitioning,
-        }
-        return React.Children.map(children, child =>
-          React.cloneElement(child, childProps)
+class SceneTransition extends React.Component {
+  constructor(props) {
+    super(props)
+
+    const { scenes, currentSceneIndex } = props
+    this.state = {
+      locationId: scenes[absmod(currentSceneIndex, scenes.length)].locationId,
+      isTransitioning: false,
+      locationInfoAnimation: new Animated.Value(1),
+    }
+    this.transitionCount = 0
+  }
+  startLocationInfoAnimation() {
+    Animated.timing(this.state.locationInfoAnimation).stop()
+    Animated.timing(this.state.locationInfoAnimation, {
+      toValue: 0,
+      duration: 100,
+      useNativeDriver: true,
+    }).start()
+  }
+  reverseLocationInfoAnimation() {
+    Animated.timing(this.state.locationInfoAnimation).stop()
+    Animated.timing(this.state.locationInfoAnimation, {
+      toValue: 1,
+      duration: 200,
+      delay: 400,
+      useNativeDriver: true,
+    }).start()
+  }
+  componentWillReceiveProps(nextProps) {
+    const { scenes, currentSceneIndex } = nextProps
+    if (currentSceneIndex !== this.props.currentSceneIndex) {
+      this.startLocationInfoAnimation()
+      clearTimeout(this.transitionTimer)
+      this.transitionTimer = setTimeout(() => {
+        this.setState({
+          locationId:
+            scenes[absmod(currentSceneIndex, scenes.length)].locationId,
+          isTransitioning: true,
+        })
+        this.transitionCount = 0
+        this.reverseLocationInfoAnimation()
+        // set transitioning timer
+        setTimeout(
+          () =>
+            this.setState({
+              isTransitioning: false,
+            }),
+          1000
         )
-      }}
-    </PropTransition>
-  )
+      }, this.transitionCount ? 1600 : 1200)
+      this.transitionCount += 1
+    }
+  }
+  render() {
+    const { children, scenes, currentSceneIndex } = this.props
+    return (
+      <PropTransition
+        holdDuration={400}
+        propToWatch="locationId"
+        locationId={this.state.locationId}
+        animations={{
+          mapMove: {
+            method: Animated.spring,
+            range: [0, 1],
+            friction: 10,
+            oneWay: true,
+          },
+        }}
+      >
+        {({ animations, currentValue, nextValue }) => {
+          const childProps = {
+            animations: {
+              ...animations,
+              locationInfo: this.state.locationInfoAnimation,
+            },
+            scenes,
+            currentSceneIndex,
+            locationId: currentValue,
+            nextLocationId: nextValue,
+            locationIsTransitioning: this.state.isTransitioning,
+          }
+          return React.Children.map(children, child =>
+            React.cloneElement(child, childProps)
+          )
+        }}
+      </PropTransition>
+    )
+  }
 }
 
 export default SceneTransition

@@ -8,6 +8,7 @@ import Hotspot from '../../../../components/Hotspot'
 import NavControls from '../../../../components/NavControls'
 import { mixins } from '../../../../shared-styles'
 import actions from '../../../../redux/scene/actions'
+import absmod from '../../../../lib/absmod'
 
 const Navigator = props => (
   <React.Fragment>
@@ -37,13 +38,22 @@ const Navigator = props => (
       <NavControls
         {...props}
         onDetails={() => {
+          const { currentSceneIndex, scenes } = props
           props.startInteraction()
           props.history.push(
-            `/subject/${props.scenes[props.currentSceneIndex].subjectId}/about`
+            `/subject/${
+              scenes[absmod(currentSceneIndex, scenes.length)].subjectId
+            }/about`
           )
         }}
-        onNext={() => console.log('next scene button')}
-        onPrevious={() => console.log('previous scene button')}
+        onNext={() => {
+          props.startInteraction()
+          props.nextScene()
+        }}
+        onPrevious={() => {
+          props.startInteraction()
+          props.previousScene()
+        }}
       />
     </Animated.View>
   </React.Fragment>
