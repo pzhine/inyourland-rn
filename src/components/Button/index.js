@@ -1,10 +1,21 @@
 import React from 'react'
 import { TouchableWithoutFeedback, Animated, View } from 'react-native'
+import _ from 'lodash'
 import styles from './styles'
 
 class Button extends React.Component {
   state = {
     highlightAnimation: new Animated.Value(0),
+  }
+  constructor(props) {
+    super(props)
+    const debounceWait = props.debounceWait || 250
+    this.onPressIn = _.throttle(this.onPressIn.bind(this), debounceWait, {
+      leading: true,
+    })
+    this.onPressOut = _.throttle(this.onPressOut.bind(this), debounceWait, {
+      leading: true,
+    })
   }
   onPressIn() {
     const { isDisabled } = this.props
@@ -18,9 +29,6 @@ class Button extends React.Component {
   }
   onPressOut() {
     const { isDisabled, onPress } = this.props
-    if (isDisabled) {
-      return
-    }
     Animated.sequence([
       Animated.timing(this.state.highlightAnimation, {
         duration: 20,
@@ -31,14 +39,16 @@ class Button extends React.Component {
         toValue: 0,
       }),
     ]).start()
-    onPress()
+    if (!isDisabled) {
+      onPress()
+    }
   }
   render() {
     const { children, style } = this.props
     return (
       <TouchableWithoutFeedback
-        onPressIn={() => this.onPressIn()}
-        onPressOut={() => this.onPressOut()}
+        onPressIn={this.onPressIn}
+        onPressOut={this.onPressOut}
       >
         <View style={{ ...styles.button, ...style }}>
           <Animated.View

@@ -2,17 +2,21 @@ import React from 'react'
 import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import { NativeRouter, Redirect } from 'react-router-native'
+import { Provider } from 'react-redux'
 import NavigatorRoute from './route'
-import AutoPlay from '../../../storybook/AutoPlay'
-import scenes from '../../../content/scenes/stream0.json'
-import storyStyles from '../../../storybook/styles'
-import SceneTransition from '../../transitions/SceneTransition'
+import store from '../../../../redux/configureStore'
+import AutoPlay from '../../../../../storybook/AutoPlay'
+import scenes from '../../../../../content/scenes/stream0.json'
+import storyStyles from '../../../../../storybook/styles'
+import SceneTransition from '../../../../transitions/SceneTransition'
 
-storiesOf('screens/Navigator', module)
+storiesOf('modules/Slideshow/Navigator', module)
   .addDecorator(story => (
-    <NativeRouter>
-      <View style={storyStyles.container}>{story()}</View>
-    </NativeRouter>
+    <Provider store={store}>
+      <NativeRouter>
+        <View style={storyStyles.container}>{story()}</View>
+      </NativeRouter>
+    </Provider>
   ))
   .add('default', () => (
     <SceneTransition scenes={scenes} currentSceneIndex={0}>

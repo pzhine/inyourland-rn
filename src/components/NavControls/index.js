@@ -1,31 +1,20 @@
 import React from 'react'
 import { Animated, Image, Text } from 'react-native'
-import { withRouter } from 'react-router-native'
 import Button from '../Button'
 import styles from './styles'
 
 const NavControls = ({
-  isTransitioning,
-  animations,
-  history,
-  scenes,
-  currentSceneIndex,
+  locationIsTransitioning,
+  onNext,
+  onPrevious,
+  onDetails,
 }) => (
-  <Animated.View
-    style={{
-      ...styles.navControls,
-      opacity: animations.locationInfo.interpolate({
-        inputRange: [0, 1],
-        outputRange: [0.5, 1],
-      }),
-    }}
-  >
+  <Animated.View style={styles.navControls}>
     <Button
       style={styles.prevButton}
-      isDisabled={isTransitioning}
-      onPress={() => {
-        console.log('prev')
-      }}
+      debounceWait={700}
+      isDisabled={locationIsTransitioning}
+      onPress={onPrevious || (() => console.log('previous button pressed'))}
     >
       <Image
         style={styles.prevArrow}
@@ -34,19 +23,20 @@ const NavControls = ({
     </Button>
     <Button
       style={styles.detailsButton}
-      isDisabled={isTransitioning}
-      onPress={() => {
-        history.push(`/subject/${scenes[currentSceneIndex].subjectId}/about`)
-      }}
+      onPress={
+        onDetails ||
+        (() => {
+          console.log('details button pressed')
+        })
+      }
     >
       <Text style={styles.detailsButtonText}>Discover</Text>
     </Button>
     <Button
       style={styles.prevButton}
-      isDisabled={isTransitioning}
-      onPress={() => {
-        console.log('next')
-      }}
+      debounceWait={700}
+      isDisabled={locationIsTransitioning}
+      onPress={onNext || (() => console.log('next button pressed'))}
     >
       <Image
         style={styles.nextArrow}
@@ -56,4 +46,4 @@ const NavControls = ({
   </Animated.View>
 )
 
-export default withRouter(NavControls)
+export default NavControls

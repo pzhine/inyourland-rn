@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import WebApp from '../components/WebApp'
+import WebApp from '../modules/WebApp'
 
 // We need a Root component for React Hot Loading.
 function Root() {

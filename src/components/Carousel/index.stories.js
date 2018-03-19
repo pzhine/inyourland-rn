@@ -27,9 +27,8 @@ const Transition = ({ children, toggle }) => (
         isIn: val => val % 2,
         range: [0, 1],
         method: Animated.timing,
-        duration: 1000,
+        duration: 700,
         easing: Easing.inOut(Easing.sin),
-        inDelay: 300,
       },
       inactiveAnimation: {
         isIn: val => !(val % 2),
@@ -76,6 +75,15 @@ storiesOf('components/Carousel', module)
   ))
   .add('autoPlay reverse', () => (
     <AutoPlay interval={-1} propToIncrement="currentSceneIndex">
+      {currentIndex => (
+        <Transition toggle={0}>
+          <Carousel scenes={scenes} currentSceneIndex={currentIndex} />
+        </Transition>
+      )}
+    </AutoPlay>
+  ))
+  .add('autoPlay forward with jumps', () => (
+    <AutoPlay interval={1} jumpEvery={4} jumpInterval={10}>
       {currentIndex => (
         <Transition toggle={0}>
           <Carousel scenes={scenes} currentSceneIndex={currentIndex} />

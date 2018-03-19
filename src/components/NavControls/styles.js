@@ -26,7 +26,6 @@ const styles = {
   },
   nextButton: {
     ...arrowButton,
-    justifySelf: 'flex-end',
   },
   nextArrow: {
     ...arrowDims,
@@ -34,7 +33,6 @@ const styles = {
   },
   detailsButton: {
     ...mixins.button,
-    justifySelf: 'center',
   },
   detailsButtonText: {
     ...mixins.buttonText,

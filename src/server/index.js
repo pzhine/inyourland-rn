@@ -71,7 +71,9 @@ io.on('connection', socket => {
 })
 
 // start scene player and sync
-startScenes({ io })
+if (process.argv[1] === 'startScenes') {
+  startScenes({ io })
+}
 
 server.listen(port, () => {
   console.log(`✅  server started on port: ${port}`) // eslint-disable-line no-console

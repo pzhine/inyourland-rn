@@ -7,6 +7,8 @@ export default function transitionProps({ propsToTransition }) {
       constructor(props) {
         super(props)
 
+        this._isMounted = false
+
         // props transitioning (prop key => timer id)
         this.transProps = {}
 
@@ -49,12 +51,14 @@ export default function transitionProps({ propsToTransition }) {
               delete this.transProps[key]
               delete this.postTransProps[key]
               // update the prop
-              this.setState({
-                propsToRender: {
-                  ...this.state.propsToRender,
-                  [key]: post[key],
-                },
-              })
+              if (this._isMounted) {
+                this.setState({
+                  propsToRender: {
+                    ...this.state.propsToRender,
+                    [key]: post[key],
+                  },
+                })
+              }
             }, toTransition[key].duration)
           } else {
             // non transition props get updated immediately
@@ -68,6 +72,12 @@ export default function transitionProps({ propsToTransition }) {
             ...normalProps,
           },
         })
+      }
+      componentWillMount() {
+        this._isMounted = true
+      }
+      componentWillUnmount() {
+        this._isMounted = false
       }
       componentWillReceiveProps(nextProps) {
         this.transitionProps({ pre: this.props, post: nextProps })

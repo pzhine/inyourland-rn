@@ -7,6 +7,7 @@ class PropTransition extends React.Component {
     const { animations, propToWatch } = props
     super(props)
 
+    this._isMounted = false
     this.state = {
       isTransitioning: false,
       animations: Object.keys(animations).reduce(
@@ -48,10 +49,12 @@ class PropTransition extends React.Component {
           isIn,
           ...options
         } = animations[animKey]
+        const delay =
+          isIn && isIn(propTransition.nextValue) ? inDelay : outDelay
         method(this.state.animations[animKey], {
           duration: duration / 2,
           toValue: range[isIn && isIn(propTransition.nextValue) ? 1 : 0],
-          delay: isIn && isIn(propTransition.nextValue) ? inDelay : outDelay,
+          delay,
           useNativeDriver: true,
           ...options,
         }).start()
@@ -60,7 +63,9 @@ class PropTransition extends React.Component {
     if (propTransition.isActive && !this.state.isTransitioning) {
       this.setState({ isTransitioning: true })
       setTimeout(() => {
-        this.setState({ isTransitioning: false })
+        if (this._isMounted) {
+          this.setState({ isTransitioning: false })
+        }
       }, this.props.holdDuration)
     }
     if (
@@ -74,8 +79,10 @@ class PropTransition extends React.Component {
           method,
           range,
           duration,
+          inDelay,
           outDelay,
           isIn,
+          oneWay,
           ...options
         } = animations[animKey]
         if (!isIn) {
@@ -86,11 +93,22 @@ class PropTransition extends React.Component {
             useNativeDriver: true,
             ...options,
           }).start()
-        } else {
-          this.resetAnimation({ animKey, nextValue: nextProps[propToWatch] })
+        } else if (duration) {
+          const delay =
+            isIn && isIn(nextProps[propToWatch]) ? inDelay : outDelay
+          const timerDelay = (delay || 0) + duration - this.props.holdDuration
+          setTimeout(() => {
+            this.resetAnimation({ animKey, nextValue: nextProps[propToWatch] })
+          }, timerDelay)
         }
       })
     }
+  }
+  componentDidMount() {
+    this._isMounted = true
+  }
+  componentWillUnmount() {
+    this._isMounted = false
   }
   render() {
     const { children, transitions, propToWatch } = this.props

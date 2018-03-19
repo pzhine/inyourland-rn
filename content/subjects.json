@@ -81,7 +81,8 @@
   },
   {
     "subjectId": "butterfly",
-    "name": "Butterfly"
+    "name": "Butterfly",
+    "bio": [{ "sectionId": "about", "content": "" }]
   },
   {
     "subjectId": "greategret",
