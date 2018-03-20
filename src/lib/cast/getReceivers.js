@@ -15,7 +15,7 @@ function getReceivers() {
 
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(
-      () => reject('getReceivers timed out'),
+      () => reject(new Error('getReceivers timed out')),
       config.castScannerTimeout * 1000
     )
 

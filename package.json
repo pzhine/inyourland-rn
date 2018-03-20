@@ -9,10 +9,18 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "haul": "haul",
-    "storybook": "storybook start -p 7007 --haul webpack.haul.storybook.js --platform ios"
+    "storybook":
+      "storybook start -p 7007 --haul webpack.haul.storybook.js --platform ios",
+    "build-lib": "babel src/lib --out-dir build/lib --presets=es2015,stage-3",
+    "build-scripts":
+      "npm run build-lib && babel src/scripts --out-dir build/scripts --presets=es2015,stage-3",
+    "scan": "npm run build-scripts && babel-node build/scripts/scan.js",
+    "play": "npm run build-scripts && babel-node build/scripts/play.js",
+    "time": "npm run build-scripts && babel-node build/scripts/time.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "castv2-client": "^1.2.0",
     "chromecast-scanner": "^0.5.0",
@@ -76,8 +84,6 @@
     ]
   },
   "rnpm": {
-    "assets": [
-      "./assets/fonts/"
-    ]
+    "assets": ["./assets/fonts/"]
   }
 }
