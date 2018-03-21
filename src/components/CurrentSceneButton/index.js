@@ -4,7 +4,6 @@ import Button from '../Button'
 import PropTransition from '../../transitions/PropTransition'
 import getImageUrl from '../../lib/scene/getImageUrl'
 import styles from './styles'
-import { mixins } from '../../shared-styles'
 
 const CurrentSceneButton = ({ scene, onPress, isVisible }) => (
   <PropTransition

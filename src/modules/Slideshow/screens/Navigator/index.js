@@ -6,6 +6,7 @@ import { compose } from 'redux'
 import LocationName from '../../../../components/LocationName'
 import Hotspot from '../../../../components/Hotspot'
 import NavControls from '../../../../components/NavControls'
+import CurrentSceneButton from '../../../../components/CurrentSceneButton'
 import { mixins } from '../../../../shared-styles'
 import actions from '../../../../redux/scene/actions'
 import absmod from '../../../../lib/absmod'
@@ -20,8 +21,14 @@ const Navigator = props => (
     >
       <LocationName {...props} />
       <Hotspot {...props} radius={35} color="#0069FF" ripples={3} />
+      <CurrentSceneButton
+        scene={props.scenes[absmod(props.nextSceneIndex, props.scenes.length)]}
+        isVisible={props.isInteracting}
+        onPress={props.endInteraction}
+      />
     </Animated.View>
     <Animated.View
+      pointerEvents="box-none"
       style={{
         ...mixins.fillContainerAbsolute,
         ...mixins.centerBoth,
@@ -59,4 +66,13 @@ const Navigator = props => (
   </React.Fragment>
 )
 
-export default compose(withRouter, connect(null, actions))(Navigator)
+export default compose(
+  withRouter,
+  connect(
+    state => ({
+      isInteracting: state.scene.isInteracting,
+      nextSceneIndex: state.scene.nextSceneIndex,
+    }),
+    actions
+  )
+)(Navigator)

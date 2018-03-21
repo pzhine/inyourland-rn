@@ -19,6 +19,14 @@ storiesOf('components/CurrentSceneButton', module)
   ))
   .add('show/hide', () => (
     <AutoPlay interval={1}>
-      {count => <CurrentSceneButton scene={scenes[0]} isVisible={count % 2} />}
+      {count => (
+        <CurrentSceneButton
+          scene={scenes[0]}
+          isVisible={count % 2}
+          onPress={() => {
+            console.log('Pressed!')
+          }}
+        />
+      )}
     </AutoPlay>
   ))

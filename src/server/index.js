@@ -67,18 +67,18 @@ expressApp.get('*', (req, res) =>
 
 const ipv4 = ip => ip.replace('::ffff:', '')
 
-// initialize socket listener
-const io = socketio(server)
-io.on('connection', socket => {
-  console.log('client connected', socket.handshake.address)
-  // add sockedId to mediaList entry
-  mediaList.find(
-    m => m.clientIp === ipv4(socket.handshake.address)
-  ).socket = socket
-})
-
 // start scene player and sync
 if (process.argv[2] === 'startScenes') {
+  // initialize socket listener
+  const io = socketio(server)
+  io.on('connection', socket => {
+    console.log('client connected', socket.handshake.address)
+    // add socketId to mediaList entry
+    mediaList.find(
+      m => m.clientIp === ipv4(socket.handshake.address)
+    ).socket = socket
+  })
+
   startScenes({ io, mediaList })
 }
 
