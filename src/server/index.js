@@ -9,6 +9,7 @@ import template from './template'
 import config from '../../content/config.json'
 import kytConfig from '../../kyt.config'
 import startScenes from '../lib/scene/start'
+import mediaList from '../../content/media.json'
 
 const clientAssets = require(KYT.ASSETS_MANIFEST) // eslint-disable-line import/no-dynamic-require
 const port = process.env.PORT || parseInt(KYT.SERVER_PORT, 10)
@@ -64,15 +65,21 @@ expressApp.get('*', (req, res) =>
   )
 )
 
+const ipv4 = ip => ip.replace('::ffff:', '')
+
 // initialize socket listener
 const io = socketio(server)
 io.on('connection', socket => {
   console.log('client connected', socket)
+  // add sockedId to mediaList entry
+  mediaList.find(
+    m => m.clientIp === ipv4(socket.handshake.address)
+  ).socket = socket
 })
 
 // start scene player and sync
-if (process.argv[1] === 'startScenes') {
-  startScenes({ io })
+if (process.argv[2] === 'startScenes') {
+  startScenes({ io, mediaList })
 }
 
 server.listen(port, () => {

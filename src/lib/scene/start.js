@@ -1,26 +1,24 @@
-import timer from './timer'
-// import { getReceivers, playMedia } from '../cast'
-import media from '../../../content/media.json'
+import setTimer from './setTimer'
+import { getReceivers, playMedia } from '../cast'
 
-async function start({ io }) {
+async function start({ io, mediaList }) {
   console.log('scene startup')
-  // const inputMedia = await getReceivers()
-  // const outputMedia = []
-  // await Promise.all(
-  //   inputMedia.map(async mediaEntry => {
-  //     outputMedia.push(await playMedia(mediaEntry))
-  //   })
-  // )
-  const outputMedia = media
+  // scan the network for chromecast devices and start playing media
+  await getReceivers(mediaList)
+  await Promise.all(
+    mediaList.map(async mediaEntry => {
+      await playMedia(mediaEntry)
+    })
+  )
 
-  outputMedia.forEach(m => {
-    const scenes = require(`../../../content/scenes/${m.mediaId}.json`)
-    timer({
+  // start scene timers
+  mediaList.forEach(mediaEntry => {
+    const scenes = require(`../../../content/scenes/${mediaEntry.mediaId}.json`)
+    setTimer({
       scenes,
-      media: m,
-      delay: scenes[1].startTime,
-      sceneIndex: 1,
+      mediaEntry,
       io,
+      currentSceneIndex: 0,
     })
   })
 }

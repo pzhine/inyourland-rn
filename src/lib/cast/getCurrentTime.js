@@ -10,7 +10,7 @@ function getCurrentTime(player) {
     )
     player.getStatus((err, status) => {
       clearTimeout(timeout)
-      resolve(status.currentTime)
+      resolve(status.currentTime * 1000)
     })
   })
 }

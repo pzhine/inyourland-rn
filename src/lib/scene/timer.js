@@ -1,24 +1,24 @@
-function timer({ io, sceneIndex, delay, scenes, media }) {
-  console.log(`set scene change timer for ${media.mediaId}`)
+import setTimer from './setTimer'
+
+function timer({ io, sceneIndex, delay, scenes, mediaEntry }) {
+  console.log(`set scene change timer for ${mediaEntry.mediaId}`)
   setTimeout(() => {
     console.log(
-      `emit scene change event for ${media.mediaId}, scene ${sceneIndex}`
+      `emit scene change event for ${mediaEntry.mediaId}, scene ${sceneIndex}`
     )
-    io.emit('action', {
-      type: 'SCENE_CHANGE',
-      payload: { mediaId: media.mediaId, sceneIndex },
-    })
-
-    let nextSceneIndex = sceneIndex + 1
-    if (nextSceneIndex >= scenes.length) {
-      nextSceneIndex = 0
+    if (mediaEntry.socket) {
+      console.log('socket', mediaEntry.socket)
+      mediaEntry.socket.emit('action', {
+        type: 'SCENE_CHANGE',
+        payload: { mediaId: mediaEntry.mediaId, sceneIndex },
+      })
+    } else {
+      // client hasn't connected to this socket yet
+      console.log(`Client '${mediaEntry.clientIp}' has not connected yet`)
     }
-    const nextDelay =
-      nextSceneIndex === 0
-        ? media.duration * 1000 - scenes[sceneIndex].startTime
-        : scenes[nextSceneIndex].startTime - scenes[sceneIndex].startTime
 
-    timer({ io, media, scenes, sceneIndex: nextSceneIndex, delay: nextDelay })
+    // set the next timer
+    setTimer({ scenes, mediaEntry, io, currentSceneIndex: sceneIndex })
   }, delay)
 }
 

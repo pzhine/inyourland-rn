@@ -2,26 +2,26 @@ import { Client } from 'castv2-client'
 import LoopingMediaReceiver from './LoopingMediaReceiver'
 import config from '../../../config.json'
 
-// attempts to play file defined in media.sourceFilename on chromecast
-//   with host address in media.host (set by lib/cast/getReceivers)
+// attempts to play file defined in mediaEntry.sourceFilename on chromecast
+//   with host address in mediaEntry.host (set by lib/cast/getReceivers)
 // return a promise that resolves when the chromecast state becomes 'PLAYING'
-// promise resolves with media object with the following properties added:
+// the following properties of mediaEntry will be added/mutated:
 //   * duration: the duration of the clip
 //   * player: a reference to the LoopingMediaReceiver instance
-function playMedia(media) {
-  console.log('playMedia', media)
+function playMedia(mediaEntry) {
+  console.log('playMedia', mediaEntry)
   const client = new Client()
 
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(
-      () => reject(new Error('playMedia timed out'), media),
+      () => reject(new Error('playMedia timed out'), mediaEntry),
       config.castPlayTimeout * 1000
     )
     client.on('error', err => {
       client.close()
       reject(err)
     })
-    client.connect(media.host, () => {
+    client.connect(mediaEntry.host, () => {
       console.log('connected, launching app ...')
 
       client.launch(LoopingMediaReceiver, (err, player) => {
@@ -29,10 +29,10 @@ function playMedia(media) {
           reject(err)
         }
 
-        media.player = player
+        mediaEntry.player = player
 
         const mediaSpec = {
-          contentId: config.mediaBaseUrl + media.sourceFilename,
+          contentId: config.mediaBaseUrl + mediaEntry.sourceFilename,
           contentType: 'video/mp4',
           streamType: 'BUFFERED', // or LIVE
         }
@@ -40,11 +40,15 @@ function playMedia(media) {
         player.on('status', status => {
           console.log('status broadcast playerState=%s', status.playerState)
           if (status.media) {
-            media.duration = status.media.duration
+            mediaEntry.duration = status.media.duration * 1000
+            console.log(
+              `🎦  ${mediaEntry.mediaId} duration`,
+              mediaEntry.duration
+            )
           }
           if (status.playerState === 'PLAYING') {
             clearTimeout(timeout)
-            resolve(media)
+            resolve()
           }
         })
 

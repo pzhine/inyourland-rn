@@ -1,4 +1,4 @@
-import getSceneAt from './getSceneAt'
+import getSceneIndexForTime from './getSceneIndexForTime'
 
 const scenes = [
   {
@@ -22,13 +22,13 @@ const scenes = [
 ]
 
 it('should find a scene', () => {
-  expect(getSceneAt({ scenes, time: 1000 })).toEqual(scenes[0])
+  expect(getSceneIndexForTime({ scenes, time: 1000 })).toBe(0)
 })
 
 it('should find the scene when argument is startTime', () => {
-  expect(getSceneAt({ scenes, time: 57506 })).toEqual(scenes[1])
+  expect(getSceneIndexForTime({ scenes, time: 57506 })).toBe(1)
 })
 
 it('should find the last scene', () => {
-  expect(getSceneAt({ scenes, time: 80000 })).toEqual(scenes[2])
+  expect(getSceneIndexForTime({ scenes, time: 80000 })).toBe(2)
 })
