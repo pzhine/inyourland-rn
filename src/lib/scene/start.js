@@ -19,6 +19,7 @@ async function start({ io, mediaList }) {
       mediaEntry,
       io,
       currentSceneIndex: 0,
+      loopCount: 0,
     })
   })
 }

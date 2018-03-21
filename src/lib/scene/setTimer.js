@@ -2,10 +2,23 @@ import timer from './timer'
 import { getTimeRemaining } from './'
 import { getCurrentTime } from '../cast'
 
-async function setTimer({ scenes, mediaEntry, io, currentSceneIndex }) {
-  // get current time from chromecast, adjusted for loop
-  const currentTime =
-    (await getCurrentTime(mediaEntry.player)) % mediaEntry.duration
+async function setTimer({
+  scenes,
+  mediaEntry,
+  io,
+  currentSceneIndex,
+  loopCount,
+}) {
+  // set fallback current time to start time of current scene
+  let currentTime = scenes[currentSceneIndex].startTime
+
+  try {
+    // try get current time from chromecast, adjusted for loop
+    currentTime =
+      (await getCurrentTime(mediaEntry.player)) % mediaEntry.duration
+  } catch (err) {
+    console.log(`⚠️  Warning: getCurrentTime failed for %{mediaEntry.deviceId}`)
+  }
 
   console.log('🕑  current time', currentTime)
 
@@ -13,6 +26,7 @@ async function setTimer({ scenes, mediaEntry, io, currentSceneIndex }) {
   let nextSceneIndex = currentSceneIndex + 1
   if (nextSceneIndex >= scenes.length) {
     nextSceneIndex = 0
+    loopCount += 1
   }
 
   console.log('⏭️  next scene', nextSceneIndex)
@@ -33,6 +47,7 @@ async function setTimer({ scenes, mediaEntry, io, currentSceneIndex }) {
     mediaEntry,
     sceneIndex: nextSceneIndex,
     delay: parseInt(timeRemaining, 10),
+    loopCount,
   })
 }
 

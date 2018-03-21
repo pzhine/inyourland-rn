@@ -70,7 +70,7 @@ const ipv4 = ip => ip.replace('::ffff:', '')
 // initialize socket listener
 const io = socketio(server)
 io.on('connection', socket => {
-  console.log('client connected', socket)
+  console.log('client connected', socket.handshake.address)
   // add sockedId to mediaList entry
   mediaList.find(
     m => m.clientIp === ipv4(socket.handshake.address)
