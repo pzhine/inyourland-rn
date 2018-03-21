@@ -23,7 +23,7 @@ function timer({ io, sceneIndex, delay, scenes, mediaEntry, loopCount }) {
       })
     } else {
       // client hasn't connected to this socket yet
-      console.log(`Client '${mediaEntry.clientIp}' has not connected yet`)
+      console.log(`⚠️  Client '${mediaEntry.clientIp}' has not connected yet`)
     }
 
     // set the next timer

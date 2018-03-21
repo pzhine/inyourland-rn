@@ -28,7 +28,7 @@ class SceneTransition extends React.Component {
     Animated.timing(this.state.locationInfoAnimation, {
       toValue: 1,
       duration: 200,
-      delay: 400,
+      delay: 500,
       useNativeDriver: true,
     }).start()
   }
@@ -61,7 +61,7 @@ class SceneTransition extends React.Component {
     const { children, scenes, currentSceneIndex } = this.props
     return (
       <PropTransition
-        holdDuration={400}
+        holdDuration={500}
         propToWatch="locationId"
         locationId={this.state.locationId}
         animations={{

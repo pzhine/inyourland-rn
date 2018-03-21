@@ -1,6 +1,6 @@
 import timer from './timer'
 import { getTimeRemaining } from './'
-import { getCurrentTime } from '../cast'
+import { getCurrentTime, restartIfInactive } from '../cast'
 
 async function setTimer({
   scenes,
@@ -17,7 +17,14 @@ async function setTimer({
     currentTime =
       (await getCurrentTime(mediaEntry.player)) % mediaEntry.duration
   } catch (err) {
-    console.log(`⚠️  Warning: getCurrentTime failed for %{mediaEntry.deviceId}`)
+    console.log(`⚠️  Warning: getCurrentTime failed for ${mediaEntry.deviceId}`)
+    ;({ currentTime, currentSceneIndex } = await restartIfInactive({
+      scenes,
+      mediaEntry,
+      io,
+      currentSceneIndex,
+      currentTime,
+    }))
   }
 
   console.log('🕑  current time', currentTime)
