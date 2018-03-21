@@ -15,14 +15,18 @@ class Approot extends React.Component {
     this.getScenes()
   }
   getScenes() {
-    getClientIp().then(clientIp => {
-      console.log('client IP', clientIp)
-      const mediaId = mediaList.find(m => m.clientIp === clientIp).mediaId
-      console.log('mediaId', mediaId)
-      const scenes = require(`../../content/scenes/${mediaId}.json`)
-      console.log('scenes', scenes)
-      this.setState({ scenes })
-    })
+    getClientIp()
+      .then(clientIp => {
+        console.log('client IP', clientIp)
+        const mediaId = mediaList.find(m => m.clientIp === clientIp).mediaId
+        console.log('mediaId', mediaId)
+        const scenes = require(`../../content/scenes/${mediaId}.json`)
+        console.log('scenes', scenes)
+        this.setState({ scenes })
+      })
+      .catch(err => {
+        console.error(err)
+      })
   }
   render() {
     return (

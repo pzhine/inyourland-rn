@@ -9,7 +9,7 @@ const styles = {
     top: 0,
     bottom: 0,
     backgroundColor: 'rgb(255,255,255)',
-    zIndex: -1,
+    zIndex: 1,
   },
 }
 

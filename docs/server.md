@@ -30,13 +30,13 @@
 
 ## On client connect
 
-* should lookup `mediaId` in `media.json` by `clientIp` from `io.on('connect')`
-* should add/update `socketId` in `mediaMap` with key `mediaId`
+* should lookup entry in `mediaList` by `clientIp` from `io.on('connect')`
+* should add/update `socket` in `mediaList` entry
 
 ## Scene timer
 
-* should lookup `socketId` in `mediaMap` by `mediaId` passed to timer
-* should emit a `sceneAdvance` event to socket listener, with new scene index
+* should emit a `sceneAdvance` event to `mediaEntry.socket`,
+  with new scene index
 * should query chromecast for current play position
 * should log alert notification and attempt restart if chromecast is unresponsive or not playing
 * should calculate time remaining for the current scene

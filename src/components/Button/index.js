@@ -10,38 +10,51 @@ class Button extends React.Component {
   constructor(props) {
     super(props)
     const debounceWait = props.debounceWait || 250
-    this.onPressIn = _.throttle(this.onPressIn.bind(this), debounceWait, {
+    this.isPressed = false
+    this.onPress = _.throttle(props.onPress.bind(this), debounceWait, {
       leading: true,
     })
-    this.onPressOut = _.throttle(this.onPressOut.bind(this), debounceWait, {
-      leading: true,
-    })
+    this.onPressIn = this.onPressIn.bind(this)
+    this.onPressOut = this.onPressOut.bind(this)
   }
   onPressIn() {
     const { isDisabled } = this.props
     if (isDisabled) {
       return
     }
+    this.isPressed = true
+    Animated.timing(this.state.highlightAnimation).stop()
     Animated.timing(this.state.highlightAnimation, {
       duration: 20,
       toValue: 1,
     }).start()
   }
   onPressOut() {
-    const { isDisabled, onPress } = this.props
-    Animated.sequence([
-      Animated.timing(this.state.highlightAnimation, {
-        duration: 20,
-        toValue: 1,
-      }),
+    const { isDisabled } = this.props
+    Animated.timing(this.state.highlightAnimation).stop()
+    if (this.isPressed || isDisabled) {
       Animated.timing(this.state.highlightAnimation, {
         duration: 300,
         toValue: 0,
-      }),
-    ]).start()
-    if (!isDisabled) {
-      onPress()
+      }).start()
+      this.isPressed = false
     }
+    if (isDisabled) {
+      return
+    }
+    if (!this.isPressed) {
+      Animated.sequence([
+        Animated.timing(this.state.highlightAnimation, {
+          duration: 20,
+          toValue: 1,
+        }),
+        Animated.timing(this.state.highlightAnimation, {
+          duration: 300,
+          toValue: 0,
+        }),
+      ]).start()
+    }
+    this.onPress()
   }
   render() {
     const { children, style } = this.props
