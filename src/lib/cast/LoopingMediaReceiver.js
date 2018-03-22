@@ -3,10 +3,10 @@ import { Application, MediaController } from 'castv2-client'
 class LoopingMediaReceiver extends Application {
   constructor(...args) {
     super(...args)
-    console.log('-----MEDIACONTROLLER', MediaController)
+    console.log('👍\tMEDIACONTROLLER')
     this.media = this.createController(MediaController)
     this.media.on('status', status => {
-      console.log('-----ONSTATUS', status)
+      console.log('ℹ️\tONSTATUS', status)
       this.emit('status', status)
     })
   }

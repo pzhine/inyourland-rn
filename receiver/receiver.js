@@ -2,19 +2,55 @@ var BUFFER_WIDTH = 10;
 var CHUNK_SIZE = Math.pow(2, 20) * 5; // 5 MB
 var BUFFER_POLL_FREQ = 1000; // 1 second
 
-function getBufferEndTime(sourceBuffer) {
-  return sourceBuffer.buffered.end(sourceBuffer.buffered.length - 1);
+function getBufferEndTime(scope) {
+  return scope.sourceBuffer.buffered.end(0);
 }
 
-function getChunk(uint8array, idx) {
-  return uint8array.slice(
-    idx * CHUNK_SIZE,
-    Math.min(uint8array.length, idx * CHUNK_SIZE + CHUNK_SIZE)
-  );
+function getChunk(scope, idx) {
+  console.log('ℹ️  getChunk', idx);
+  var rangeStart = idx * CHUNK_SIZE;
+  var rangeEnd = rangeStart + CHUNK_SIZE - 1;
+
+  // if we've hit the end of the stream, adjust range and reset index to 0
+  if (scope.rangeMax && rangeEnd >= scope.rangeMax) {
+    rangeEnd = scope.rangeMax;
+    scope.chunkIndex = 0; // next getChunk will start at beginning of stream
+    scope.resetTimestamp = true;
+  } else {
+    // otherwise, increment next chunkIndex
+    scope.chunkIndex = idx + 1;
+  }
+  var xhr = new XMLHttpRequest();
+  var url = scope.mediaUrl;
+  console.log('ℹ️  GET', url);
+  xhr.open('GET', url, true);
+  xhr.responseType = 'arraybuffer';
+  xhr.setRequestHeader('Range', 'bytes=' + rangeStart + '-' + rangeEnd);
+  xhr.send();
+  xhr.onload = function (e) {
+    if (xhr.status !== 206) {
+      console.log('❌  getChunk error', e);
+      return;
+    }
+    if (!scope.rangeMax) {
+      scope.rangeMax = parseInt(
+        xhr.getResponseHeader('Content-Range').split('/')[1],
+        10
+      );
+    }
+    scope.sourceBuffer.appendBuffer(xhr.response);
+    setTimeout(processNextSegment.bind(null, scope), BUFFER_POLL_FREQ);
+  };
+  xhr.onerror = function (e) {
+    console.log('❌  getChunk error', e);
+    scope.video.src = null;
+  };
 }
 
 function init(scope, cast) {
   console.log('-----RECEIVER INIT');
+  scope.loopCount = 0;
+
   // Turn on debugging so that you can see what is going on.  Please turn this off
   // on your production receivers to improve performance.
   cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
@@ -29,19 +65,33 @@ function init(scope, cast) {
     // Use MSE with the media element.
     scope.mediaSource = new MediaSource();
     scope.video.src = scope.URL.createObjectURL(scope.mediaSource);
-    scope.allSegments = null;
+    scope.mediaUrl = data.data.media.contentId;
 
     /**
      * Loads the video and kicks off the processing.
      */
-    scope.mediaSource.addEventListener('sourceopen', function () {
-      scope.sourceBuffer = scope.mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42c01e"');
+    scope.mediaSource.addEventListener('sourceopen', function (args) {
+      console.log('ℹ️  sourceopen', args);
+
+      scope.sourceBuffer = scope.mediaSource.addSourceBuffer(
+        'video/mp4; codecs="avc1.4D401E"'
+      );
 
       scope.sourceBuffer.addEventListener('updateend', function () {
-        scope.sourceBuffer.timestampOffset = getBufferEndTime(scope.sourceBuffer);
+        if (!scope.duration) {
+          // save initial duration, as it increases after the 1st loop
+          scope.duration = scope.mediaSource.duration;
+        }
+        var bufferEndTime = getBufferEndTime(scope);
+
+        if (scope.resetTimestamp) {
+          console.log('ℹ️  timestamp reset');
+          scope.sourceBuffer.timestampOffset = bufferEndTime;
+          scope.resetTimestamp = false;
+        }
       });
 
-      fileDownload(scope, data.data.media.contentId);
+      startBuffering(scope);
     });
   });
 
@@ -50,47 +100,37 @@ function init(scope, cast) {
   scope.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
   scope.castReceiverManager.onSenderDisconnected = function (event) {
     console.log('sender disconnected');
-    if (scope.castReceiverManager.getSenders().length === 0 &&
-      event.reason === cast.receiver.system.DisconnectReason.REQUESTED_BY_SENDER) {
+    if (
+      scope.castReceiverManager.getSenders().length === 0 &&
+      event.reason === cast.receiver.system.DisconnectReason.REQUESTED_BY_SENDER
+    ) {
       scope.close();
     }
   };
   scope.castReceiverManager.start();
 }
 
-// When video data is ready, append the video source buffer
-// @param {arrayBuffer} ArrayBuffer with video segments.
-function onLoad(scope, arrayBuffer) {
-  if (!arrayBuffer) {
-    scope.video.src = null;
-    return;
-  }
-  scope.uint8array = new Uint8Array(arrayBuffer); // eslint-disable-line no-undef
+// start loading data from server into video buffer
+function startBuffering(scope) {
+  console.log('ℹ️  startBuffer');
   scope.chunkIndex = 0;
-  scope.sourceBuffer.appendBuffer(getChunk(scope.uint8array, 0));
-  processNextSegment(scope);
+  getChunk(scope, 0);
 }
 
 // Processes the next video segment for the video.
 function processNextSegment(scope) {
   // Wait for the source buffer to be updated
   if (!scope.sourceBuffer.updating && scope.sourceBuffer.buffered.length > 0) {
-    var bufferRemaining =
-      getBufferEndTime(scope.sourceBuffer) - scope.video.currentTime;
+    var bufferEndTime = getBufferEndTime(scope);
+    var bufferRemaining = bufferEndTime - scope.video.currentTime;
 
     console.log('-----processNextSegment', bufferRemaining);
 
     // Only push a new fragment if we are not updating and we have
     // less than BUFFER_WIDTH seconds in the pipeline
     if (bufferRemaining < BUFFER_WIDTH) {
-      scope.chunkIndex += 1;
-      if (scope.chunkIndex * CHUNK_SIZE >= scope.uint8array.length) {
-        scope.chunkIndex = 0;
-      }
-      console.log('-----appendBuffer', scope.chunkIndex);
-      scope.sourceBuffer.appendBuffer(
-        getChunk(scope.uint8array, scope.chunkIndex)
-      );
+      getChunk(scope, scope.chunkIndex);
+      return;
     }
     // Start playing the video
     if (scope.video.paused) {
@@ -98,26 +138,6 @@ function processNextSegment(scope) {
     }
   }
   setTimeout(processNextSegment.bind(null, scope), BUFFER_POLL_FREQ);
-}
-
-// Sends the xhr request to download the video.
-function fileDownload(scope, url) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'arraybuffer';
-  xhr.send();
-  xhr.onload = function (e) {
-    if (xhr.status !== 200) {
-      console.log('-----fileDownload error', e);
-      onLoad(scope);
-      return;
-    }
-    onLoad(scope, xhr.response);
-  };
-  xhr.onerror = function (e) {
-    console.log('-----fileDownload error', e);
-    scope.video.src = null;
-  };
 }
 
 window.onload = function () {

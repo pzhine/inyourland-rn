@@ -74,9 +74,12 @@ if (process.argv[2] === 'startScenes') {
   io.on('connection', socket => {
     console.log('client connected', socket.handshake.address)
     // add socketId to mediaList entry
-    mediaList.find(
+    const mediaEntry = mediaList.find(
       m => m.clientIp === ipv4(socket.handshake.address)
-    ).socket = socket
+    )
+    if (mediaEntry) {
+      mediaEntry.socket = socket
+    }
   })
 
   startScenes({ io, mediaList })

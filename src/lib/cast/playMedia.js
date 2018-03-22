@@ -18,6 +18,7 @@ function playMedia(mediaEntry) {
       config.castPlayTimeout * 1000
     )
     client.on('error', err => {
+      console.log('❌  playMedia client error', JSON.stringify(err, null, 2))
       client.close()
       reject(err)
     })
@@ -26,6 +27,10 @@ function playMedia(mediaEntry) {
 
       client.launch(LoopingMediaReceiver, (err, player) => {
         if (err) {
+          console.log(
+            '❌  playMedia launch error',
+            JSON.stringify(err, null, 2)
+          )
           reject(err)
         }
 
@@ -60,7 +65,12 @@ function playMedia(mediaEntry) {
 
         player.load(mediaSpec, { autoplay: true }, (err2, status) => {
           if (err2) {
+            console.log(
+              '❌  playMedia load error',
+              JSON.stringify(err2, null, 2)
+            )
             reject(err2)
+            return
           }
           console.log('media loaded playerState=%s', status.playerState)
         })
