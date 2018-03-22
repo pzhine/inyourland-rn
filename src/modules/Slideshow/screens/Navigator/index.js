@@ -23,7 +23,10 @@ const Navigator = props => (
       <Hotspot {...props} radius={35} color="#0069FF" ripples={3} />
       <CurrentSceneButton
         scene={props.scenes[absmod(props.nextSceneIndex, props.scenes.length)]}
-        isVisible={props.isInteracting}
+        isVisible={
+          props.isInteracting &&
+          props.currentSceneIndex !== props.nextSceneIndex
+        }
         onPress={props.endInteraction}
       />
     </Animated.View>

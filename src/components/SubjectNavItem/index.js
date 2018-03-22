@@ -7,7 +7,7 @@ import styles from './styles'
 import { variables } from '../../shared-styles'
 import bioSections from '../../../content/bioSections.json'
 
-const SubjectNavItem = ({ section, history }) => (
+const SubjectNavItem = ({ section, history, onNav }) => (
   <RouteTransition
     holdDuration={variables.transitions.fadeRoute.duration}
     path="/subject/(.*)/:sectionId"
@@ -36,7 +36,12 @@ const SubjectNavItem = ({ section, history }) => (
       return (
         <Button
           isDisabled={isActive || isTransitioning}
-          onPress={() => history.push(section.sectionId)}
+          onPress={() => {
+            if (onNav) {
+              onNav()
+            }
+            history.push(section.sectionId)
+          }}
           style={styles.button}
         >
           <Animated.Text

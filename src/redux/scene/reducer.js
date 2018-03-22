@@ -9,7 +9,7 @@ export default function sceneReducer(state = initialState, action) {
       return { ...state, currentSceneIndex: action.payload.sceneIndex }
     }
     case 'START_INTERACTION': {
-      return { ...state, isInteracting: true }
+      return { ...state, isInteracting: true, interactionTimer: action.payload }
     }
     case 'END_INTERACTION': {
       return {

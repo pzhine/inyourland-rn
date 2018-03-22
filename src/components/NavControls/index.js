@@ -12,7 +12,6 @@ const NavControls = ({
   <Animated.View style={styles.navControls}>
     <Button
       style={styles.prevButton}
-      debounceWait={700}
       isDisabled={locationIsTransitioning}
       onPress={onPrevious || (() => console.log('previous button pressed'))}
     >
@@ -34,7 +33,6 @@ const NavControls = ({
     </Button>
     <Button
       style={styles.prevButton}
-      debounceWait={700}
       isDisabled={locationIsTransitioning}
       onPress={onNext || (() => console.log('next button pressed'))}
     >

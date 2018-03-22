@@ -3130,7 +3130,7 @@ core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
-core-js@^2.2.2, core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0:
+core-js@^2.2.2, core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.3.tgz#8acc38345824f16d8365b7c9b4259168e8ed603e"
 
@@ -5414,9 +5414,9 @@ hasha@^2.2.0:
     is-stream "^1.0.1"
     pinkie-promise "^2.0.0"
 
-haul@^1.0.0-beta.13:
+"haul@git://github.com/pzhine/haul.git#v1.0.0-beta.13.script-fix":
   version "1.0.0-beta.13"
-  resolved "https://registry.yarnpkg.com/haul/-/haul-1.0.0-beta.13.tgz#7e638a0f60c9b392b3ab285d2edb67423e82e422"
+  resolved "git://github.com/pzhine/haul.git#54cd2d4f61bacd2f19cc3085125ab4c4a8b0204d"
   dependencies:
     "@zamotany/react-proxy" "3.0.0-alpha.4"
     babel-core "^6.24.0"
@@ -5431,6 +5431,7 @@ haul@^1.0.0-beta.13:
     clear "^0.0.1"
     cliui "^3.2.0"
     clone "^2.1.1"
+    core-js "^2.5.3"
     decamelize "^1.2.0"
     dedent "^0.7.0"
     dlv "^1.1.0"
@@ -7288,7 +7289,7 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
-lodash.debounce@^4.0.8:
+lodash.debounce@^4.0.0, lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
@@ -7437,6 +7438,12 @@ lodash.templatesettings@^3.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
+
+lodash.throttle@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.0.1.tgz#b3211662ee9d82f56903d0731262aaaa873a6330"
+  dependencies:
+    lodash.debounce "^4.0.0"
 
 lodash.throttle@^4.1.1:
   version "4.1.1"
@@ -9991,6 +9998,12 @@ redux-logger@^3.0.6:
 redux-socket.io@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/redux-socket.io/-/redux-socket.io-1.4.0.tgz#28f5f8c47011bce809e2ab760f54891521219b54"
+
+redux-throttle@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/redux-throttle/-/redux-throttle-0.1.1.tgz#43070573f0331d12ae16fae6572ad9d7fcb761ae"
+  dependencies:
+    lodash.throttle "4.0.1"
 
 redux-thunk@^2.2.0:
   version "2.2.0"

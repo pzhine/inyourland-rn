@@ -1,6 +1,5 @@
 import React from 'react'
 import { TouchableWithoutFeedback, Animated, View } from 'react-native'
-import _ from 'lodash'
 import styles from './styles'
 
 class Button extends React.Component {
@@ -9,11 +8,7 @@ class Button extends React.Component {
   }
   constructor(props) {
     super(props)
-    const debounceWait = props.debounceWait || 250
     this.isPressed = false
-    this.onPress = _.throttle(props.onPress.bind(this), debounceWait, {
-      leading: true,
-    })
     this.onPressIn = this.onPressIn.bind(this)
     this.onPressOut = this.onPressOut.bind(this)
   }
@@ -54,7 +49,7 @@ class Button extends React.Component {
         }),
       ]).start()
     }
-    this.onPress()
+    this.props.onPress()
   }
   render() {
     const { children, style } = this.props
