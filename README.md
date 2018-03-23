@@ -7,28 +7,48 @@ Dual channel video installation with interactive tablet app companion and websit
 * [config](docs/config.md)
 * [server](docs/server.md)
 * [client](docs/client.md)
+* [chromecast](docs/chromecast.md)
 
-## Getting Started
+## Setup
 
-1.  Install the dependencies:
+Install the dependencies:
 
 ```
 yarn install
 ```
 
-2.  Run the development bundler and development web server, build the native app and launch the simulator
+## Dev Scripts
 
 ```
-yarn dev
+# Run the web server
+yarn dev-server
 ```
 
-## Storybook
-
-To run the Storybook component prototyping app:
+```
+# Run the web server and start playing media
+yarn dev-server-player
+```
 
 ```
+# Run haul bundler and launch remote debugger
+yarn dev-haul
+```
+
+```
+# Run haul bundler with storybook entrypoint
 yarn storybook
-react-native run-ios
+```
+
+```
+# Build the app and launch it in the simulator
+yarn dev-ios
+```
+
+## Production scripts
+
+```
+# Build the bundle for production with haul
+yarn haul-bundle
 ```
 
 ## Questions/comments?
