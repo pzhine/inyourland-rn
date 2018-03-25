@@ -75,10 +75,6 @@ class Carousel extends Component {
   }
   componentWillReceiveProps(nextProps) {
     const { currentSceneIndex, transitions, scenes } = nextProps
-    // const sceneIndexDelta = Math.abs(
-    //   absmod(currentSceneIndex, scenes.length) -
-    //     absmod(this.props.currentSceneIndex, scenes.length)
-    // )
 
     // calculate transition properties
     if (

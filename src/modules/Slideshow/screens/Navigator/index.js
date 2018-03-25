@@ -14,6 +14,7 @@ import absmod from '../../../../lib/absmod'
 const Navigator = props => (
   <React.Fragment>
     <Animated.View
+      pointerEvents="box-none"
       style={{
         ...mixins.fillContainerAbsolute,
         opacity: props.animations.inactiveAnimation,
