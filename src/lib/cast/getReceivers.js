@@ -20,6 +20,7 @@ function getReceivers(mediaList) {
 
     browser.on('serviceUp', service => {
       console.log('scanning for chromecast devices...')
+      console.log(`found ${service.txtRecord.fn}`)
       const mediaEntry = mediaList.find(
         m => m.deviceId === service.txtRecord.fn
       )

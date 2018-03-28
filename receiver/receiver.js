@@ -1,5 +1,5 @@
-var BUFFER_WIDTH = 10; // 15 seconds
-var CHUNK_SIZE = Math.pow(2, 20) * 10; // 15 MB
+var BUFFER_WIDTH = 15; // 15 seconds
+var CHUNK_SIZE = Math.pow(2, 20) * 10; // 10 MB
 var BUFFER_POLL_FREQ = 1000; // 1 second
 
 function getBufferEndTime(scope) {

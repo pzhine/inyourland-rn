@@ -3,12 +3,12 @@
     "mediaId": "stream01",
     "sourceFilename": "stream01_mute_dashinit.mp4",
     "deviceId": "pintor",
-    "clientIp": "192.168.121.108"
+    "clientIp": "192.168.121.112"
   },
   {
     "mediaId": "stream02",
     "sourceFilename": "stream02_mute_dashinit.mp4",
     "deviceId": "claris",
-    "clientIp": "192.168.121.101"
+    "clientIp": "192.168.121.115"
   }
 ]
