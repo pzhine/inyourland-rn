@@ -3,6 +3,7 @@ import csv from 'csvtojson'
 import fs from 'fs'
 
 function convert(url, path, transform) {
+  console.log('START', path)
   const out = fs.createWriteStream(path)
   let isFirst = true
   out.write('[')
@@ -28,11 +29,12 @@ function convert(url, path, transform) {
     })
     .on('done', err => {
       if (err) {
-        console.error('convert failed', err)
+        console.error('ERROR', err)
         return
       }
       out.write(']')
       out.end()
+      console.log('END', path)
     })
 }
 
@@ -40,4 +42,10 @@ convert(
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vSvZaMFjZQGnjMm7P-AbS51W9pvTJtOuuY0gviLK5_yPe8WLXdw2_fRKlt-7IybvI2oVxEQn5VJQ6rw/pub?gid=0&single=true&output=csv',
   './content/scenes/stream01.json',
   json => ({ ...json, thumbFilename: `stream01/${json.thumbFilename}` })
+)
+
+convert(
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vSvZaMFjZQGnjMm7P-AbS51W9pvTJtOuuY0gviLK5_yPe8WLXdw2_fRKlt-7IybvI2oVxEQn5VJQ6rw/pub?gid=1241837251&single=true&output=csv',
+  './content/scenes/stream02.json',
+  json => ({ ...json, thumbFilename: `stream02/${json.thumbFilename}` })
 )

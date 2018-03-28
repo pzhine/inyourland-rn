@@ -17,14 +17,14 @@ const startInteraction = () => (dispatch, getState) => {
 const nextScene = () => ({
   type: 'NEXT_SCENE',
   meta: {
-    throttle: 700,
+    throttle: 800,
     leading: true,
   },
 })
 const previousScene = () => ({
   type: 'PREVIOUS_SCENE',
   meta: {
-    throttle: 700,
+    throttle: 800,
     leading: true,
   },
 })

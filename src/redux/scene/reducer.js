@@ -6,7 +6,11 @@ export default function sceneReducer(state = initialState, action) {
       if (state.isInteracting) {
         return { ...state, nextSceneIndex: action.payload.sceneIndex }
       }
-      return { ...state, currentSceneIndex: action.payload.sceneIndex }
+      return {
+        ...state,
+        currentSceneIndex: action.payload.sceneIndex,
+        nextSceneIndex: action.payload.sceneIndex,
+      }
     }
     case 'START_INTERACTION': {
       return { ...state, isInteracting: true, interactionTimer: action.payload }

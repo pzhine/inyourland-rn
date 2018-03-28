@@ -144,7 +144,7 @@
     ]
   },
   {
-    "subjectId": "nightherron",
+    "subjectId": "nightheron",
     "name": "Black-crowned Night-Heron",
     "bio": [
       {
@@ -283,8 +283,7 @@
       {
         "sectionId": "habitat",
         "content":
-          "Breeds in muskegs of taiga to timberline, and barely onto subarctic tundra. Winters on coastal mud flats and brackish lagoons. In migration prefers saltwater tidal flats, beaches, and salt marshes.
-Found in freshwater mud flats and flooded agricultural fields."
+          "Breeds in muskegs of taiga to timberline, and barely onto subarctic tundra. Winters on coastal mud flats and brackish lagoons. In migration prefers saltwater tidal flats, beaches, and salt marshes. Found in freshwater mud flats and flooded agricultural fields."
       }
     ]
   },
@@ -369,6 +368,22 @@ Found in freshwater mud flats and flooded agricultural fields."
     ]
   },
   {
+    "subjectId": "starling",
+    "name": "European Starling",
+    "bio": [
+      {
+        "sectionId": "about",
+        "content":
+          "First brought to North America by Shakespeare enthusiasts in the nineteenth century, European Starlings are now among the continent’s most numerous songbirds. They are stocky black birds with short tails, triangular wings, and long, pointed bills. Though they’re sometimes resented for their abundance and aggressiveness, they’re still dazzling birds when you get a good look. Covered in white spots during winter, they turn dark and glossy in summer. For much of the year, they wheel through the sky and mob lawns in big, noisy flocks."
+      },
+      {
+        "sectionId": "habitat",
+        "content":
+          "Starlings typically live around people, using mowed lawns, city streets, and agricultural fields for feeding; and trees, buildings, and other structures for nesting. Their main requirements are open, grassy areas in which to forage, a water source, and trees or buildings that contain suitable cavities or niches for nesting. They avoid large, unbroken stretches of forest, chaparral, and desert."
+      }
+    ]
+  },
+  {
     "subjectId": "warbler",
     "name": "Black-and-white Warbler",
     "bio": [
@@ -381,22 +396,6 @@ Found in freshwater mud flats and flooded agricultural fields."
         "sectionId": "habitat",
         "content":
           "Black-and-white Warblers typically use deciduous forests and mixed forests of deciduous trees and conifers. They can be found in many habitats during migration, especially woodlots and forests in riparian settings. On their tropical wintering grounds Black-and-white Warblers use an immense range of habitats, including lawns, gardens, and other urban settings, fruit orchards, shade-coffee plantations, wetlands, mangroves, and all types of forests."
-      }
-    ]
-  },
-  {
-    "subjectId": "waterthrush",
-    "name": "Northern Waterthrush",
-    "bio": [
-      {
-        "sectionId": "about",
-        "content":
-          "A bird of northern forests, the Northern Waterthrush sings its loud, ringing song from wooded swamps and bogs. It can be seen on migration bobbing its tail near wet spots in parks or backyards."
-      },
-      {
-        "sectionId": "habitat",
-        "content":
-          "Breeds in thickets near slow-moving streams, ponds, swamps, and bogs; in migration and winter, uses a variety of wooded habitats, generally near water, often in mangroves."
       }
     ]
   },
@@ -479,5 +478,5 @@ Found in freshwater mud flats and flooded agricultural fields."
           "In summer, White-throated Sparrows are birds of forests across Canada, the northeastern U.S., and the northern Midwest. Look for them in either coniferous or deciduous forests up to treeline, especially around openings with low, dense vegetation; in areas regrowing after logging, fires, or insect damage; or edges of ponds, meadows, and bogs. During migration and winter, you’ll find White-throated Sparrows along edges of woodlots, hedgerows, thickets, weedy fields, suburbs, backyards, and city parks."
       }
     ]
-  },
+  }
 ]

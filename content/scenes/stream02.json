@@ -1,0 +1,252 @@
+[{
+  "subjectId": "mockingbird",
+  "startFrame": "0",
+  "startTime": "0",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/05_mockingbird"
+},
+{
+  "subjectId": "sparrow",
+  "startFrame": "556",
+  "startTime": "23185",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/06_sparrow"
+},
+{
+  "subjectId": "whitethroatedsparrow",
+  "startFrame": "832",
+  "startTime": "34695",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/07_sparrow"
+},
+{
+  "subjectId": "cardinal",
+  "startFrame": "964",
+  "startTime": "40200",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/08_cardinal"
+},
+{
+  "subjectId": "sparrow",
+  "startFrame": "1128",
+  "startTime": "47039",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/09_sparrow"
+},
+{
+  "subjectId": "cardinal",
+  "startFrame": "1958",
+  "startTime": "81651",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/11_cardinal"
+},
+{
+  "subjectId": "cardinal",
+  "startFrame": "2564",
+  "startTime": "106922",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/12_cardinal"
+},
+{
+  "subjectId": "dove",
+  "startFrame": "2751",
+  "startTime": "114720",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/13_dove"
+},
+{
+  "subjectId": "sparrow",
+  "startFrame": "2879",
+  "startTime": "120058",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/14_sparrow"
+},
+{
+  "subjectId": "piper",
+  "startFrame": "4477",
+  "startTime": "186697",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/16_piper"
+},
+{
+  "subjectId": "dowitcher",
+  "startFrame": "5183",
+  "startTime": "216138",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/18_dowitcher"
+},
+{
+  "subjectId": "nuthatch",
+  "startFrame": "5478",
+  "startTime": "228440",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/19_nuthatch"
+},
+{
+  "subjectId": "dowitcher",
+  "startFrame": "5628",
+  "startTime": "234695",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/20_dowitcher"
+},
+{
+  "subjectId": "piper",
+  "startFrame": "5778",
+  "startTime": "240950",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/21_piper"
+},
+{
+  "subjectId": "ringbilledgull",
+  "startFrame": "6794",
+  "startTime": "283319",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/22_gull"
+},
+{
+  "subjectId": "cardinal",
+  "startFrame": "7004",
+  "startTime": "292076",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/23_cardinal"
+},
+{
+  "subjectId": "sparrow",
+  "startFrame": "7784",
+  "startTime": "324603",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/25_sparrow"
+},
+{
+  "subjectId": "ringbilledgull",
+  "startFrame": "7954",
+  "startTime": "331693",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/27_gull"
+},
+{
+  "subjectId": "ringbilledgull",
+  "startFrame": "8326",
+  "startTime": "347206",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/28_gull"
+},
+{
+  "subjectId": "greategret",
+  "startFrame": "8913",
+  "startTime": "371684",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/29_egret"
+},
+{
+  "subjectId": "herringgull",
+  "startFrame": "9746",
+  "startTime": "406422",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/30_gull"
+},
+{
+  "subjectId": "herringgull",
+  "startFrame": "10025",
+  "startTime": "418056",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/31_gull"
+},
+{
+  "subjectId": "herringgull",
+  "startFrame": "11246",
+  "startTime": "468974",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/32_gull"
+},
+{
+  "subjectId": "greategret",
+  "startFrame": "11978",
+  "startTime": "499499",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/33_egret"
+},
+{
+  "subjectId": "sparrow",
+  "startFrame": "12858",
+  "startTime": "536196",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/35_sparrow"
+},
+{
+  "subjectId": "warbler",
+  "startFrame": "13382",
+  "startTime": "558048",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/36_warbler"
+},
+{
+  "subjectId": "snowyegret",
+  "startFrame": "13578",
+  "startTime": "566221",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/37_egret"
+},
+{
+  "subjectId": "robin",
+  "startFrame": "15350",
+  "startTime": "640116",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/40_robin"
+},
+{
+  "subjectId": "sparrow",
+  "startFrame": "16137",
+  "startTime": "672935",
+  "locationId": "centralpark",
+  "thumbFilename": "stream02/41_sparrow"
+},
+{
+  "subjectId": "bluejay",
+  "startFrame": "16604",
+  "startTime": "692410",
+  "locationId": "prospectpark",
+  "thumbFilename": "stream02/42_bluejay"
+},
+{
+  "subjectId": "dowitcher",
+  "startFrame": "16953",
+  "startTime": "706964",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/43_dowitcher"
+},
+{
+  "subjectId": "herringgull",
+  "startFrame": "17592",
+  "startTime": "733611",
+  "locationId": "jamaica",
+  "thumbFilename": "stream02/44_gull"
+},
+{
+  "subjectId": "tern",
+  "startFrame": "17748",
+  "startTime": "740116",
+  "locationId": "govsisland",
+  "thumbFilename": "stream02/45_tern"
+},
+{
+  "subjectId": "waterthrush",
+  "startFrame": "17971",
+  "startTime": "749416",
+  "locationId": "govsisland",
+  "thumbFilename": "stream02/46_thrush"
+},
+{
+  "subjectId": "hawk",
+  "startFrame": "18934",
+  "startTime": "789574",
+  "locationId": "govsisland",
+  "thumbFilename": "stream02/50_hawk"
+},
+{
+  "subjectId": "hawk",
+  "startFrame": "19731",
+  "startTime": "822810",
+  "locationId": "govsisland",
+  "thumbFilename": "stream02/51_hawk"
+}]

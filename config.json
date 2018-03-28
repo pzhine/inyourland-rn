@@ -1,5 +1,10 @@
 {
-  "castScannerTimeout": 10,
-  "castPlayTimeout": 30,
-  "mediaBaseUrl": "http://192.168.101.55:3000/media/"
+  "castScannerTimeout": 30,
+  "castPlayTimeout": 300,
+  "castStatusTimeout": 5,
+  "clientIpTimeout": 5,
+  "interactionTimeout": 90,
+  "mediaBaseUrl": "http://192.168.121.100:3000/media/",
+  "serverUrl": "http://192.168.121.100:3000",
+  "receiverAppId": "D838C0D2"
 }

@@ -8,8 +8,8 @@ const styles = {
     ...mixins.fillContainerAbsolute,
   },
   map: {
-    width: 3000,
-    height: 2926,
+    width: 1870,
+    height: 3610,
     position: 'absolute',
     left: 0,
     top: 0,
