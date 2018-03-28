@@ -6,5 +6,9 @@
   {
     "sectionId": "habitat",
     "title": "Habitat"
+  },
+  {
+    "sectionId": "conservation",
+    "title": "Conservation"
   }
 ]
