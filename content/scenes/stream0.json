@@ -1,38 +1,177 @@
 [
   {
+    "subjectId": "redtailedhawk",
+    "startFrame": 0,
     "startTime": 0,
-    "thumbFilename": "redtailedhawk",
     "locationId": "govsisland",
-    "subjectId": "redtailedhawk"
+    "thumbFilename": "01_hawk"
   },
   {
+    "subjectId": "plover",
+    "startFrame": 1379,
     "startTime": 57506,
-    "thumbFilename": "pipingplover",
     "locationId": "jamaica",
-    "subjectId": "pipingplover"
+    "thumbFilename": "02_plover"
   },
   {
-    "startTime": 71685,
-    "thumbFilename": "robin",
+    "subjectId": "robin",
+    "startFrame": 29950,
+    "startTime": 1248957,
+    "locationId": "prospectpark",
+    "thumbFilename": "68_robin"
+  },
+  {
+    "subjectId": "grackle",
+    "startFrame": 8843,
+    "startTime": 368765,
     "locationId": "centralpark",
-    "subjectId": "robin"
+    "thumbFilename": "20_grackle"
   },
   {
-    "startTime": 100626,
-    "thumbFilename": "grackle",
-    "locationId": "centralpark",
-    "subjectId": "grackle"
-  },
-  {
-    "startTime": 106464,
-    "thumbFilename": "greategret",
+    "subjectId": "greategret",
+    "startFrame": 24023,
+    "startTime": 1001793,
     "locationId": "jamaica",
-    "subjectId": "greategret"
+    "thumbFilename": "57_egret"
   },
   {
-    "startTime": 112344,
-    "thumbFilename": "butterfly",
+    "subjectId": "sparrow",
+    "startFrame": 7153,
+    "startTime": 298290,
+    "locationId": "wavehill",
+    "thumbFilename": "16_sparrow"
+  },
+  {
+    "subjectId": "snowyegret",
+    "startFrame": 3800,
+    "startTime": 158465,
+    "locationId": "jamaica",
+    "thumbFilename": "06_egret"
+  },
+  {
+    "subjectId": "bee",
+    "startFrame": 27423,
+    "startTime": 1143577,
     "locationId": "centralpark",
-    "subjectId": "butterfly"
+    "thumbFilename": "62_bee"
+  },
+  {
+    "subjectId": "nightheron",
+    "startFrame": 5643,
+    "startTime": 235321,
+    "locationId": "jamaica",
+    "thumbFilename": "11_gull"
+  },
+  {
+    "subjectId": "canadagoose",
+    "startFrame": 28194,
+    "startTime": 1175729,
+    "locationId": "prospectpark",
+    "thumbFilename": "64_goose"
+  },
+  {
+    "subjectId": "vireo",
+    "startFrame": 6332,
+    "startTime": 264053,
+    "locationId": "prospectpark",
+    "thumbFilename": "13_warbler"
+  },
+  {
+    "subjectId": "pigeon",
+    "startFrame": 7252,
+    "startTime": 302418,
+    "locationId": "centralpark",
+    "thumbFilename": "17_pigeon"
+  },
+  {
+    "subjectId": "cardinal",
+    "startFrame": 28884,
+    "startTime": 1204503,
+    "locationId": "centralpark",
+    "thumbFilename": "65_yellow"
+  },
+  {
+    "subjectId": "redstart",
+    "startFrame": 7648,
+    "startTime": 318932,
+    "locationId": "centralpark",
+    "thumbFilename": "17b_redstart"
+  },
+  {
+    "subjectId": "bluejay",
+    "startFrame": 10175,
+    "startTime": 424311,
+    "locationId": "centralpark",
+    "thumbFilename": "24_jay"
+  },
+  {
+    "subjectId": "swan",
+    "startFrame": 21199,
+    "startTime": 884028,
+    "locationId": "prospectpark",
+    "thumbFilename": "48_swan"
+  },
+  {
+    "subjectId": "grasshopper",
+    "startFrame": 16015,
+    "startTime": 667848,
+    "locationId": "centralpark",
+    "thumbFilename": "39_grasshopper"
+  },
+  {
+    "subjectId": "dowitcher",
+    "startFrame": 29174,
+    "startTime": 1216597,
+    "locationId": "jamaica",
+    "thumbFilename": "66_wader"
+  },
+  {
+    "subjectId": "mourningdove",
+    "startFrame": 14090,
+    "startTime": 587572,
+    "locationId": "centralpark",
+    "thumbFilename": "35_dove"
+  },
+  {
+    "subjectId": "ibis",
+    "startFrame": 18639,
+    "startTime": 777272,
+    "locationId": "jamaica",
+    "thumbFilename": "43_ibis"
+  },
+  {
+    "subjectId": "herringgull",
+    "startFrame": 24275,
+    "startTime": 1012301,
+    "locationId": "jamaica",
+    "thumbFilename": "58a_gull"
+  },
+  {
+    "subjectId": "mallard",
+    "startFrame": 20327,
+    "startTime": 847664,
+    "locationId": "prospectpark",
+    "thumbFilename": "46_duck"
+  },
+  {
+    "subjectId": "woodduck",
+    "startFrame": 20980,
+    "startTime": 874895,
+    "locationId": "prospectpark",
+    "thumbFilename": "47_duck"
+  },
+  {
+    "subjectId": "starling",
+    "startFrame": 23131,
+    "startTime": 964595,
+    "locationId": "jamaica",
+    "thumbFilename": "54_treeflock"
+  },
+  {
+    "subjectId": "ringbilledgull",
+    "startFrame": 25540,
+    "startTime": 1065054,
+    "locationId": "jamaica",
+    "thumbFilename": "59_gull"
   }
 ]

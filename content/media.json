@@ -1,8 +1,8 @@
 [
   {
     "mediaId": "stream0",
-    "sourceFilename": "audubon_sample_h264_baseline_dashinit.mp4",
-    "deviceId": "jordi",
+    "sourceFilename": "stream01_mute_dashinit.mp4",
+    "deviceId": "claris",
     "clientIp": "192.168.101.58"
   }
 ]
