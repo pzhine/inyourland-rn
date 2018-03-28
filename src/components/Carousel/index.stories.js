@@ -1,12 +1,15 @@
 import React from 'react'
 import { View, Image, Animated, Easing } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
+import { Provider, connect } from 'react-redux'
 import Carousel from './'
+import CarouselGestures from './gestures'
 import scenes from '../../../content/scenes/stream0.json'
 import AutoPlay from '../../../storybook/AutoPlay'
 import storyStyles from '../../../storybook/styles'
 import getImageUrl from '../../lib/scene/getImageUrl'
 import PropTransition from '../../transitions/PropTransition'
+import store from '../../redux/configureStore'
 
 const Transition = ({ children, toggle }) => (
   <PropTransition
@@ -41,6 +44,10 @@ const Transition = ({ children, toggle }) => (
     {children}
   </PropTransition>
 )
+
+const ConnectedCarouselGestures = connect(state => ({
+  currentSceneIndex: state.scene.currentSceneIndex,
+}))(CarouselGestures)
 
 storiesOf('components/Carousel', module)
   .addDecorator(story => (
@@ -97,4 +104,11 @@ storiesOf('components/Carousel', module)
         <Carousel scenes={scenes} currentSceneIndex={0} />
       </Transition>
     </AutoPlay>
+  ))
+  .add('with gestures', () => (
+    <Provider store={store}>
+      <Transition toggle={0}>
+        <ConnectedCarouselGestures scenes={scenes} />
+      </Transition>
+    </Provider>
   ))

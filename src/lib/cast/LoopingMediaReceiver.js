@@ -1,4 +1,5 @@
 import { Application, MediaController } from 'castv2-client'
+import config from '../../../config.json'
 
 class LoopingMediaReceiver extends Application {
   constructor(...args) {
@@ -20,6 +21,6 @@ class LoopingMediaReceiver extends Application {
     this.media.play(...args)
   }
 }
-LoopingMediaReceiver.APP_ID = 'D838C0D2'
+LoopingMediaReceiver.APP_ID = config.receiverAppId
 
 export default LoopingMediaReceiver

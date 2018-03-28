@@ -86,6 +86,7 @@ class Hotspot extends React.Component {
     const coords = { left: location.pin[0], top: location.pin[1] }
     return (
       <Animated.View
+        pointerEvents="box-none"
         style={{
           ...styles.hotspot,
           opacity: animations.locationInfo,

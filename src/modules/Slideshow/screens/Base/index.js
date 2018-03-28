@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Map from '../../../../components/Map'
-import Carousel from '../../../../components/Carousel'
+import Carousel from '../../../../components/Carousel/gestures'
 
 const Base = props => (
   <React.Fragment>
