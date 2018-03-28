@@ -61,6 +61,7 @@
     "enzyme": "^3.3.0",
     "eslint": "4.9.0",
     "eslint-config-airbnb": "16.1.0",
+    "eslint-config-airbnb-es5": "^1.2.0",
     "eslint-config-kyt": "^0.5.0",
     "eslint-config-prettier": "2.6.0",
     "eslint-plugin-import": "2.8.0",
