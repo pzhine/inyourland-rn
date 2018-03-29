@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import Map from './'
 import AutoPlay from '../../../storybook/AutoPlay'
-import scenes from '../../../content/scenes/stream0.json'
+import scenes from '../../../content/scenes/stream01.json'
 import storyStyles from '../../../storybook/styles'
 import SceneTransition from '../../transitions/SceneTransition'
 

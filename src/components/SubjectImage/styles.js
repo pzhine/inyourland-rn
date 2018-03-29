@@ -17,9 +17,12 @@ const styles = {
   },
   image: {
     ...dims,
-    position: 'absolute',
-    zIndex: 2,
     borderRadius: 10,
+    zIndex: 2,
+    position: 'absolute',
+  },
+  dims: {
+    ...dims,
   },
 }
 

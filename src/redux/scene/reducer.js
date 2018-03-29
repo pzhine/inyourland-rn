@@ -12,6 +12,12 @@ export default function sceneReducer(state = initialState, action) {
         nextSceneIndex: action.payload.sceneIndex,
       }
     }
+    case 'CHANGE_SCENE': {
+      return {
+        ...state,
+        currentSceneIndex: action.payload,
+      }
+    }
     case 'START_INTERACTION': {
       return { ...state, isInteracting: true, interactionTimer: action.payload }
     }

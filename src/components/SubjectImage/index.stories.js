@@ -33,10 +33,8 @@ storiesOf('components/SubjectImage', module)
   .addDecorator(story => <View style={storyStyles.container}>{story()}</View>)
   .add('default', () => (
     <SubjectImage>
-      <Animated.Image
-        source={{ uri: 'http://www.placecage.com/300/200.png' }}
-      />
-      <Image source={{ uri: 'http://www.fillmurray.com/300/200.png' }} />
+      <Animated.Image source={{ uri: 'http://placebear.com/g/300/200.jpg' }} />
+      <Image source={{ uri: 'http://placebear.com/300/200.jpg' }} />
     </SubjectImage>
   ))
   .add('active/inactive autoplay', () => (
@@ -44,10 +42,20 @@ storiesOf('components/SubjectImage', module)
       <Transition>
         <SubjectImage>
           <Animated.Image
-            source={{ uri: 'http://www.placecage.com/300/200.png' }}
+            source={{ uri: 'http://placebear.com/g/300/200.jpg' }}
           />
-          <Image source={{ uri: 'http://www.fillmurray.com/300/200.png' }} />
+          <Image source={{ uri: 'http://placebear.com/300/200.jpg' }} />
         </SubjectImage>
       </Transition>
     </AutoPlay>
+  ))
+  .add('with onPress', () => (
+    <SubjectImage
+      onPress={() => {
+        console.log('pressed!')
+      }}
+    >
+      <Animated.Image source={{ uri: 'http://placebear.com/g/300/200.jpg' }} />
+      <Image source={{ uri: 'http://placebear.com/300/200.jpg' }} />
+    </SubjectImage>
   ))

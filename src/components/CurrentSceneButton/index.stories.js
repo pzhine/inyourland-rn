@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
 import CurrentSceneButton from './'
 import storyStyles from '../../../storybook/styles'
-import scenes from '../../../content/scenes/stream0.json'
+import scenes from '../../../content/scenes/stream01.json'
 import AutoPlay from '../../../storybook/AutoPlay'
 
 storiesOf('components/CurrentSceneButton', module)

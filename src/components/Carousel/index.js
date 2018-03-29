@@ -20,6 +20,7 @@ const Slides = ({
   blur,
   activeAnimation,
   inactiveAnimation,
+  onSlidePress,
 }) => {
   const middleIndex = Math.floor(slideRange.length / 2)
   return slideRange.map((index, count) => (
@@ -33,6 +34,7 @@ const Slides = ({
       <SubjectImage
         activeAnimation={count === middleIndex && activeAnimation}
         hideOnActive={blur}
+        onPress={() => onSlidePress(absmod(index, scenes.length))}
       >
         {!blur &&
           count === middleIndex && (
@@ -136,7 +138,7 @@ class Carousel extends Component {
     }
   }
   render() {
-    const { currentSceneIndex, scenes, animations } = this.props
+    const { currentSceneIndex, scenes, animations, onSlidePress } = this.props
 
     const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =
@@ -176,6 +178,7 @@ class Carousel extends Component {
             activeAnimation={animations.activeAnimation}
             inactiveAnimation={animations.inactiveAnimation}
             scale={1}
+            onSlidePress={onSlidePress}
           />
         </Animated.View>
         <Animated.Text

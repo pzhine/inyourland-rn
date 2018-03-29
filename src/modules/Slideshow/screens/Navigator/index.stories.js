@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import NavigatorRoute from './route'
 import store from '../../../../redux/configureStore'
 import AutoPlay from '../../../../../storybook/AutoPlay'
-import scenes from '../../../../../content/scenes/stream0.json'
+import scenes from '../../../../../content/scenes/stream01.json'
 import storyStyles from '../../../../../storybook/styles'
 import SceneTransition from '../../../../transitions/SceneTransition'
 
