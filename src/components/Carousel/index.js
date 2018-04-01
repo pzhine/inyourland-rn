@@ -34,7 +34,9 @@ const Slides = ({
       <SubjectImage
         activeAnimation={count === middleIndex && activeAnimation}
         hideOnActive={blur}
-        onPress={() => onSlidePress(absmod(index, scenes.length))}
+        onPress={
+          onSlidePress ? () => onSlidePress(absmod(index, scenes.length)) : null
+        }
       >
         {!blur &&
           count === middleIndex && (
