@@ -23,50 +23,50 @@ const Slides = ({
   onSlidePress,
 }) => {
   const middleIndex = Math.floor(slideRange.length / 2)
-  return slideRange.map((index, count) => (
-    <View
-      style={{
-        ...styles.slide,
-        transform: [{ scaleX: scale }, { scaleY: scale }],
-      }}
-      key={index}
-    >
-      <SubjectImage
-        activeAnimation={count === middleIndex && activeAnimation}
-        hideOnActive={blur}
-        onPress={
-          onSlidePress ? () => onSlidePress(absmod(index, scenes.length)) : null
-        }
+  return slideRange.map((index, count) => {
+    const sceneIndex = absmod(index, scenes.length)
+    return (
+      <View
+        style={{
+          ...styles.slide,
+          transform: [{ scaleX: scale }, { scaleY: scale }],
+        }}
+        key={index}
       >
-        {!blur &&
-          count === middleIndex && (
-            <Animated.Image
-              source={{
-                uri: getImageUrl(
-                  scenes[absmod(index, scenes.length)].thumbFilename,
-                  { blur: true }
-                ),
-              }}
-              style={{
-                opacity: activeAnimation.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, 0.7],
-                }),
-              }}
-            />
-          )}
-        <Animated.Image
-          source={{
-            uri: getImageUrl(
-              scenes[absmod(index, scenes.length)].thumbFilename,
-              { blur }
-            ),
-          }}
-          style={{ opacity: count === middleIndex ? 1 : inactiveAnimation }}
-        />
-      </SubjectImage>
-    </View>
-  ))
+        <SubjectImage
+          activeAnimation={count === middleIndex && activeAnimation}
+          hideOnActive={blur}
+          onPress={onSlidePress ? () => onSlidePress(sceneIndex) : null}
+        >
+          {!blur &&
+            count === middleIndex && (
+              <Animated.Image
+                source={{
+                  uri: getImageUrl(scenes[sceneIndex].thumbFilename, {
+                    blur: true,
+                  }),
+                }}
+                style={{
+                  opacity: activeAnimation.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [0, 0.7],
+                  }),
+                }}
+              />
+            )}
+          <Animated.Image
+            source={{
+              uri: getImageUrl(scenes[sceneIndex].thumbFilename, { blur }),
+            }}
+            style={{
+              ...styles.image,
+              opacity: count === middleIndex ? 1 : inactiveAnimation,
+            }}
+          />
+        </SubjectImage>
+      </View>
+    )
+  })
 }
 
 const sceneIndexDelta = (current, next) => Math.abs(next - current)
@@ -102,7 +102,6 @@ class Carousel extends Component {
           useNativeDriver: true,
         }).start()
       } else {
-        console.log('carousel.render resync start')
         // or start resync animation
         Animated.timing(this.state.resyncAnimation, {
           toValue: 0,
@@ -129,7 +128,6 @@ class Carousel extends Component {
           useNativeDriver: true,
         }).start()
       } else {
-        console.log('carousel.render resync end')
         // or reset resync animation
         Animated.timing(this.state.resyncAnimation, {
           toValue: 1,

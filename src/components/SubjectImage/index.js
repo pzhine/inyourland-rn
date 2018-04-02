@@ -1,7 +1,7 @@
 import React from 'react'
 import { Animated } from 'react-native'
-import Button from '../Button'
 import styles from './styles'
+import Gestures from './gestures'
 
 const SubjectImage = ({
   style,
@@ -10,9 +10,7 @@ const SubjectImage = ({
   hideOnActive,
   onPress,
 }) => {
-  console.log(!!onPress)
-  const imageStyles = onPress ? styles.dims : styles.image
-  console.log(imageStyles)
+  const imageStyles = styles.image
   const styledChildren = React.Children.map(
     children,
     (child, idx) =>
@@ -48,17 +46,14 @@ const SubjectImage = ({
         }
       : {}),
   }
-  // return <Animated.View style={viewStyle}>{styledChildren}</Animated.View>
-  return onPress ? (
-    <Animated.View style={viewStyle}>
-      {styledChildren[0]}
-      <Button style={styles.image} onPress={onPress}>
-        {styledChildren[1]}
-      </Button>
-    </Animated.View>
-  ) : (
-    <Animated.View style={viewStyle}>{styledChildren}</Animated.View>
-  )
+  if (onPress) {
+    return (
+      <Animated.View style={viewStyle}>
+        <Gestures onPress={onPress}>{styledChildren}</Gestures>
+      </Animated.View>
+    )
+  }
+  return <Animated.View style={viewStyle}>{styledChildren}</Animated.View>
 }
 
 export default SubjectImage

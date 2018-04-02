@@ -19,11 +19,10 @@ class Base extends React.Component {
       nextProps.currentSceneIndex !== currentSceneIndex &&
       this.isTransitioningToSubject
     ) {
-      this.navToSubject(nextProps)
-    }
-    if (this.props.location.pathname.match('/subject')) {
-      console.log('Base reset trans')
-      this.isTransitioningToSubject = false
+      setTimeout(() => {
+        this.navToSubject(nextProps)
+        this.isTransitioningToSubject = false
+      }, 400)
     }
   }
   navToSubject(props) {
@@ -49,6 +48,7 @@ class Base extends React.Component {
     }
   }
   render() {
+    console.log('base.render', this.props.currentSceneIndex)
     return (
       <React.Fragment>
         <Map {...this.props} />

@@ -1,3 +1,8 @@
+const dims = {
+  width: 225,
+  height: 150,
+}
+
 const styles = {
   carousel: {
     position: 'absolute',
@@ -33,6 +38,17 @@ const styles = {
     top: 600,
     right: 0,
     textAlign: 'center',
+  },
+  image: {
+    ...dims,
+    borderRadius: 10,
+    overflow: 'hidden',
+    zIndex: 2,
+    position: 'absolute',
+  },
+  button: {
+    ...dims,
+    position: 'absolute',
   },
 }
 
