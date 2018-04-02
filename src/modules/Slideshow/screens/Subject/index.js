@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Animated, Image } from 'react-native'
+import { View, Animated, Image, Text } from 'react-native'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { withRouter, Redirect } from 'react-router-native'
@@ -12,15 +12,15 @@ import actions from '../../../../redux/scene/actions'
 const Content = ({ subject, sectionId, animations }) => {
   const section = subject.bio.find(s => s.sectionId === sectionId)
   return section ? (
-    <Animated.Text
+    <Animated.View
       style={{
-        ...mixins.paragraphText,
         ...styles.content,
         opacity: animations.sectionAnimation,
       }}
     >
-      {section.content}
-    </Animated.Text>
+      <Text style={mixins.paragraphText}>{section.content}</Text>
+      <Text style={styles.source}>Source: {section.source}</Text>
+    </Animated.View>
   ) : null
 }
 

@@ -6,12 +6,14 @@
       {
         "sectionId": "about",
         "content":
-          "A close relative of the Mallard, the Black Duck is better adapted to wooded country. With the clearing of forest, it has steadily lost ground to spreading populations of Mallards. In its stronghold along the Atlantic Coast it is a hardy bird, wintering farther north than most dabbling ducks. "
+          "A close relative of the Mallard, the Black Duck is better adapted to wooded country. With the clearing of forest, it has steadily lost ground to spreading populations of Mallards. In its stronghold along the Atlantic Coast it is a hardy bird, wintering farther north than most dabbling ducks. ",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "American Black Ducks breed mostly in freshwater wetlands throughout northeastern North America, including beaver ponds, brooks lined by speckled alder, shallow lakes with reeds and sedges, bogs in boreal forests, and wooded swamps. They may also nest in saltmarshes. "
+          "American Black Ducks breed mostly in freshwater wetlands throughout northeastern North America, including beaver ponds, brooks lined by speckled alder, shallow lakes with reeds and sedges, bogs in boreal forests, and wooded swamps. They may also nest in saltmarshes. ",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -22,12 +24,14 @@
       {
         "sectionId": "about",
         "content":
-          "This is probably the most common hawk in North America. If you’ve got sharp eyes you’ll see several individuals on almost any long car ride, anywhere. Red-tailed Hawks soar above open fields, slowly turning circles on their broad, rounded wings."
+          "This is probably the most common hawk in North America. If you’ve got sharp eyes you’ll see several individuals on almost any long car ride, anywhere. Red-tailed Hawks soar above open fields, slowly turning circles on their broad, rounded wings.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Red-tailed Hawks occupy just about every type of open habitat on the continent. This includes desert, scrublands, grasslands, roadsides, fields and pastures, parks, broken woodland, and (in Mexico) tropical rainforest."
+          "Red-tailed Hawks occupy just about every type of open habitat on the continent. This includes desert, scrublands, grasslands, roadsides, fields and pastures, parks, broken woodland, and (in Mexico) tropical rainforest.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -38,12 +42,14 @@
       {
         "sectionId": "about",
         "content":
-          "A small dark shorebird with a single band across its chest, the Semipalmated Plover is the most common plover seen on migration in most areas."
+          "A small dark shorebird with a single band across its chest, the Semipalmated Plover is the most common plover seen on migration in most areas.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "conservation",
         "content":
-          "The Semipalmated Plover is among the few plovers whose numbers are apparently increasing, perhaps owing to its versatility in food and habitat choice, its wide-spread coastal winter distribution, or its habitat expansion in the sub-Arctic as a result of disturbance by both humans and arctic geese. A 2012 study estimates a North American breeding population of 200,000."
+          "The Semipalmated Plover is among the few plovers whose numbers are apparently increasing, perhaps owing to its versatility in food and habitat choice, its wide-spread coastal winter distribution, or its habitat expansion in the sub-Arctic as a result of disturbance by both humans and arctic geese. A 2012 study estimates a North American breeding population of 200,000.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -54,12 +60,14 @@
       {
         "sectionId": "about",
         "content":
-          "The quintessential early bird, American Robins are common sights on lawns across North America, where you often see them tugging earthworms out of the ground. Robins are popular birds for their warm orange breast, cheery song, and early appearance at the end of winter. Though they’re familiar town and city birds, American Robins are at home in wilder areas, too, including mountain forests and Alaskan wilderness."
+          "The quintessential early bird, American Robins are common sights on lawns across North America, where you often see them tugging earthworms out of the ground. Robins are popular birds for their warm orange breast, cheery song, and early appearance at the end of winter. Though they’re familiar town and city birds, American Robins are at home in wilder areas, too, including mountain forests and Alaskan wilderness.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "American Robins are common birds across the continent. You’ll find them on lawns, fields, and city parks, as well as in more wild places like woodlands, forests, mountains up to near treeline, recently burned forests, and tundra. During winter many robins move to moist woods where berry-producing trees and shrubs are common."
+          "American Robins are common birds across the continent. You’ll find them on lawns, fields, and city parks, as well as in more wild places like woodlands, forests, mountains up to near treeline, recently burned forests, and tundra. During winter many robins move to moist woods where berry-producing trees and shrubs are common.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -70,12 +78,14 @@
       {
         "sectionId": "about",
         "content":
-          "Common Grackles are blackbirds that look like they've been slightly stretched. They're taller and longer tailed than a typical blackbird, with a longer, more tapered bill and glossy-iridescent bodies. Grackles walk around lawns and fields on their long legs or gather in noisy groups high in trees, typically evergreens. They eat many crops (notably corn) and nearly anything else as well, including garbage. In flight their long tails trail behind them, sometimes folded down the middle into a shallow V shape."
+          "Common Grackles are blackbirds that look like they've been slightly stretched. They're taller and longer tailed than a typical blackbird, with a longer, more tapered bill and glossy-iridescent bodies. Grackles walk around lawns and fields on their long legs or gather in noisy groups high in trees, typically evergreens. They eat many crops (notably corn) and nearly anything else as well, including garbage. In flight their long tails trail behind them, sometimes folded down the middle into a shallow V shape.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Common Grackles do well in human landscapes, using scattered trees for nesting and open ground for foraging. Typical natural habitats include open woodland, forest edge, grassland, meadows, swamps, marshes, and palmetto hammocks. They are also very common near agricultural fields and feedlots, suburbs, city parks, cemeteries, pine plantations, and hedgerows. Unbroken tracts of forest are the only places where you are unlikely to find Common Grackles."
+          "Common Grackles do well in human landscapes, using scattered trees for nesting and open ground for foraging. Typical natural habitats include open woodland, forest edge, grassland, meadows, swamps, marshes, and palmetto hammocks. They are also very common near agricultural fields and feedlots, suburbs, city parks, cemeteries, pine plantations, and hedgerows. Unbroken tracts of forest are the only places where you are unlikely to find Common Grackles.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -86,12 +96,14 @@
       {
         "sectionId": "about",
         "content":
-          "The elegant Great Egret is a dazzling sight in many a North American wetland. Slightly smaller and more svelte than a Great Blue Heron, these are still large birds with impressive wingspans. They hunt in classic heron fashion, standing immobile or wading through wetlands to capture fish with a deadly jab of their yellow bill. Great Egrets were hunted nearly to extinction for their plumes in the late nineteenth century, sparking conservation movements and some of the first laws to protect birds."
+          "The elegant Great Egret is a dazzling sight in many a North American wetland. Slightly smaller and more svelte than a Great Blue Heron, these are still large birds with impressive wingspans. They hunt in classic heron fashion, standing immobile or wading through wetlands to capture fish with a deadly jab of their yellow bill. Great Egrets were hunted nearly to extinction for their plumes in the late nineteenth century, sparking conservation movements and some of the first laws to protect birds.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Great Egrets live in freshwater, brackish, and marine wetlands. During the breeding season they live in colonies in trees or shrubs with other waterbirds, ranging across the southeastern states and in scattered spots throughout the rest of the U.S. and southern Canada. The colonies are located on lakes, ponds, marshes, estuaries, impoundments, and islands. Great Egrets use similar habitats for migration stopover sites and wintering grounds. They hunt in marshes, swamps, streams, rivers, ponds, lakes, impoundments, lagoons, tidal flats, canals, ditches, fish-rearing ponds, flooded farm fields, and sometimes upland habitats."
+          "Great Egrets live in freshwater, brackish, and marine wetlands. During the breeding season they live in colonies in trees or shrubs with other waterbirds, ranging across the southeastern states and in scattered spots throughout the rest of the U.S. and southern Canada. The colonies are located on lakes, ponds, marshes, estuaries, impoundments, and islands. Great Egrets use similar habitats for migration stopover sites and wintering grounds. They hunt in marshes, swamps, streams, rivers, ponds, lakes, impoundments, lagoons, tidal flats, canals, ditches, fish-rearing ponds, flooded farm fields, and sometimes upland habitats.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -102,12 +114,14 @@
       {
         "sectionId": "about",
         "content":
-          "Among the most elegant of the herons, the slender Snowy Egret sets off immaculate white plumage with black legs and brilliant yellow feet. Those feet seem to play a role in stirring up or herding small aquatic animals as the egret forages. Breeding Snowy Egrets grow filmy, curving plumes that once fetched astronomical prices in the fashion industry, endangering the species. Early conservationists rallied to protect egrets by the early twentieth century, and this species is once again a common sight in shallow coastal wetlands."
+          "Among the most elegant of the herons, the slender Snowy Egret sets off immaculate white plumage with black legs and brilliant yellow feet. Those feet seem to play a role in stirring up or herding small aquatic animals as the egret forages. Breeding Snowy Egrets grow filmy, curving plumes that once fetched astronomical prices in the fashion industry, endangering the species. Early conservationists rallied to protect egrets by the early twentieth century, and this species is once again a common sight in shallow coastal wetlands.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Snowy Egrets nest in colonies on thick vegetation in isolated places—such as barrier islands, dredge-spoil islands, salt marsh islands, swamps, and marshes. They often change location from year to year. During the breeding season Snowy Egrets feed in estuaries, saltmarshes, tidal channels, shallow bays, and mangroves. They winter in mangroves, saltwater lagoons, freshwater swamps, grassy ponds, and temporary pools, and forage on beaches, shallow reefs, and wet fields."
+          "Snowy Egrets nest in colonies on thick vegetation in isolated places—such as barrier islands, dredge-spoil islands, salt marsh islands, swamps, and marshes. They often change location from year to year. During the breeding season Snowy Egrets feed in estuaries, saltmarshes, tidal channels, shallow bays, and mangroves. They winter in mangroves, saltwater lagoons, freshwater swamps, grassy ponds, and temporary pools, and forage on beaches, shallow reefs, and wet fields.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -118,12 +132,14 @@
       {
         "sectionId": "about",
         "content":
-          "Familiar acrobats of the air, Ring-billed Gulls nimbly pluck tossed tidbits from on high. Comfortable around humans, they frequent parking lots, garbage dumps, beaches, and fields, sometimes by the hundreds. These are the gulls you're most likely to see far away from coastal areas—in fact, most Ring-billed Gulls nest in the interior of the continent, near freshwater."
+          "Familiar acrobats of the air, Ring-billed Gulls nimbly pluck tossed tidbits from on high. Comfortable around humans, they frequent parking lots, garbage dumps, beaches, and fields, sometimes by the hundreds. These are the gulls you're most likely to see far away from coastal areas—in fact, most Ring-billed Gulls nest in the interior of the continent, near freshwater.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Ring-billed Gulls are often found in and around urban, suburban, and agricultural areas. In coastal areas, Ring-billed Gulls frequent estuaries, beaches, mudflats, and coastal waters. In winter, these birds are common around docks, wharves, and harbors. Ring-billed Gulls are more commonly seen inland than most other gull species."
+          "Ring-billed Gulls are often found in and around urban, suburban, and agricultural areas. In coastal areas, Ring-billed Gulls frequent estuaries, beaches, mudflats, and coastal waters. In winter, these birds are common around docks, wharves, and harbors. Ring-billed Gulls are more commonly seen inland than most other gull species.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -134,12 +150,14 @@
       {
         "sectionId": "about",
         "content":
-          "You can find House Sparrows most places where there are houses (or other buildings), and few places where there aren’t. Along with two other introduced species, the European Starling and the Rock Pigeon, these are some of our most common birds."
+          "You can find House Sparrows most places where there are houses (or other buildings), and few places where there aren’t. Along with two other introduced species, the European Starling and the Rock Pigeon, these are some of our most common birds.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "House Sparrows are closely associated with people and their buildings. Look for them in cities, towns, suburbs, and farms (particularly around livestock). You won’t find them in extensive woodlands, forests, or grasslands. In extreme environments such as deserts or the far north, House Sparrows survive only in the immediate vicinity of people."
+          "House Sparrows are closely associated with people and their buildings. Look for them in cities, towns, suburbs, and farms (particularly around livestock). You won’t find them in extensive woodlands, forests, or grasslands. In extreme environments such as deserts or the far north, House Sparrows survive only in the immediate vicinity of people.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -150,12 +168,14 @@
       {
         "sectionId": "about",
         "content":
-          "Black-crowned Night-Herons are stocky birds compared to many of their long-limbed heron relatives. They’re most active at night or at dusk, when you may see their ghostly forms flapping out from daytime roosts to forage in wetlands. In the light of day adults are striking in gray-and-black plumage and long white head plumes."
+          "Black-crowned Night-Herons are stocky birds compared to many of their long-limbed heron relatives. They’re most active at night or at dusk, when you may see their ghostly forms flapping out from daytime roosts to forage in wetlands. In the light of day adults are striking in gray-and-black plumage and long white head plumes.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Black-crowned Night-Herons are common in wetlands across North America, including saltmarshes, freshwater marshes, swamps, streams, rivers, lakes, ponds, lagoons, tidal mudflats, canals, reservoirs, and wet agricultural fields. They require aquatic habitat for foraging and terrestrial vegetation for cover."
+          "Black-crowned Night-Herons are common in wetlands across North America, including saltmarshes, freshwater marshes, swamps, streams, rivers, lakes, ponds, lagoons, tidal mudflats, canals, reservoirs, and wet agricultural fields. They require aquatic habitat for foraging and terrestrial vegetation for cover.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -166,12 +186,14 @@
       {
         "sectionId": "about",
         "content":
-          "The big, black-necked Canada Goose with its signature white chinstrap mark is a familiar and widespread bird of fields and parks. Thousands of “honkers” migrate north and south each year, filling the sky with long V-formations."
+          "The big, black-necked Canada Goose with its signature white chinstrap mark is a familiar and widespread bird of fields and parks. Thousands of “honkers” migrate north and south each year, filling the sky with long V-formations.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Canada Geese live in a great many habitats near water, grassy fields, and grain fields. Canada Geese are particularly drawn to lawns for two reasons: they can digest grass, and when they are feeding with their young, manicured lawns give them a wide, unobstructed view of any approaching predators."
+          "Canada Geese live in a great many habitats near water, grassy fields, and grain fields. Canada Geese are particularly drawn to lawns for two reasons: they can digest grass, and when they are feeding with their young, manicured lawns give them a wide, unobstructed view of any approaching predators.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -182,12 +204,14 @@
       {
         "sectionId": "about",
         "content":
-          "A tireless songster, the Red-eyed Vireo is one of the most common summer residents of Eastern forests. These neat, olive-green and white songbirds have a crisp head pattern of gray, black, and white. Their brief but incessant songs—sometimes more than 20,000 per day by a single male—contribute to the characteristic sound of an Eastern forest in summer."
+          "A tireless songster, the Red-eyed Vireo is one of the most common summer residents of Eastern forests. These neat, olive-green and white songbirds have a crisp head pattern of gray, black, and white. Their brief but incessant songs—sometimes more than 20,000 per day by a single male—contribute to the characteristic sound of an Eastern forest in summer.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Throughout their summer range, Red-eyed Vireos breed in deciduous and mixed forests with shrubby understories. Numbers are greatest away from forest edges and near small openings in the interior forest canopy. In the pine forests of the southeastern United States, they prefer stream and river edges supporting hardwood trees."
+          "Throughout their summer range, Red-eyed Vireos breed in deciduous and mixed forests with shrubby understories. Numbers are greatest away from forest edges and near small openings in the interior forest canopy. In the pine forests of the southeastern United States, they prefer stream and river edges supporting hardwood trees.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -198,12 +222,14 @@
       {
         "sectionId": "about",
         "content":
-          "A common sight in cities around the world, Rock Pigeons crowd streets and public squares, living on discarded food and offerings of birdseed. In addition to the typical blue-gray bird with two dark wingbars, you'll often see flocks with plain, spotted, pale, or rusty-red birds in them."
+          "A common sight in cities around the world, Rock Pigeons crowd streets and public squares, living on discarded food and offerings of birdseed. In addition to the typical blue-gray bird with two dark wingbars, you'll often see flocks with plain, spotted, pale, or rusty-red birds in them.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Urban areas, farmland, and rocky cliffs. May gather in large flocks in urban parks where people feed them."
+          "Urban areas, farmland, and rocky cliffs. May gather in large flocks in urban parks where people feed them.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -214,12 +240,14 @@
       {
         "sectionId": "about",
         "content":
-          "The male Northern Cardinal is perhaps responsible for getting more people to open up a field guide than any other bird. They’re a perfect combination of familiarity, conspicuousness, and style: a shade of red you can’t take your eyes off. Even the brown females sport a sharp crest and warm red accents."
+          "The male Northern Cardinal is perhaps responsible for getting more people to open up a field guide than any other bird. They’re a perfect combination of familiarity, conspicuousness, and style: a shade of red you can’t take your eyes off. Even the brown females sport a sharp crest and warm red accents.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Look for Northern Cardinals in dense shrubby areas such as forest edges, overgrown fields, hedgerows, backyards, marshy thickets, mesquite, regrowing forest, and ornamental landscaping. Cardinals nest in dense foliage and look for conspicuous, fairly high perches for singing."
+          "Look for Northern Cardinals in dense shrubby areas such as forest edges, overgrown fields, hedgerows, backyards, marshy thickets, mesquite, regrowing forest, and ornamental landscaping. Cardinals nest in dense foliage and look for conspicuous, fairly high perches for singing.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -230,12 +258,14 @@
       {
         "sectionId": "about",
         "content":
-          "A lively warbler that hops among tree branches in search of insects, the male American Redstart is coal-black with vivid orange patches on the sides, wings, and tail. True to its Halloween-themed color scheme, the redstart seems to startle its prey out of the foliage by flashing its strikingly patterned tail and wing feathers."
+          "A lively warbler that hops among tree branches in search of insects, the male American Redstart is coal-black with vivid orange patches on the sides, wings, and tail. True to its Halloween-themed color scheme, the redstart seems to startle its prey out of the foliage by flashing its strikingly patterned tail and wing feathers.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "American Redstarts breed in moist, deciduous, second-growth woodlands with abundant shrubs, across much of the eastern and northern United States and southern Canada. Its habitat is often situated near water, and includes alder and willow thickets, thickets in treefall gaps within old-growth forest, fencerows, orchards, and mixed deciduous-coniferous woodlands."
+          "American Redstarts breed in moist, deciduous, second-growth woodlands with abundant shrubs, across much of the eastern and northern United States and southern Canada. Its habitat is often situated near water, and includes alder and willow thickets, thickets in treefall gaps within old-growth forest, fencerows, orchards, and mixed deciduous-coniferous woodlands.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -246,12 +276,14 @@
       {
         "sectionId": "about",
         "content":
-          "This common, large songbird is familiar to many people, with its perky crest; blue, white, and black plumage; and noisy calls. Blue Jays are known for their intelligence and complex social systems with tight family bonds. Their fondness for acorns is credited with helping spread oak trees after the last glacial period."
+          "This common, large songbird is familiar to many people, with its perky crest; blue, white, and black plumage; and noisy calls. Blue Jays are known for their intelligence and complex social systems with tight family bonds. Their fondness for acorns is credited with helping spread oak trees after the last glacial period.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Blue Jays are found in all kinds of forests but especially near oak trees; they’re more abundant near forest edges than in deep forest. They’re common in urban and suburban areas, especially where oaks or bird feeders are found."
+          "Blue Jays are found in all kinds of forests but especially near oak trees; they’re more abundant near forest edges than in deep forest. They’re common in urban and suburban areas, especially where oaks or bird feeders are found.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -262,12 +294,14 @@
       {
         "sectionId": "about",
         "content":
-          "The exotic Mute Swan is the elegant bird of Russian ballets and European fairy tales. This swan swims with its long neck curved into an S and often holds its wings raised slightly above its back. Although they’re numerous and familiar in city parks and in bays and lakes in the Pacific Northwest, Great Lakes, Northeast, and Midatlantic, Mute Swans are not native to North America. Their aggressive behavior and voracious appetites often disturb local ecosystems, displace native species, and even pose a hazard to humans."
+          "The exotic Mute Swan is the elegant bird of Russian ballets and European fairy tales. This swan swims with its long neck curved into an S and often holds its wings raised slightly above its back. Although they’re numerous and familiar in city parks and in bays and lakes in the Pacific Northwest, Great Lakes, Northeast, and Midatlantic, Mute Swans are not native to North America. Their aggressive behavior and voracious appetites often disturb local ecosystems, displace native species, and even pose a hazard to humans.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "The adaptable Mute Swan can be found in aquatic habitats ranging from urban lakes and farm ponds to coastal estuaries. In the Pacific Northwest and from New England south to Virginia, Mute Swan pairs choose fresh, brackish, and saltwater ponds as breeding sites. Farther inland, they breed on slow-moving rivers, bogs, embayments, and creeks and streams that empty into large lakes and other bodies of water. Severe weather or food shortages may drive birds from their territories to winter with nonbreeders in ice-free stretches of lakes, rivers, estuaries, and ocean sounds."
+          "The adaptable Mute Swan can be found in aquatic habitats ranging from urban lakes and farm ponds to coastal estuaries. In the Pacific Northwest and from New England south to Virginia, Mute Swan pairs choose fresh, brackish, and saltwater ponds as breeding sites. Farther inland, they breed on slow-moving rivers, bogs, embayments, and creeks and streams that empty into large lakes and other bodies of water. Severe weather or food shortages may drive birds from their territories to winter with nonbreeders in ice-free stretches of lakes, rivers, estuaries, and ocean sounds.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -278,12 +312,14 @@
       {
         "sectionId": "about",
         "content":
-          "A medium to large shorebird with a long bill, the Short-billed Dowitcher is a common and conspicous migrant that uses a \"sewing-machine\" method of foraging across the mud flats. Its long bill is short only in comparison with the very similar Long-billed Dowitcher."
+          "A medium to large shorebird with a long bill, the Short-billed Dowitcher is a common and conspicous migrant that uses a \"sewing-machine\" method of foraging across the mud flats. Its long bill is short only in comparison with the very similar Long-billed Dowitcher.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Breeds in muskegs of taiga to timberline, and barely onto subarctic tundra. Winters on coastal mud flats and brackish lagoons. In migration prefers saltwater tidal flats, beaches, and salt marshes. Found in freshwater mud flats and flooded agricultural fields."
+          "Breeds in muskegs of taiga to timberline, and barely onto subarctic tundra. Winters on coastal mud flats and brackish lagoons. In migration prefers saltwater tidal flats, beaches, and salt marshes. Found in freshwater mud flats and flooded agricultural fields.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -294,12 +330,14 @@
       {
         "sectionId": "about",
         "content":
-          "A graceful, slender-tailed, small-headed dove that’s common across the continent. Mourning Doves perch on telephone wires and forage for seeds on the ground; their flight is fast and bullet straight. Their soft, drawn-out calls sound like laments. When taking off, their wings make a sharp whistling or whinnying. Mourning Doves are the most frequently hunted species in North America."
+          "A graceful, slender-tailed, small-headed dove that’s common across the continent. Mourning Doves perch on telephone wires and forage for seeds on the ground; their flight is fast and bullet straight. Their soft, drawn-out calls sound like laments. When taking off, their wings make a sharp whistling or whinnying. Mourning Doves are the most frequently hunted species in North America.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Primarily a bird of open country, scattered trees, and woodland edges, but large numbers roost in woodlots during winter. Feeds on ground in grasslands, agricultural fields, backyards, and roadsides."
+          "Primarily a bird of open country, scattered trees, and woodland edges, but large numbers roost in woodlots during winter. Feeds on ground in grasslands, agricultural fields, backyards, and roadsides.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -310,12 +348,14 @@
       {
         "sectionId": "about",
         "content":
-          "A dark wading bird with a long, down-curved bill. Although the Glossy Ibis in North America lives primarily along the Atlantic Coast, it also can be found in Europe, Africa, Asia, and Australia."
+          "A dark wading bird with a long, down-curved bill. Although the Glossy Ibis in North America lives primarily along the Atlantic Coast, it also can be found in Europe, Africa, Asia, and Australia.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "conservation",
         "content":
-          "Glossy Ibis are found throughout the world. In North America, populations increased between 1966 and 2014, according to the North American Breeding Bird Survey. The North American Waterbird Conservation Plan estimates 13,000-15,000 breeding birds on the continent, rates the species a 12 out of 20 on the Continental Concern Score, and lists it as a Species of Low Concern."
+          "Glossy Ibis are found throughout the world. In North America, populations increased between 1966 and 2014, according to the North American Breeding Bird Survey. The North American Waterbird Conservation Plan estimates 13,000-15,000 breeding birds on the continent, rates the species a 12 out of 20 on the Continental Concern Score, and lists it as a Species of Low Concern.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -326,12 +366,14 @@
       {
         "sectionId": "about",
         "content":
-          "If someone at a park is feeding bread to ducks, chances are there are Mallards in the fray. Perhaps the most familiar of all ducks, Mallards occur throughout North America and Eurasia in ponds and parks as well as wilder wetlands and estuaries. The male’s gleaming green head, gray flanks, and black tail-curl arguably make it the most easily identified duck. Mallards have long been hunted for the table, and almost all domestic ducks come from this species."
+          "If someone at a park is feeding bread to ducks, chances are there are Mallards in the fray. Perhaps the most familiar of all ducks, Mallards occur throughout North America and Eurasia in ponds and parks as well as wilder wetlands and estuaries. The male’s gleaming green head, gray flanks, and black tail-curl arguably make it the most easily identified duck. Mallards have long been hunted for the table, and almost all domestic ducks come from this species.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Mallards can be found in almost any wetland habitats, including permanent wetlands such as marshes, bogs, riverine floodplains, beaver ponds, lakes, reservoirs, ponds, city parks, farms, and estuaries. They also occur in prairie potholes and ephemeral wetlands; they may be found feeding along roadside ditches, pastures, croplands and rice fields."
+          "Mallards can be found in almost any wetland habitats, including permanent wetlands such as marshes, bogs, riverine floodplains, beaver ponds, lakes, reservoirs, ponds, city parks, farms, and estuaries. They also occur in prairie potholes and ephemeral wetlands; they may be found feeding along roadside ditches, pastures, croplands and rice fields.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -342,12 +384,14 @@
       {
         "sectionId": "about",
         "content":
-          "Herring Gulls' scavenging habits take them to open water, intertidal pools and shallows, mud flats, landfills, newly plowed fields, picnic grounds, and fish-processing plants. They roost and loaf, often in large mixed species groups, in open areas with good visibility for spotting predators, including agricultural and athletic fields, beaches, parking lots, airport runways, and garbage dumps. They breed near lakes in northern forests across Canada to Alaska and in some coastal areas. Colonies often form on isolated islands, barrier beaches, and marshy hummocks, which are safe from terrestrial predators (though aerial predators can still be a danger). City rooftops, for example, serve the same purpose."
+          "Herring Gulls' scavenging habits take them to open water, intertidal pools and shallows, mud flats, landfills, newly plowed fields, picnic grounds, and fish-processing plants. They roost and loaf, often in large mixed species groups, in open areas with good visibility for spotting predators, including agricultural and athletic fields, beaches, parking lots, airport runways, and garbage dumps. They breed near lakes in northern forests across Canada to Alaska and in some coastal areas.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Herring Gulls' scavenging habits take them to open water, intertidal pools and shallows, mud flats, landfills, newly plowed fields, picnic grounds, and fish-processing plants. They roost and loaf, often in large mixed species groups, in open areas with good visibility for spotting predators, including agricultural and athletic fields, beaches, parking lots, airport runways, and garbage dumps. They breed near lakes in northern forests across Canada to Alaska and in some coastal areas. Colonies often form on isolated islands, barrier beaches, and marshy hummocks, which are safe from terrestrial predators (though aerial predators can still be a danger). City rooftops, for example, serve the same purpose."
+          "Herring Gulls' scavenging habits take them to open water, intertidal pools and shallows, mud flats, landfills, newly plowed fields, picnic grounds, and fish-processing plants. They roost and loaf, often in large mixed species groups, in open areas with good visibility for spotting predators, including agricultural and athletic fields, beaches, parking lots, airport runways, and garbage dumps. They breed near lakes in northern forests across Canada to Alaska and in some coastal areas.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -358,12 +402,14 @@
       {
         "sectionId": "about",
         "content":
-          "The Wood Duck is one of the most stunningly pretty of all waterfowl. Males are iridescent chestnut and green, with ornate patterns on nearly every feather; the elegant females have a distinctive profile and delicate white pattern around the eye. These birds live in wooded swamps, where they nest in holes in trees or in nest boxes put up around lake margins. They are one of the few duck species equipped with strong claws that can grip bark and perch on branches."
+          "The Wood Duck is one of the most stunningly pretty of all waterfowl. Males are iridescent chestnut and green, with ornate patterns on nearly every feather; the elegant females have a distinctive profile and delicate white pattern around the eye. These birds live in wooded swamps, where they nest in holes in trees or in nest boxes put up around lake margins. They are one of the few duck species equipped with strong claws that can grip bark and perch on branches.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Wood Ducks thrive in bottomland forests, swamps, freshwater marshes, and beaver ponds. They are also common along streams of all sizes, from creeks to rivers, and the sheer extent of these make them an important habitat. Wood Ducks seem to fare best when open water alternates with 50–75% vegetative cover that the ducks can hide and forage in. This cover can consist of downed trees, shrubs such as alder, willow, and buttonbush, as well as emergent herbaceous plants such as arrowhead and smartweeds."
+          "Wood Ducks thrive in bottomland forests, swamps, freshwater marshes, and beaver ponds. They are also common along streams of all sizes, from creeks to rivers, and the sheer extent of these make them an important habitat. Wood Ducks seem to fare best when open water alternates with 50–75% vegetative cover that the ducks can hide and forage in. This cover can consist of downed trees, shrubs such as alder, willow, and buttonbush, as well as emergent herbaceous plants such as arrowhead and smartweeds.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -374,12 +420,14 @@
       {
         "sectionId": "about",
         "content":
-          "First brought to North America by Shakespeare enthusiasts in the nineteenth century, European Starlings are now among the continent’s most numerous songbirds. They are stocky black birds with short tails, triangular wings, and long, pointed bills. Though they’re sometimes resented for their abundance and aggressiveness, they’re still dazzling birds when you get a good look. Covered in white spots during winter, they turn dark and glossy in summer. For much of the year, they wheel through the sky and mob lawns in big, noisy flocks."
+          "First brought to North America by Shakespeare enthusiasts in the nineteenth century, European Starlings are now among the continent’s most numerous songbirds. They are stocky black birds with short tails, triangular wings, and long, pointed bills. Though they’re sometimes resented for their abundance and aggressiveness, they’re still dazzling birds when you get a good look. Covered in white spots during winter, they turn dark and glossy in summer.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Starlings typically live around people, using mowed lawns, city streets, and agricultural fields for feeding; and trees, buildings, and other structures for nesting. Their main requirements are open, grassy areas in which to forage, a water source, and trees or buildings that contain suitable cavities or niches for nesting. They avoid large, unbroken stretches of forest, chaparral, and desert."
+          "Starlings typically live around people, using mowed lawns, city streets, and agricultural fields for feeding; and trees, buildings, and other structures for nesting. Their main requirements are open, grassy areas in which to forage, a water source, and trees or buildings that contain suitable cavities or niches for nesting. They avoid large, unbroken stretches of forest, chaparral, and desert.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -390,12 +438,14 @@
       {
         "sectionId": "about",
         "content":
-          "One of the earliest-arriving migrant warblers, the Black-and-white Warbler’s thin, squeaky song is one of the first signs that spring birding has sprung. This crisply striped bundle of black and white feathers creeps along tree trunks and branches like a nimble nuthatch, probing the bark for insects with its slightly downcurved bill. Though you typically see these birds only in trees, they build their little cup-shaped nests in the leaf litter of forests across central and eastern North America."
+          "One of the earliest-arriving migrant warblers, the Black-and-white Warbler’s thin, squeaky song is one of the first signs that spring birding has sprung. This crisply striped bundle of black and white feathers creeps along tree trunks and branches like a nimble nuthatch, probing the bark for insects with its slightly downcurved bill. Though you typically see these birds only in trees, they build their little cup-shaped nests in the leaf litter of forests across central and eastern North America.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Black-and-white Warblers typically use deciduous forests and mixed forests of deciduous trees and conifers. They can be found in many habitats during migration, especially woodlots and forests in riparian settings. On their tropical wintering grounds Black-and-white Warblers use an immense range of habitats, including lawns, gardens, and other urban settings, fruit orchards, shade-coffee plantations, wetlands, mangroves, and all types of forests."
+          "Black-and-white Warblers typically use deciduous forests and mixed forests of deciduous trees and conifers. They can be found in many habitats during migration, especially woodlots and forests in riparian settings. On their tropical wintering grounds Black-and-white Warblers use an immense range of habitats, including lawns, gardens, and other urban settings, fruit orchards, shade-coffee plantations, wetlands, mangroves, and all types of forests.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -406,12 +456,14 @@
       {
         "sectionId": "about",
         "content":
-          "A bird of northern forests, the Northern Waterthrush sings its loud, ringing song from wooded swamps and bogs. It can be seen on migration bobbing its tail near wet spots in parks or backyards."
+          "A bird of northern forests, the Northern Waterthrush sings its loud, ringing song from wooded swamps and bogs. It can be seen on migration bobbing its tail near wet spots in parks or backyards.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Breeds in thickets near slow-moving streams, ponds, swamps, and bogs; in migration and winter, uses a variety of wooded habitats, generally near water, often in mangroves."
+          "Breeds in thickets near slow-moving streams, ponds, swamps, and bogs; in migration and winter, uses a variety of wooded habitats, generally near water, often in mangroves.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -422,12 +474,14 @@
       {
         "sectionId": "about",
         "content":
-          "Common Terns gracefully row through the sky showing off their long angular wings, and breeding season gray belly, black cap, and red bill. They dive towards the water picking off fish just below the surface. The Common Tern is the most widespread tern in North America, spending its winters as far south as Argentina and Chile. They are social birds, foraging in groups and nesting on the ground in colonies."
+          "Common Terns gracefully row through the sky showing off their long angular wings, and breeding season gray belly, black cap, and red bill. They dive towards the water picking off fish just below the surface. The Common Tern is the most widespread tern in North America, spending its winters as far south as Argentina and Chile. They are social birds, foraging in groups and nesting on the ground in colonies.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Common Terns nest on rocky islands, barrier beaches, and saltmarshes and forage over open waters. Terns often gather over warmer waters with high densities of American sand lance (a small fish) in the spring, and tuna that help scare up smaller fish in the fall. During the winter, they gather primarily over marine habitats, foraging at sea and resting on boats and beaches."
+          "Common Terns nest on rocky islands, barrier beaches, and saltmarshes and forage over open waters. Terns often gather over warmer waters with high densities of American sand lance (a small fish) in the spring, and tuna that help scare up smaller fish in the fall. During the winter, they gather primarily over marine habitats, foraging at sea and resting on boats and beaches.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -438,12 +492,14 @@
       {
         "sectionId": "about",
         "content":
-          "A common feeder bird with clean black, gray, and white markings, White-breasted Nuthatches are active, agile little birds with an appetite for insects and large, meaty seeds. They get their common name from their habit of jamming large nuts and acorns into tree bark, then whacking them with their sharp bill to “hatch” out the seed from the inside. White-breasted Nuthatches may be small but their voices are loud, and often their insistent nasal yammering will lead you right to them."
+          "A common feeder bird with clean black, gray, and white markings, White-breasted Nuthatches are active, agile little birds with an appetite for insects and large, meaty seeds. They get their common name from their habit of jamming large nuts and acorns into tree bark, then whacking them with their sharp bill to “hatch” out the seed from the inside. White-breasted Nuthatches may be small but their voices are loud, and often their insistent nasal yammering will lead you right to them.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "White-breasted Nuthatches are birds of mature woods, and they’re more often found in deciduous than coniferous forests (where Red-breasted Nuthatches are more likely). You can also find them at woodland edges and in open areas with large trees, such as parks, wooded suburbs, and yards."
+          "White-breasted Nuthatches are birds of mature woods, and they’re more often found in deciduous than coniferous forests (where Red-breasted Nuthatches are more likely). You can also find them at woodland edges and in open areas with large trees, such as parks, wooded suburbs, and yards.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -454,12 +510,14 @@
       {
         "sectionId": "about",
         "content":
-          "If you’ve been hearing an endless string of 10 or 15 different birds singing outside your house, you might have a Northern Mockingbird in your yard. These slender-bodied gray birds apparently pour all their color into their personalities. They sing almost endlessly, even sometimes at night, and they flagrantly harass birds that intrude on their territories, flying slowly around them or prancing toward them, legs extended, flaunting their bright white wing patches."
+          "If you’ve been hearing an endless string of 10 or 15 different birds singing outside your house, you might have a Northern Mockingbird in your yard. These slender-bodied gray birds apparently pour all their color into their personalities. They sing almost endlessly, even sometimes at night, and they flagrantly harass birds that intrude on their territories, flying slowly around them or prancing toward them, legs extended, flaunting their bright white wing patches.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Year-round the Northern Mockingbird is found in areas with open ground and with shrubby vegetation like hedges, fruiting bushes, and thickets. When foraging on the ground, it prefers grassy areas, rather than bare spots. Common places to find Northern Mockingbirds include parkland, cultivated land, suburban areas and in second growth habitat at low elevations."
+          "Year-round the Northern Mockingbird is found in areas with open ground and with shrubby vegetation like hedges, fruiting bushes, and thickets. When foraging on the ground, it prefers grassy areas, rather than bare spots. Common places to find Northern Mockingbirds include parkland, cultivated land, suburban areas and in second growth habitat at low elevations.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -470,12 +528,14 @@
       {
         "sectionId": "about",
         "content":
-          "Crisp facial markings make the White-throated Sparrow an attractive bird as well as a hopping, flying anatomy lesson. There’s the black eyestripe, the white crown and supercilium, the yellow lores, the white throat bordered by a black whisker, or malar stripe. They’re also a great entrée into the world of birdsong, with their pretty, wavering whistle of Oh-sweet-canada. These forest sparrows breed mostly across Canada, but they’re familiar winter birds across most of eastern and southern North America and California."
+          "Crisp facial markings make the White-throated Sparrow an attractive bird as well as a hopping, flying anatomy lesson. There’s the black eyestripe, the white crown and supercilium, the yellow lores, the white throat bordered by a black whisker, or malar stripe. They’re also a great entrée into the world of birdsong, with their pretty, wavering whistle of Oh-sweet-canada. These forest sparrows breed mostly across Canada, but they’re familiar winter birds across most of eastern and southern North America and California.",
+        "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "In summer, White-throated Sparrows are birds of forests across Canada, the northeastern U.S., and the northern Midwest. Look for them in either coniferous or deciduous forests up to treeline, especially around openings with low, dense vegetation; in areas regrowing after logging, fires, or insect damage; or edges of ponds, meadows, and bogs. During migration and winter, you’ll find White-throated Sparrows along edges of woodlots, hedgerows, thickets, weedy fields, suburbs, backyards, and city parks."
+          "In summer, White-throated Sparrows are birds of forests across Canada, the northeastern U.S., and the northern Midwest. Look for them in either coniferous or deciduous forests up to treeline, especially around openings with low, dense vegetation; in areas regrowing after logging, fires, or insect damage; or edges of ponds, meadows, and bogs. During migration and winter, you’ll find White-throated Sparrows along edges of woodlots, hedgerows, thickets, weedy fields, suburbs, backyards, and city parks.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   }
