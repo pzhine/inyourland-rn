@@ -32,14 +32,16 @@ function playMedia(mediaEntry) {
             JSON.stringify(err, null, 2)
           )
           reject(err)
+          return
         }
 
         mediaEntry.player = player
 
         const mediaSpec = {
           contentId: config.mediaBaseUrl + mediaEntry.sourceFilename,
-          contentType: 'video/mp4',
+          contentType: mediaEntry.contentType,
           streamType: 'BUFFERED', // or LIVE
+          crossfadeWidth: mediaEntry.crossfadeWidth,
         }
 
         player.on('status', status => {

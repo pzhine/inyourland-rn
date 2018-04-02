@@ -13,6 +13,9 @@ async function start({ io, mediaList }) {
 
   // start scene timers
   mediaList.forEach(mediaEntry => {
+    if (mediaEntry.contentType.match('audio')) {
+      return
+    }
     const scenes = require(`../../../content/scenes/${mediaEntry.mediaId}.json`)
     setTimer({
       scenes,
