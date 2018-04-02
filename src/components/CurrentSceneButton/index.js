@@ -16,6 +16,7 @@ const CurrentSceneButton = ({ scene, onPress, isVisible }) => (
         range: [0, 1],
         method: Animated.timing,
         duration: 400,
+        inDelay: 1000,
       },
     }}
   >

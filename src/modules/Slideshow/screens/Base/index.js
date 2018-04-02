@@ -14,7 +14,7 @@ class Base extends React.Component {
     this.isTransitioningToSubject = false
   }
   componentWillReceiveProps(nextProps) {
-    const { currentSceneIndex } = this.props
+    const { currentSceneIndex, location } = this.props
     if (
       nextProps.currentSceneIndex !== currentSceneIndex &&
       this.isTransitioningToSubject
@@ -23,7 +23,7 @@ class Base extends React.Component {
         this.navToSubject(nextProps)
       }, 400)
     }
-    if (nextProps.location.pathname.match('/subject')) {
+    if (location.pathname.match('/subject')) {
       this.isTransitioningToSubject = false
     }
   }
@@ -56,6 +56,7 @@ class Base extends React.Component {
         <Carousel
           {...this.props}
           onSlidePress={sceneIndex => this.onSlidePress(sceneIndex)}
+          isTransitioningToSubject={this.isTransitioningToSubject}
         />
       </React.Fragment>
     )

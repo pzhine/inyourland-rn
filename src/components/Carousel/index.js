@@ -140,7 +140,15 @@ class Carousel extends Component {
     }
   }
   render() {
-    const { currentSceneIndex, scenes, animations, onSlidePress } = this.props
+    const {
+      currentSceneIndex,
+      scenes,
+      animations,
+      onSlidePress,
+      isTransitioningToSubject,
+    } = this.props
+
+    console.log('carousel.render', isTransitioningToSubject)
 
     const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =
@@ -194,7 +202,7 @@ class Carousel extends Component {
               }),
               animations.activeFollowAnimation.interpolate({
                 inputRange: [0, 0.2, 0.8, 1],
-                outputRange: [0, -1, -1, 0],
+                outputRange: [isTransitioningToSubject ? -1 : 0, -1, -1, 0],
               })
             ),
             transform: [
