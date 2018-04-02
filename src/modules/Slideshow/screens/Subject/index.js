@@ -29,10 +29,11 @@ const Subject = ({
   history,
   isInteracting,
   startInteraction,
+  ignoreInteracting,
   ...props
 }) => (
   <View style={styles.subject}>
-    {!isInteracting && <Redirect to="/" />}
+    {!isInteracting && !ignoreInteracting && <Redirect to="/" />}
     <Button
       style={styles.backButton}
       onPress={() => {
