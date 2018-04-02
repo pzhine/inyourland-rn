@@ -49,13 +49,3 @@ storiesOf('components/SubjectImage', module)
       </Transition>
     </AutoPlay>
   ))
-  .add('with onPress', () => (
-    <SubjectImage
-      onPress={() => {
-        console.log('pressed!')
-      }}
-    >
-      <Animated.Image source={{ uri: 'http://placebear.com/g/300/200.jpg' }} />
-      <Image source={{ uri: 'http://placebear.com/300/200.jpg' }} />
-    </SubjectImage>
-  ))

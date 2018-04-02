@@ -1,14 +1,12 @@
 import React from 'react'
 import { View, Image, Animated, Easing } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
-import { Provider, connect } from 'react-redux'
 import Carousel from './'
 import scenes from '../../../content/scenes/stream01.json'
 import AutoPlay from '../../../storybook/AutoPlay'
 import storyStyles from '../../../storybook/styles'
 import getImageUrl from '../../lib/scene/getImageUrl'
 import PropTransition from '../../transitions/PropTransition'
-import store from '../../redux/configureStore'
 
 const Transition = ({ children, toggle }) => (
   <PropTransition
