@@ -21,8 +21,10 @@ class Base extends React.Component {
     ) {
       setTimeout(() => {
         this.navToSubject(nextProps)
-        this.isTransitioningToSubject = false
       }, 400)
+    }
+    if (nextProps.location.pathname.match('/subject')) {
+      this.isTransitioningToSubject = false
     }
   }
   navToSubject(props) {
@@ -40,15 +42,14 @@ class Base extends React.Component {
       return
     }
     this.props.startInteraction()
-    this.isTransitioningToSubject = true
     if (sceneIndex !== currentSceneIndex) {
+      this.isTransitioningToSubject = true
       this.props.changeScene(sceneIndex)
     } else {
       this.navToSubject(this.props)
     }
   }
   render() {
-    console.log('base.render', this.props.currentSceneIndex)
     return (
       <React.Fragment>
         <Map {...this.props} />

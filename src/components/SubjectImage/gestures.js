@@ -3,8 +3,8 @@ import { PanResponder, View } from 'react-native'
 import { connect } from 'react-redux'
 import actions from '../../redux/scene/actions'
 
-const MOVE_THRESHOLD = 100
-const VELOCITY_THRESHOLD = 1
+const MOVE_THRESHOLD = 20
+const VELOCITY_THRESHOLD = 0.3
 
 const gestureIsPan = gestureState =>
   gestureState.vx > VELOCITY_THRESHOLD ||

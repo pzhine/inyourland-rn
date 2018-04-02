@@ -38,22 +38,24 @@ const Slides = ({
           hideOnActive={blur}
           onPress={onSlidePress ? () => onSlidePress(sceneIndex) : null}
         >
-          {!blur &&
-            count === middleIndex && (
-              <Animated.Image
-                source={{
-                  uri: getImageUrl(scenes[sceneIndex].thumbFilename, {
-                    blur: true,
-                  }),
-                }}
-                style={{
-                  opacity: activeAnimation.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [0, 0.7],
-                  }),
-                }}
-              />
-            )}
+          {!blur && (
+            <Animated.Image
+              source={{
+                uri: getImageUrl(scenes[sceneIndex].thumbFilename, {
+                  blur: true,
+                }),
+              }}
+              style={{
+                opacity:
+                  count === middleIndex
+                    ? activeAnimation.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [0, 0.7],
+                      })
+                    : 0,
+              }}
+            />
+          )}
           <Animated.Image
             source={{
               uri: getImageUrl(scenes[sceneIndex].thumbFilename, { blur }),
