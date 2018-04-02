@@ -21,5 +21,13 @@ const styles = {
     borderRadius: mixins.button.borderRadius - padding,
     zIndex: 0,
   },
+  captionText: {
+    fontFamily: 'System',
+    fontWeight: '100',
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 14,
+    textAlign: 'center',
+    marginTop: 8,
+  },
 }
 export default styles

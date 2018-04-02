@@ -1,5 +1,5 @@
 import React from 'react'
-import { Animated, Image } from 'react-native'
+import { Animated, Image, Text } from 'react-native'
 import Button from '../Button'
 import PropTransition from '../../transitions/PropTransition'
 import getImageUrl from '../../lib/scene/getImageUrl'
@@ -34,6 +34,7 @@ const CurrentSceneButton = ({ scene, onPress, isVisible }) => (
             }}
           />
         </Button>
+        <Text style={styles.captionText}>RESUME</Text>
       </Animated.View>
     )}
   </PropTransition>
