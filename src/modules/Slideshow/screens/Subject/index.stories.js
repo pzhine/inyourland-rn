@@ -23,7 +23,7 @@ storiesOf('modules/Slideshow/Subject', module)
         path="/"
         render={() => <Redirect to="/subject/americanblackduck/about" />}
       />
-      <SubjectRoute />
+      <SubjectRoute ignoreInteracting />
     </React.Fragment>
   ))
   .add('nav to subject', () => (
@@ -37,6 +37,6 @@ storiesOf('modules/Slideshow/Subject', module)
           )
         }
       </AutoPlay>
-      <SubjectRoute />
+      <SubjectRoute ignoreInteracting />
     </React.Fragment>
   ))

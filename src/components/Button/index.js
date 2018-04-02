@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableWithoutFeedback, Animated, View } from 'react-native'
+import { TouchableWithoutFeedback, Animated } from 'react-native'
 import styles from './styles'
 
 class Button extends React.Component {
@@ -58,7 +58,7 @@ class Button extends React.Component {
         onPressIn={this.onPressIn}
         onPressOut={this.onPressOut}
       >
-        <View style={{ ...styles.button, ...style }}>
+        <Animated.View style={{ ...styles.button, ...style }}>
           <Animated.View
             style={{
               ...styles.highlight,
@@ -69,7 +69,7 @@ class Button extends React.Component {
             }}
           />
           {children}
-        </View>
+        </Animated.View>
       </TouchableWithoutFeedback>
     )
   }

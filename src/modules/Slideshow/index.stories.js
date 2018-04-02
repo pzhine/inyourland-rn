@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native'
 import { Provider } from 'react-redux'
 import store from '../../redux/configureStore'
 import AutoPlay from '../../../storybook/AutoPlay'
-import scenes from '../../../content/scenes/stream0.json'
+import scenes from '../../../content/scenes/stream01.json'
 import Slideshow from './'
 
 storiesOf('modules/Slideshow', module)
