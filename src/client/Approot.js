@@ -21,7 +21,6 @@ class Approot extends React.Component {
         const mediaId = mediaList.find(m => m.clientIp === clientIp).mediaId
         console.log('mediaId', mediaId)
         const scenes = require(`../../content/scenes/${mediaId}.json`)
-        console.log('scenes', scenes)
         this.setState({ scenes })
       })
       .catch(err => {

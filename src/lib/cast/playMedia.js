@@ -35,6 +35,16 @@ function playMedia(mediaEntry) {
           return
         }
 
+        client.setVolume({ level: mediaEntry.volume }, (err2, response) => {
+          if (err2) {
+            console.log(
+              '❌  playMedia setVolume error',
+              JSON.stringify(err2, null, 2)
+            )
+          }
+          console.log('🔈  playMedia setVolume', response)
+        })
+
         mediaEntry.player = player
 
         const mediaSpec = {

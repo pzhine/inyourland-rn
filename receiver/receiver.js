@@ -99,6 +99,7 @@ function init(scope, cast) {
           'audio/mp4; codecs="mp4a.40.2"'
         );
         scope.config = bufferSettings.audio;
+        scope.video.volume = 0.5;
       }
 
       scope.sourceBuffer.addEventListener('updateend', function () {

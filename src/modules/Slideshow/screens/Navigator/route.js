@@ -24,10 +24,7 @@ const NavigatorRoute = props => (
       },
     }}
   >
-    <Navigator
-      {...props}
-      currentSceneIndex={props.currentSceneIndex % props.scenes.length}
-    />
+    <Navigator {...props} />
   </RouteTransition>
 )
 
