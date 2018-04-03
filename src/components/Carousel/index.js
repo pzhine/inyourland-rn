@@ -36,7 +36,7 @@ const Slides = ({
         <SubjectImage
           activeAnimation={count === middleIndex && activeAnimation}
           hideOnActive={blur}
-          onPress={onSlidePress ? () => onSlidePress(sceneIndex) : null}
+          onPress={onSlidePress ? () => onSlidePress(index) : null}
         >
           {!blur && (
             <Animated.Image
@@ -147,8 +147,6 @@ class Carousel extends Component {
       onSlidePress,
       isTransitioningToSubject,
     } = this.props
-
-    console.log('carousel.render', isTransitioningToSubject)
 
     const slideRange = range(currentSceneIndex - 3, currentSceneIndex + 3)
     const stripWidth =

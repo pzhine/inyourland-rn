@@ -3,12 +3,24 @@
     "mediaId": "stream01",
     "sourceFilename": "stream01_mute_dashinit.mp4",
     "deviceId": "pintor",
+    "contentType": "video/mp4",
+    "volume": 0,
     "clientIp": "192.168.121.112"
   },
   {
     "mediaId": "stream02",
     "sourceFilename": "stream02_mute_dashinit.mp4",
     "deviceId": "claris",
+    "contentType": "video/mp4",
+    "volume": 0,
     "clientIp": "192.168.121.115"
+  },
+  {
+    "mediaId": "audio01",
+    "sourceFilename": "audio01_dashinit.mp4",
+    "contentType": "audio/mp4",
+    "volume": 0.5,
+    "deviceId": "gilberto",
+    "clientIp": "192.168.1.8"
   }
 ]

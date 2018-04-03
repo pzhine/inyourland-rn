@@ -11,8 +11,8 @@ const styles = {
   },
   text: {
     ...mixins.navText,
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 12,
+    marginRight: 12,
     fontWeight: '100',
   },
   active: {

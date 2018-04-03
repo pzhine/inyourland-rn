@@ -9,7 +9,7 @@ export default {
     fontFamily: 'System',
     fontWeight: '100',
     color: 'rgba(255,255,255,1)',
-    fontSize: 50,
+    fontSize: 48,
   },
   locationText: {
     fontFamily: 'System',
@@ -27,15 +27,15 @@ export default {
     fontFamily: 'HiraginoSans-W3',
     fontWeight: 'normal',
     color: 'rgba(255,255,255,0.75)',
-    fontSize: 23,
-    lineHeight: 27,
+    fontSize: 21,
+    lineHeight: 24,
     textAlign: 'justify',
     width: 525,
   },
   navText: {
     fontFamily: 'System',
     fontWeight: '300',
-    fontSize: 24,
+    fontSize: 22,
     color: 'rgb(255,255,255)',
   },
   button: {
