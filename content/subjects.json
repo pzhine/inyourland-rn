@@ -19,18 +19,36 @@
   },
   {
     "subjectId": "redtailedhawk",
-    "name": "Red Tailed Hawk",
+    "name": "Red-tailed Hawk",
     "bio": [
       {
         "sectionId": "about",
         "content":
-          "This is probably the most common hawk in North America. If you’ve got sharp eyes you’ll see several individuals on almost any long car ride, anywhere. Red-tailed Hawks soar above open fields, slowly turning circles on their broad, rounded wings.",
+          "This is probably the most common hawk in North America. If you’ve got sharp eyes you’ll see several individuals on almost any long car ride, anywhere. Red-tailed Hawks soar above open fields, slowly turning circles on their broad, rounded wings. Other times you’ll see them atop telephone poles, eyes fixed on the ground to catch the movements of a vole or a rabbit, or simply waiting out cold weather before climbing a thermal updraft into the sky.",
         "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Red-tailed Hawks occupy just about every type of open habitat on the continent. This includes desert, scrublands, grasslands, roadsides, fields and pastures, parks, broken woodland, and (in Mexico) tropical rainforest.",
+          "Red-tailed hawks have shown the ability to become habituated to almost any habitat present in North and Central America. Their preferred habitat is mixed forest and field, with trees or alternately high bluffs that may be used as nesting and perching sites. It occupies a wide range of habitats and altitudes, including deserts, grasslands, nearly any coastal or wetland habitat, mountains, foothills, coniferous and deciduous woodlands and tropical rainforests.",
+        "source": "Wikipedia"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "Red-tailed hawks are considered partial migrants, as in about the northern-third of their distribution  they almost entirely vacate their breeding grounds. During fall migration, departure may occur as soon as late September but peak movements occur in late October and the full month of November in the United States, with migration ceasing after mid-December. Spring northward movements may commence as early as late February, with peak numbers usually occurring in late March and early April.",
+        "source": "Wikipedia"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Mammals make up the bulk of most Red-tailed Hawk meals. Frequent victims include voles, mice, wood rats, rabbits, snowshoe hares, jackrabbits, and ground squirrels. The hawks also eat birds, including pheasants, bobwhite, starlings, and blackbirds; as well as snakes and carrion. Individual prey items can weigh anywhere from less than an ounce to more than 5 pounds.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Red-tailed Hawks typically put their nests in the crowns of tall trees where they have a commanding view of the landscape. They may also nest on a cliff ledge or on artificial structures such as window ledges and billboard platforms. Both members build the nest, or simply refurbish one of the nests they’ve used in previous years.",
         "source": "Cornell Lab of Ornithology"
       }
     ]
@@ -42,14 +60,32 @@
       {
         "sectionId": "about",
         "content":
-          "A small dark shorebird with a single band across its chest, the Semipalmated Plover is the most common plover seen on migration in most areas.",
-        "source": "Cornell Lab of Ornithology"
+          "The most common of the small plovers on migration through most areas. On its breeding grounds in the north, it avoids the tundra habitat chosen by most shorebirds, nesting instead on gravel bars along rivers or ponds. In such surroundings, its seemingly bold pattern actually helps to make the plover inconspicuous, by breaking up its outline against the varied background. The name \"semipalmated\" refers to partial webbing between the bird's toes.",
+        "source": "National Audubon Society"
       },
       {
-        "sectionId": "conservation",
+        "sectionId": "habitat",
         "content":
-          "The Semipalmated Plover is among the few plovers whose numbers are apparently increasing, perhaps owing to its versatility in food and habitat choice, its wide-spread coastal winter distribution, or its habitat expansion in the sub-Arctic as a result of disturbance by both humans and arctic geese. A 2012 study estimates a North American breeding population of 200,000.",
-        "source": "Cornell Lab of Ornithology"
+          "The semipalmated plover lives on shores and in tideflats. It favors very open habitats during migration, including broad mudflats, sandy beaches, lake shores, and pools in salt marsh. It is sometimes found in flooded fields or even plowed fields with other shorebirds. It tends to avoid flats overgrown with too much marsh vegetation. It breeds in the north, mostly on open flats of sand or gravel near water.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "The semipalmated plover migrates mostly late in spring and early in fall, with peak southbound flights in August. It Has a very extensive winter range, along coasts from United States to southern South America. They are extremely rare vagrants to western Europe, and have been found in Tierra del Fuego and the Isles of Scilly. It has been seen to swim short distances across small water channels during foraging while on migration.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society, Wikipedia"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Eats insects, crustaceans, and worms. Their diet varies with season and location: in breeding season and during migration inland, it may feed mostly on insects, including flies and their larvae, also earthworms. In coastal habitats, they forage for food on beaches, tidal flats and fields, usually by sight, eating mainly marine worms, crustaceans, and small mollusks.",
+        "source": "National Audubon Society, Wikipedia"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "In breeding season, male displays over territory by flying in wide circles with slow, exaggerated wingbeats, calling repeatedly. The nest is a shallow scrape in ground, sometimes lined with small leaves and other debris. Since the semipalmated plover nests on the ground, it uses a \"broken-wing\" display to lure intruders away from the nest, in a display similar to the related killdeer.",
+        "source": "National Audubon Society, Wikipedia"
       }
     ]
   },
@@ -66,7 +102,25 @@
       {
         "sectionId": "habitat",
         "content":
-          "American Robins are common birds across the continent. You’ll find them on lawns, fields, and city parks, as well as in more wild places like woodlands, forests, mountains up to near treeline, recently burned forests, and tundra. During winter many robins move to moist woods where berry-producing trees and shrubs are common.",
+          "American Robins are common birds across the American continent. You’ll find them on lawns, fields, and city parks, as well as in more wild places like woodlands, forests, mountains up to near treeline, recently burned forests, and tundra. During winter many robins move to moist woods where berry-producing trees and shrubs are common. Despite being depicted in the film Mary Poppins in London, this species is actually a rare vagrant to western Europe.",
+        "source": "Cornell Lab of Ornithology, Wikipedia"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "Migrates in flocks, often by day. Although some robins winter as far north as Canada, they are in localized concentrations then. With the breakup of flocks prior to the nesting season, when northerners see their \"first robin of spring,\" it may be a bird that has wintered only a few miles away, not one that has just arrived from southern climates. To the south, winter range is highly variable from year to year, depending on local food supplies.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The American robin eats mostly insects, berries, and earthworms. In early summer, insects make up majority of diet, but it also feeds on earthworms, snails, spiders, other invertebrates. Robins also eat an enormous variety of fruits, including chokecherries, hawthorn, dogwood, and sumac fruits, and juniper berries. One study suggested that robins may try to round out their diet by selectively eating fruits that have bugs in them. Young are fed mostly on insects and earthworms.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Female robins choose the nest sites, which are typically on one or several horizontal branches hidden in or just below a layer of dense leaves. Nests are typically in the lower half of a tree, although they can be built as high as the treetop. American Robins also nest in gutters, eaves, on outdoor light fixtures, and other structures. In western prairies, American Robins may build their nests on the ground or in thickets, while in Alaska they sometimes nest on buildings or cliffs.",
         "source": "Cornell Lab of Ornithology"
       }
     ]
@@ -86,6 +140,24 @@
         "content":
           "Common Grackles do well in human landscapes, using scattered trees for nesting and open ground for foraging. Typical natural habitats include open woodland, forest edge, grassland, meadows, swamps, marshes, and palmetto hammocks. They are also very common near agricultural fields and feedlots, suburbs, city parks, cemeteries, pine plantations, and hedgerows. Unbroken tracts of forest are the only places where you are unlikely to find Common Grackles.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The common grackle is omnivorous, feeding on beetle grubs, grasshoppers, caterpillars, and many other types of insects. It also eats spiders, millipedes, earthworms, and such diverse items as crayfish, minnows, frogs, lizards, eggs and the young of other birds, and small rodents. Also important in their diet is vegetable matter, especially in the winter months: berries, seeds, waste grain, and acorns are all found on the menu.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "You might see a Common Grackle hunched over on the ground, wings spread, letting ants crawl over its body and feathers. This is called anting, and grackles are frequent practitioners among the many bird species that do it. The ants secrete formic acid, the chemical in their stings, and this may rid the bird of parasites. In addition to ants, grackles have been seen using walnut juice, lemons and limes, marigold blossoms, chokecherries, and mothballs in a similar fashion.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The female chooses the nest site, with the male sometimes following along as she surveys. After beginning to build, females often seem to change their minds and select another site. Typically the nest is high in a coniferous tree between two vertical limbs or on a horizontal branch (although they’ve been recorded as low as 8 inches off the ground and in deciduous vegetation, cattails and other sites). Nests are often built near water.",
+        "source": "Cornell Lab of Ornithology"
       }
     ]
   },
@@ -96,13 +168,31 @@
       {
         "sectionId": "about",
         "content":
-          "The elegant Great Egret is a dazzling sight in many a North American wetland. Slightly smaller and more svelte than a Great Blue Heron, these are still large birds with impressive wingspans. They hunt in classic heron fashion, standing immobile or wading through wetlands to capture fish with a deadly jab of their yellow bill. Great Egrets were hunted nearly to extinction for their plumes in the late nineteenth century, sparking conservation movements and some of the first laws to protect birds.",
+          "The elegant Great Egret is a dazzling sight in many a North American wetland. Great Egrets were hunted nearly to extinction for their plumes in the late nineteenth century, sparking conservation movements and some of the first laws to protect birds. The Great Egret is the symbol of the National Audubon Society, one of the oldest environmental organizations in North America, founded to protect birds from being killed for their feathers.",
         "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Great Egrets live in freshwater, brackish, and marine wetlands. During the breeding season they live in colonies in trees or shrubs with other waterbirds, ranging across the southeastern states and in scattered spots throughout the rest of the U.S. and southern Canada. The colonies are located on lakes, ponds, marshes, estuaries, impoundments, and islands. Great Egrets use similar habitats for migration stopover sites and wintering grounds. They hunt in marshes, swamps, streams, rivers, ponds, lakes, impoundments, lagoons, tidal flats, canals, ditches, fish-rearing ponds, flooded farm fields, and sometimes upland habitats.",
+          "Great Egrets live in freshwater, brackish, and marine wetlands. During the breeding season they live in colonies in trees or shrubs with other waterbirds, ranging across the southeastern states and in scattered spots throughout the rest of the U.S. and southern Canada. The colonies are located on lakes, ponds, marshes, estuaries, impoundments, and islands.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The Great Egret eats mostly fish, but also crustaceans, frogs, salamanders, snakes, aquatic insects. In open fields, it may catch grasshoppers and rodents. Has been seen catching small rails and other birds. It forages mostly by standing or walking in shallow water, waiting for fish to come near, then catching them with rapid thrust of bill. It may feed in flocks or in association with other herons, cormorants, and ibises, sometimes stealing food from smaller birds.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Great Egrets fly slowly but powerfully: with just two wingbeats per second their cruising speed is around 25 miles an hour. Though it mainly hunts while wading, the Great Egret occasionally swims to capture prey or hovers (somewhat laboriously) over the water and dips for fish. Aggression among nestlings is common and large chicks frequently kill their smaller siblings. This behavior is not uncommon among birds such as hawks, owls, and herons.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Males choose the display areas, where nests are later constructed. The nest itself is up to 100 feet off the ground, often over water, usually in or near the top of a shrub or tree. Great Egrets occasionally nest on the ground or on artificial platforms. The male builds a nest platform from long sticks and twigs before pairing up with a female, and then both members of the pair may collaborate to complete the nest, though the male sometimes finishes it himself.",
         "source": "Cornell Lab of Ornithology"
       }
     ]
@@ -114,7 +204,7 @@
       {
         "sectionId": "about",
         "content":
-          "Among the most elegant of the herons, the slender Snowy Egret sets off immaculate white plumage with black legs and brilliant yellow feet. Those feet seem to play a role in stirring up or herding small aquatic animals as the egret forages. Breeding Snowy Egrets grow filmy, curving plumes that once fetched astronomical prices in the fashion industry, endangering the species. Early conservationists rallied to protect egrets by the early twentieth century, and this species is once again a common sight in shallow coastal wetlands.",
+          "Among the most elegant of the herons, the slender Snowy Egret sets off immaculate white plumage with black legs and brilliant yellow feet. Those feet seem to play a role in stirring up or herding small aquatic animals as the egret forages. Breeding Snowy Egrets grow filmy, curving plumes that once fetched astronomical prices in the fashion industry, endangering the species.",
         "source": "Cornell Lab of Ornithology"
       },
       {
@@ -122,6 +212,24 @@
         "content":
           "Snowy Egrets nest in colonies on thick vegetation in isolated places—such as barrier islands, dredge-spoil islands, salt marsh islands, swamps, and marshes. They often change location from year to year. During the breeding season Snowy Egrets feed in estuaries, saltmarshes, tidal channels, shallow bays, and mangroves. They winter in mangroves, saltwater lagoons, freshwater swamps, grassy ponds, and temporary pools, and forage on beaches, shallow reefs, and wet fields.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The Snowy Egret eats mostly aquatic animals, including fish, frogs, worms, crustaceans, and insects. It often uses its bright yellow feet to paddle in the water or probe in the mud, rounding up prey before striking with its bill. Snowy Egrets feed while standing, walking, running, or hopping, and they may vibrate their bills, sway their heads, or flick their wings as part of prey gathering.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "conservation",
+        "content":
+          "During the breeding season, adult Snowy Egrets develop long, wispy feathers on their backs, necks, and heads. In 1886 these plumes were valued at $32 per ounce, which was twice the price of gold at the time. Plume-hunting for the fashion industry killed many Snowy Egrets and other birds until reforms were passed in the early twentieth century. Snowy Egrets are once again numerous and their populations were stable from 1966 to 2014.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The male selects nest site and displays there to ward off rivals and attract a mate. Displays include pointing bill straight up, raising all plumes, and pumping head up and down while calling. After mating,  the female takes over and ends up doing most of the nest building, with materials supplied by the male. The nest is usually in a tree or shrub, 5 to 10 feet up, but can also be on the ground.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       }
     ]
   },
@@ -138,7 +246,25 @@
       {
         "sectionId": "habitat",
         "content":
-          "Ring-billed Gulls are often found in and around urban, suburban, and agricultural areas. In coastal areas, Ring-billed Gulls frequent estuaries, beaches, mudflats, and coastal waters. In winter, these birds are common around docks, wharves, and harbors. Ring-billed Gulls are more commonly seen inland than most other gull species.",
+          "Ring-billed Gulls are often found in and around urban, suburban, and agricultural areas. In coastal areas, Ring-billed Gulls frequent estuaries, beaches, mudflats, and coastal waters. In winter, these birds are common around docks, wharves, and harbors. Ring-billed Gulls are more commonly seen inland than most other gull species. They can be found at reservoirs, lakes, ponds, streams, landfills, parking lots, and shopping malls.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The Ring-billed gull is omnivorous. Its diet varies with location and season, but major items include insects, fish, earthworms, grain, rodents, and refuse. Forages in freshly plowed fields for grubs and earthworms. It is a notably adaptable and bold feeder, known to take bread from children, soar to catch insects, scavenge at garbage dumps, and even pluck berries from trees.",
+        "source": "Cornell Lab of Ornithology, National Geographic"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The Ring-billed gull is omnivorous. Its diet varies with location and season, but major items include insects, fish, earthworms, grain, rodents, and refuse. Forages in freshly plowed fields for grubs and earthworms. It is a notably adaptable and bold feeder, known to take bread from children, soar to catch insects, scavenge at garbage dumps, and even pluck berries from trees.",
+        "source": "Cornell Lab of Ornithology, National Geographic"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Ring-billed gulls are strong, graceful flyers. They can race along at more than 40 miles per hour, and they're adept at snatching food from the air. Adults play by repeatedly dropping objects, then swooping to catch them—perhaps honing their hunting moves. Like many other gull species, when Ring-billed Gulls are feeling aggressive they'll lower their head, begin calling, and then raise their head up to their shoulders.",
         "source": "Cornell Lab of Ornithology"
       }
     ]
@@ -150,13 +276,31 @@
       {
         "sectionId": "about",
         "content":
-          "You can find House Sparrows most places where there are houses (or other buildings), and few places where there aren’t. Along with two other introduced species, the European Starling and the Rock Pigeon, these are some of our most common birds.",
-        "source": "Cornell Lab of Ornithology"
+          "One of the most widespread and abundant songbirds in the world today, the House Sparrow has a simple success formula: it associates with humans. Native to Eurasia and northern Africa, it has succeeded in urban and farming areas all over the world -- including North America, where it was first released at New York in 1851. Tough, adaptable, aggressive, it survives on city sidewalks where few birds can make a living; in rural areas, it may evict native birds from their nests.",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
           "House Sparrows are closely associated with people and their buildings. Look for them in cities, towns, suburbs, and farms (particularly around livestock). You won’t find them in extensive woodlands, forests, or grasslands. In extreme environments such as deserts or the far north, House Sparrows survive only in the immediate vicinity of people.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "House Sparrows eat mostly grains and seeds, as well as livestock feed and, in cities, discarded food. Among the crops they eat are corn, oats, wheat, and sorghum. Wild foods include ragweed, crabgrass and other grasses, and buckwheat. In summer, House Sparrows eat insects and feed them to their young. They catch insects in the air, by pouncing on them, or by following lawnmowers or visiting lights at dusk.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "House Sparrows nest in holes of buildings and other structures such as streetlights, gas-station roofs, signs, and the overhanging fixtures that hold traffic lights. They sometimes build nests in vines climbing the walls of buildings. House Sparrows are strong competitors for nest boxes, too, at times displacing the species the nest box was intended for, such as bluebirds and Tree Swallows. House Sparrows sometimes build nests next to each other, and these neighboring nests can share walls.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "House Sparrows in flocks have a pecking order much the way chickens in a farmyard do. You can begin to decipher the standings by paying attention to the black throats of the males. Males with larger patches of black tend to be older and dominant over males with less black. By wearing this information on their feathers, sparrows can avoid some fights and thereby save energy.",
         "source": "Cornell Lab of Ornithology"
       }
     ]
@@ -168,14 +312,32 @@
       {
         "sectionId": "about",
         "content":
-          "Black-crowned Night-Herons are stocky birds compared to many of their long-limbed heron relatives. They’re most active at night or at dusk, when you may see their ghostly forms flapping out from daytime roosts to forage in wetlands. In the light of day adults are striking in gray-and-black plumage and long white head plumes.",
-        "source": "Cornell Lab of Ornithology"
+          "Black-crowned Night-Herons are stocky birds compared to many of their long-limbed heron relatives. They’re most active at night or at dusk, when you may see their ghostly forms flapping out from daytime roosts to forage in wetlands. Some studies suggest that they feed at night because they are dominated by other herons and egrets by day. A cosmopolitan species, they nest on every continent except Australia and Antarctica.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Black-crowned Night-Herons are common in wetlands across North America, including saltmarshes, freshwater marshes, swamps, streams, rivers, lakes, ponds, lagoons, tidal mudflats, canals, reservoirs, and wet agricultural fields. They require aquatic habitat for foraging and terrestrial vegetation for cover.",
+          "Black-crowned Night-Herons are common in wetlands across North America, including saltmarshes, freshwater marshes, swamps, streams, rivers, lakes, ponds, lagoons, tidal mudflats, canals, reservoirs, and wet agricultural fields. They require aquatic habitat for foraging and terrestrial vegetation for cover. They spend the winter in southern and coastal portions of their breeding range as well as across Mexico and Central America",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Black-crowned Night-Herons are opportunists feeders that eat many kinds of terrestrial, freshwater, and marine animals. Their diet includes leeches, earthworms, insects, crayfish, clams, mussels, fish, amphibians, lizards, snakes, turtles, rodents, birds, and eggs. They also eat carrion, plant materials, and garbage from landfills. Rather than stabbing their prey like many herons, they grasp it in their bills.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Black-crowned Night-Herons nest colonially and behave socially all year long. Both males and females vigorously defend feeding and nesting territories, sometimes striking with their bills and grabbing each other’s bills or wings. Night-herons are generally monogamous. Both the male and the female incubate the eggs and brood the chicks, greeting each other with calls and raised feathers when switching over duties.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "May begin nesting earlier in season than other herons. The male chooses nest site and displays there to attract mate. Displays include stretching neck up and forward with feathers ruffed up and slowly bowing while raising feet alternately, giving hissing buzz at lowest point in bow. The nest is usually in a tree or in cattails, in a safe habitat such as an island. They nest colonially, often with a dozen nests in a single tree, and colonies sometimes last for 50 years or more.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       }
     ]
   },
@@ -186,13 +348,31 @@
       {
         "sectionId": "about",
         "content":
-          "The big, black-necked Canada Goose with its signature white chinstrap mark is a familiar and widespread bird of fields and parks. Thousands of “honkers” migrate north and south each year, filling the sky with long V-formations.",
-        "source": "Cornell Lab of Ornithology"
+          "This big \"Honker\" is among our best-known waterfowl. In many regions, flights of Canada Geese passing over in V-formation - northbound in spring, southbound in fall - are universally recognized as signs of the changing seasons. Once considered a symbol of wilderness, this goose has adapted well to civilization, and in a few places it has even become something of a nuisance. Local forms vary greatly in size, and the smallest ones are now regarded as a separate species, Cackling Goose.",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Canada Geese live in a great many habitats near water, grassy fields, and grain fields. Canada Geese are particularly drawn to lawns for two reasons: they can digest grass, and when they are feeding with their young, manicured lawns give them a wide, unobstructed view of any approaching predators.",
+          "Canada Geese live in a great many habitats near water, grassy fields, and grain fields. Canada Geese are particularly drawn to lawns for two reasons: they can digest grass, and when they are feeding with their young, manicured lawns give them a wide, unobstructed view of any approaching predators. Their nesting habitat is diverse and differs by region, but they always nests near water. Canada Geese winter where feeding areas are within commuting distance of water. ",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "In spring and summer, geese concentrate their feeding on grasses and sedges, including skunk cabbage leaves and eelgrass. During fall and winter, they rely more on berries and seeds, including agricultural grains, and seem especially fond of blueberries. They’re very efficient at removing kernels from dry corn cobs. Two subspecies have adapted to urban environments and graze on domesticated grasses year round.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "Some Canada geese have become permanent residents of parks, golf courses, suburban subdevelopments, and other human habitats across much of North America. When they do migrate, they form impressive and aerodynamic V-formations. They can cover 1,500 miles in just 24 hours with a favorable wind. The flocks cover well-established paths that include designated \"rest stops.\" These social birds remain in flocks year-round, except while nesting.",
+        "source": "National Geographic"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Canada geese build nests on the ground, usually on a muskrat mound or other slightly elevated site, near water. They prefer a spot from which they can have a fairly unobstructed view in many directions. Female selects the site and does much of nest construction. She adds down feathers and some body feathers beginning after the second egg is laid. She does all the incubation while her mate guards her and the nest.",
         "source": "Cornell Lab of Ornithology"
       }
     ]
@@ -204,14 +384,32 @@
       {
         "sectionId": "about",
         "content":
-          "A tireless songster, the Red-eyed Vireo is one of the most common summer residents of Eastern forests. These neat, olive-green and white songbirds have a crisp head pattern of gray, black, and white. Their brief but incessant songs—sometimes more than 20,000 per day by a single male—contribute to the characteristic sound of an Eastern forest in summer.",
+          "A tireless songster, the Red-eyed Vireo is one of the most common summer residents of Eastern forests. These neat, olive-green and white songbirds have a crisp head pattern of gray, black, and white. Their brief but incessant songs—sometimes more than 20,000 per day by a single male—contribute to the characteristic sound of an Eastern forest in summer. When fall arrives, they head for the Amazon basin, fueled by a summer of plucking caterpillars from leaves in the treetops.",
         "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Throughout their summer range, Red-eyed Vireos breed in deciduous and mixed forests with shrubby understories. Numbers are greatest away from forest edges and near small openings in the interior forest canopy. In the pine forests of the southeastern United States, they prefer stream and river edges supporting hardwood trees.",
-        "source": "Cornell Lab of Ornithology"
+          "Throughout their summer range, Red-eyed Vireos breed in deciduous and mixed forests with shrubby understories. Numbers are greatest away from forest edges and near small openings in the interior forest canopy. In the pine forests of the southeastern United States, they prefer stream and river edges supporting hardwood trees. It is not the most often seen, because it tends to stay out of sight in the leafy treetops, searching methodically among the foliage for insects.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Red-eyed Vireos' diet changes substantially throughout the year: it’s mostly insects during summer, especially caterpillars which can account for 50 percent of their summer diet. Caterpillars make up only 15 percent of their spring diet, and 20 percent in fall. In winter in the tropics, may feed heavily on berries and small fruit.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "The Red-eyed Vireo's magnetic compass guides migration between continents. But fat stores seem to influence migration paths when the birds encounter the Gulf of Mexico. Fatter birds head across the Gulf, while leaner birds hug the coastline or travel inland around the Gulf. It migrates mostly at night. Peak migration periods in most areas are May and September. Those breeding in Northwest apparently move east in fall before turning south.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The male Vireo sings persistently throughout the day during the breeding season. In courtship, male displays to female with feathers sleeked down, swaying body and head from side to side; both birds then vibrate wings simultaneously. The female chooses a fork in a branch of a midstory to understory tree or shrub. The nest, built by the female, is a compact, dainty cup, made of strips of bark, grass stems, weeds, rootlets, spiderwebs, and cocoons.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -222,14 +420,32 @@
       {
         "sectionId": "about",
         "content":
-          "A common sight in cities around the world, Rock Pigeons crowd streets and public squares, living on discarded food and offerings of birdseed. In addition to the typical blue-gray bird with two dark wingbars, you'll often see flocks with plain, spotted, pale, or rusty-red birds in them.",
+          "Few birds have been associated with humans so closely as the Rock Pigeon, better known as the common city pigeon. It has been domesticated and taken around the world, raised for food, trained for homing, racing, and carrying messages, and used in research. Originally native from Europe to North Africa and India, it now lives in a wild or semi-wild condition in cities all over the world, including most of North America.",
         "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Urban areas, farmland, and rocky cliffs. May gather in large flocks in urban parks where people feed them.",
+          "Sustains itself in the wild around cities, farms, cliffs, bridges. In North America most common around cities, also in suburban areas and farms, occasionally in wild places far from human dwellings. In native range, nested on cliffs along coast and in inland mountains and gorges.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Rock pigeons eat mostly seeds. Away from cities, they feed on waste grain, seeds of many grasses and other plants, sometimes berries or acorns; may eat a few earthworms or insects. In cities, may live largely on bread crumbs, popcorn, or other junk food provided by humans. Forages mostly by walking on the ground. Pigeons peck at food on the ground and drink by placing their bill in water, using it like a straw.",
+        "source": "National Audubon Society, Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Pigeons can find their way home, even if released from a distant location blindfolded. They can navigate by sensing the earth’s magnetic fields, and perhaps also by using sound and smell. They can also use cues based on the position of the sun. When threatening a rival, pigeons may bow and coo, inflating their throat and walking in a circle. During courtship, the pair may preen one another and the male may grasp the female’s bill, regurgitating food as a courtship gesture.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Rock pigeons may mate for life. In courtship, male spreads tail, puffs up chest, and struts about, often strutting in circles around female, repeatedly bowing and cooing. Males typically choose the nest site, then sit in place and coo to attract a mate. Their nests are on sheltered cliff ledges; in cities, around human dwellings, they use artificial replacements such as window ledges of tall buildings, barn lofts, rain gutters, many others.",
+        "source": "Cornell Lab of Ornithology, Cornell Lab of Ornithology"
       }
     ]
   },
@@ -240,14 +456,32 @@
       {
         "sectionId": "about",
         "content":
-          "The male Northern Cardinal is perhaps responsible for getting more people to open up a field guide than any other bird. They’re a perfect combination of familiarity, conspicuousness, and style: a shade of red you can’t take your eyes off. Even the brown females sport a sharp crest and warm red accents.",
-        "source": "Cornell Lab of Ornithology"
+          "The northern cardinal is so well loved that it has been named the official bird of no fewer than seven U.S. states. Bright red cardinals are easily identified by even casual bird watchers, and are often seen frequenting backyards and bird feeders. Cardinalsndo not migrate and have traditionally been more common in warmer climes such as the U.S. southeast. However, in recent decades they have expanded their common range north through the United States and even into Canada.",
+        "source": "National Geographic"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Look for Northern Cardinals in dense shrubby areas such as forest edges, overgrown fields, hedgerows, backyards, marshy thickets, mesquite, regrowing forest, and ornamental landscaping. Cardinals nest in dense foliage and look for conspicuous, fairly high perches for singing.",
+          "Look for Northern Cardinals in dense shrubby areas such as forest edges, overgrown fields, hedgerows, backyards, marshy thickets, mesquite, regrowing forest, and ornamental landscaping. Cardinals nest in dense foliage and look for conspicuous, fairly high perches for singing. West of the Great Plains, the Cardinal is mostly absent, but it is locally common in the desert Southwest.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Northern Cardinals eat mainly seeds and fruit, supplementing these with insects (and feeding nestlings mostly insects). Common fruits and seeds include dogwood, wild grape, buckwheat, grasses, sedges, mulberry, hackberry, blackberry, sumac, tulip-tree, and corn. Cardinals eat many kinds of birdseed, particularly black oil sunflower seed. They also eat beetles, crickets, katydids, leafhoppers, cicadas, flies, centipedes, spiders, butterflies, and moths.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Northern Cardinals hop through low branches and forage on or near the ground. Cardinals commonly sing and preen from a high branch of a shrub. The distinctive crest can be raised and pointed when agitated or lowered and barely visible while resting. You typically see cardinals moving around in pairs during the breeding season, but in fall and winter they can form fairly large flocks of a dozen to several dozen birds.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Male sings to defend nesting territory, actively attacking intruding males (and attacking his own reflection in windows and mirrors). In courtship, male and female raise heads high, sway back and forth while singing softly; male often feeds female early in breeding season. The nest is usually well hidden in dense shrubs, vines, or low trees, placed 3-10' above ground. Pairs may stay together throughout winter, but up to 20 percent of pairs split up by the next season.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -258,14 +492,32 @@
       {
         "sectionId": "about",
         "content":
-          "A lively warbler that hops among tree branches in search of insects, the male American Redstart is coal-black with vivid orange patches on the sides, wings, and tail. True to its Halloween-themed color scheme, the redstart seems to startle its prey out of the foliage by flashing its strikingly patterned tail and wing feathers.",
+          "A lively warbler that hops among tree branches in search of insects, the male American Redstart is coal-black with vivid orange patches on the sides, wings, and tail. True to its Halloween-themed color scheme, the redstart seems to startle its prey out of the foliage by flashing its strikingly patterned tail and wing feathers. These sweet-singing warblers nest in open woodlands across much of North America.",
         "source": "Cornell Lab of Ornithology"
       },
       {
         "sectionId": "habitat",
         "content":
-          "American Redstarts breed in moist, deciduous, second-growth woodlands with abundant shrubs, across much of the eastern and northern United States and southern Canada. Its habitat is often situated near water, and includes alder and willow thickets, thickets in treefall gaps within old-growth forest, fencerows, orchards, and mixed deciduous-coniferous woodlands.",
+          "American Redstarts breed in moist, deciduous, second-growth woodlands with abundant shrubs, across much of the eastern and northern United States and southern Canada. Its habitat is often situated near water, and includes alder and willow thickets, thickets in treefall gaps within old-growth forest, fencerows, orchards, and mixed deciduous-coniferous woodlands. In winter in the tropics, found in lowland woods.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "American Redstarts feed mostly on insects, but in late summer they also eat some small berries and fruits. They forage between the ground and near the top of the canopy, taking most of their prey from twigs, branches, and leaves. They fan their tails and droop their wings, showcasing the orange-and-black or yellow-and-gray “flash patterns” of their plumage, presumably to startle prey and flush it from vegetation.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Like the Painted Redstart and other \"redstarts\" of the Neotropics, the American Redstart flashes the bright patches in its tail and wings. This seems to startle insect prey and give the birds an opportunity to catch them. Though these birds share a common name, they are not closely related to each other. In fact, there are other unrelated birds around the world—such as the fantails of Australia and southeastern Asia, and other redstarts of Europe—that share the same foraging tricks.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Males sometimes mate with more than one female and raise 2-3 broods simultaneously. Males perform a frequent boundary display flight toward rivals, with stiffened wingbeats and a glide back to the original perch in a semicircle. Male displays to female during courtship by fluffing plumage, raising crown feathers, spreading wings and tail, and bowing. The nest site is picked by the female, usually in the fork of a tree, 4-70' above the ground.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -276,14 +528,33 @@
       {
         "sectionId": "about",
         "content":
-          "This common, large songbird is familiar to many people, with its perky crest; blue, white, and black plumage; and noisy calls. Blue Jays are known for their intelligence and complex social systems with tight family bonds. Their fondness for acorns is credited with helping spread oak trees after the last glacial period.",
-        "source": "Cornell Lab of Ornithology"
+          "Blue jays are natural forest dwellers, but they are also highly adaptable and intelligent birds. They are a familiar and noisy presence around many North American bird feeders. The blue jay's \"Jay! Jay!\" call is only one of a wide variety of sounds the bird employs, including excellent imitations of several hawk calls. Not always conspicuous, they slip furtively through the trees when tending their own nest or going to rob the nest of another bird.",
+        "source": "National Audubon Society, National Geographic"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Blue Jays are found in all kinds of forests but especially near oak trees; they’re more abundant near forest edges than in deep forest. They’re common in urban and suburban areas, especially where oaks or bird feeders are found.",
+          "Common in much of eastern and central North America, Blue Jays are gradually extending their range to the Northwest. They are found in all kinds of forests but especially near oak trees; they’re more abundant near forest edges than in deep forest. They’re common in urban and suburban areas, especially where oaks or bird feeders are found. Often migrates south in the fall, but stays within the United States.",
+        "source":
+          "Cornell Lab of Ornithology, Nat'l Audubon Society, Nat'l Geographic"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Blue jays are sometimes known to eat eggs or nestlings, and it is this practice that has tarnished their reputation. In fact, they are largely vegetarian birds. Most of their diet is composed of acorns, nuts, and seeds, though they also eat small creatures such as caterpillars, grasshoppers, and beetles. Blue jays sometimes store acorns in the ground and may fail to retrieve them, thus aiding the spread of forests.",
+        "source": "National Geographic"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Blue Jays are known for their intelligence and complex social systems, and have tight family bonds. They often mate for life, remaining with their social mate throughout the year.  Blue Jays communicate with one another both vocally and with body language using their crest. The higher the crest, the higher the bird’s aggression level; when a Blue Jay squawks, the crest is virtually always held up. Blue Jays have a wide variety of vocalizations, with an immense vocabulary.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Courtship may involve aerial chases and males may feed female. Blue Jays become quiet and inconspicuous around the nest, but will attack with loud calls if the nest is threatened by a predator. They build their nests in the crotch or thick outer branches of a deciduous or coniferous tree, usually 10-25 feet above the ground. They may abandon their nest after detecting a nearby predator.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       }
     ]
   },
@@ -294,14 +565,32 @@
       {
         "sectionId": "about",
         "content":
-          "The exotic Mute Swan is the elegant bird of Russian ballets and European fairy tales. This swan swims with its long neck curved into an S and often holds its wings raised slightly above its back. Although they’re numerous and familiar in city parks and in bays and lakes in the Pacific Northwest, Great Lakes, Northeast, and Midatlantic, Mute Swans are not native to North America. Their aggressive behavior and voracious appetites often disturb local ecosystems, displace native species, and even pose a hazard to humans.",
-        "source": "Cornell Lab of Ornithology"
+          "Brought in from Europe as an ornamental addition to parks and estates, the Mute Swan has established itself in a feral state in some parts of North America, mainly in the northeast. In some places, it has become common enough to be unpopular, and it is considered a pest in a few areas. Not really mute: its voice is hoarse and much quieter than those of our native swans, but its wingbeats may be heard as much as a mile away.",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "The adaptable Mute Swan can be found in aquatic habitats ranging from urban lakes and farm ponds to coastal estuaries. In the Pacific Northwest and from New England south to Virginia, Mute Swan pairs choose fresh, brackish, and saltwater ponds as breeding sites. Farther inland, they breed on slow-moving rivers, bogs, embayments, and creeks and streams that empty into large lakes and other bodies of water. Severe weather or food shortages may drive birds from their territories to winter with nonbreeders in ice-free stretches of lakes, rivers, estuaries, and ocean sounds.",
+          "The adaptable Mute Swan can be found in aquatic habitats ranging from urban lakes and farm ponds to coastal estuaries. In the Pacific Northwest and from New England south to Virginia, Mute Swan pairs choose fresh, brackish, and saltwater ponds as breeding sites. Farther inland, they breed on slow-moving rivers, bogs, embayments, and creeks and streams that empty into large lakes and other bodies of water.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Mute Swans mainly eat aquatic vegetation, along with some animal prey including frogs, tadpoles, fish, snails, mollusks and insects. Mute Swans are voracious foragers, eating up to 8 pounds of aquatic plants a day that they tear off with their thick, rough-edged bills anchored by strong bill muscles. They skim plants from the surface and submerge all but their tail and feet to reach vegetation growing in deeper water.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Short legs placed well back on the body give Mute Swans an awkward walking gait, but the birds can run quickly if pursued and can take off from land and water, flying with head and neck extended. On the water they sometimes hold their wings slightly raised and “sail” with the wind. Before or during landing at a breeding site they’ll slap the water with their feet to announce their arrival and alert potential intruders.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Mute Swans are predominantly monogamous and form long-lasting breeding pairs. Pairs in courtship face each other and turn heads from side to side in unison. In threat display to protect nesting area, wings arched over back, head laid far back with neck feathers fluffed out, while swan swims forward jerkily. They nest on a shoreline, small island, or mound built up in shallows. The male Mute Swan starts the nest but the female does the bulk of the construction.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       }
     ]
   },
@@ -312,14 +601,32 @@
       {
         "sectionId": "about",
         "content":
-          "A medium to large shorebird with a long bill, the Short-billed Dowitcher is a common and conspicous migrant that uses a \"sewing-machine\" method of foraging across the mud flats. Its long bill is short only in comparison with the very similar Long-billed Dowitcher.",
-        "source": "Cornell Lab of Ornithology"
+          "The Short-billed Dowitcher is a common and conspicous migrant that uses a \"sewing-machine\" method of foraging across the mud flats. The name of this species could be misleading: it is \"short-billed\" only by comparison to the Long-billed Dowitcher, and longer-billed than the average shorebird. Flocks of Short-billed Dowitchers wade in shallow water over coastal mudflats. They often seem rather tame, allowing a close approach when they are busy feeding.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Breeds in muskegs of taiga to timberline, and barely onto subarctic tundra. Winters on coastal mud flats and brackish lagoons. In migration prefers saltwater tidal flats, beaches, and salt marshes. Found in freshwater mud flats and flooded agricultural fields.",
-        "source": "Cornell Lab of Ornithology"
+          "Short-billed Dowitchers live primarily in mudflats, tidal marshes and pond edges. Migrants and wintering birds favor coastal habitats, especially tidal flats on protected estuaries and bays, also lagoons, salt marshes, and sometimes sandy beaches. Migrants also stop inland on freshwater ponds with muddy margins. Breeds in far north, mostly in open bogs, marshes, and edges of lakes within coniferous forest zone.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Eats small aquatic invertebrates, as well as many insects and their larvae. In migration and winter, also eats mollusks, marine worms, crustaceans. At times, may feed heavily on seeds of grasses, bulrushes, pondweeds, other plants. In spring, also feeds on eggs of horseshoe crab. Typically forages by wading in shallow water (sometimes walking on wet mud), probing deeply in the mud with its bill. Usually deliberate in its feeding, standing in one spot or moving forward slowly.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "Breeds in three distinct regions, with distinct migratory routes and wintering areas. Alaska birds winter on Pacific Coast, central Canada birds migrate through Great Plains and along Atlantic Coast, eastern Canada birds stay east, winter as far south as Brazil.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Much of nesting area is far inland, generally south and east of the breeding range of Long-billed Dowitcher. Nest site is on ground in bog, forest clearing, or edge of tundra, often near water. Nest is a shallow depression in moss or in a clump of grass, lined with small twigs, leaves, fine grasses. The nest and eggs of this species eluded discovery until 1906, and even that information was overlooked for a long while because they were attributed to the Long-billed Dowitcher.",
+        "source": "National Audubon Society, Cornell Lab of Ornithology"
       }
     ]
   },
@@ -330,14 +637,32 @@
       {
         "sectionId": "about",
         "content":
-          "A graceful, slender-tailed, small-headed dove that’s common across the continent. Mourning Doves perch on telephone wires and forage for seeds on the ground; their flight is fast and bullet straight. Their soft, drawn-out calls sound like laments. When taking off, their wings make a sharp whistling or whinnying. Mourning Doves are the most frequently hunted species in North America.",
-        "source": "Cornell Lab of Ornithology"
+          "The mournful cooing of the Mourning Dove is one of our most familiar bird sounds. From southern Canada to central Mexico, this is one of our most common birds, often abundant in open country and along roadsides. European settlement of the continent, with its opening of the forest, probably helped this species to increase. It also helps itself, by breeding prolifically: in warm climates, Mourning Doves may raise up to six broods per year, more than any other native bird.",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Primarily a bird of open country, scattered trees, and woodland edges, but large numbers roost in woodlots during winter. Feeds on ground in grasslands, agricultural fields, backyards, and roadsides.",
+          "Found in almost any kind of open or semi-open habitat in temperate parts of North America, including forest clearings, farmland, suburbs, prairies, deserts. May be most common in edge habitats having both trees and open ground, but also found in some treeless areas. Avoids unbroken forest. They can survive in the desert perhaps because they can drink brackish spring water (up to almost half the salinity of sea water) without becoming dehydrated the way humans would.",
+        "source": "National Audubon Society, Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Seeds make up 99 percent of a Mourning Dove’s diet, including cultivated grains and even peanuts, as well as wild grasses, weeds, herbs, and occasionally berries. They sometimes eat snails. Mourning Doves eat roughly 12 to 20 percent of their body weight per day, or 71 calories on average. Occasionally eats snails, very rarely any insects.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "During the breeding season, you might see three Mourning Doves flying in tight formation, one after another. This is a form of social display. Typically the bird in the lead is the male of a mated pair. The second bird is an unmated male chasing his rival from the area where he hopes to nest. The third is the female of the mated pair, which seems to go along for the ride.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "In courtship, male flies up with noisy wingbeats and then goes into long circular glide, wings fully spread and slightly bowed down. Members of mated pairs may preen each other's feathers. The male leads female to potential nest sites and the female chooses one. It is typically amid dense foliage on the branch of an evergreen, orchard tree, mesquite, cottonwood, or vine. Also quite commonly nests on the ground, particularly in the West.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
       }
     ]
   },
@@ -348,14 +673,32 @@
       {
         "sectionId": "about",
         "content":
-          "A dark wading bird with a long, down-curved bill. Although the Glossy Ibis in North America lives primarily along the Atlantic Coast, it also can be found in Europe, Africa, Asia, and Australia.",
-        "source": "Cornell Lab of Ornithology"
+          "Flocks of Glossy Ibises wade in the shallows of eastern marshes, probing for food with their sickle-shaped bills. Widespread in the Old World, the species is found in the New World mainly in the West Indies and along our Atlantic Coast, especially Florida, where it was quite scarce as recently as the 1930s. It may have invaded within the last few centuries, riding the trade winds across from West Africa to the Caribbean.",
+        "source": "National Audubon Society"
       },
       {
-        "sectionId": "conservation",
+        "sectionId": "habitat",
         "content":
-          "Glossy Ibis are found throughout the world. In North America, populations increased between 1966 and 2014, according to the North American Breeding Bird Survey. The North American Waterbird Conservation Plan estimates 13,000-15,000 breeding birds on the continent, rates the species a 12 out of 20 on the Continental Concern Score, and lists it as a Species of Low Concern.",
-        "source": "Cornell Lab of Ornithology"
+          "The Glossy Ibis is found throughout the world in marshes, rice fields, and swamps. It forages in shallow waters, favoring marshes (either fresh or salt), flooded fields, shallow ponds, estuaries. It nests in low stands of willows and other shrubs surrounded by marsh, on ground in spartina marsh, in dense thickets of trees and shrubs on higher ground, sometimes in mangroves. Withdraws from northern part of breeding range in winter.",
+        "source": "Cornell Lab of Ornithology, National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The Glossy Ibis forages mostly by wading in shallow water, probing in soft mud for food. Also picks up insects and other visible items from surface of water or soil. Feeds on beetle larvae in soft soil, also adults and larvae of many aquatic insects. Crayfish may be main food in some areas. In Florida, reported to eat many small snakes. Also may eat leeches, snails, crabs, frogs, small fish.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Glossy Ibises undertake dispersal movements after breeding and are very nomadic. The more northerly populations are fully migratory and travel on a broad front, for example across the Sahara Desert. Populations in temperate regions breed during the local spring, while tropical populations nest to coincide with the rainy season. Glossy ibises often roost communally at night in large flocks, with other species, occasionally in trees which can be some distance from wetland feeding areas.",
+        "source": "Wikipedia"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The Glossy Ibis breeds in colonies, sometimes associated with other kinds of wading birds. The nest site is in shrubs or low trees over water or over land, or on ground on island. The nest, built by both sexes is bulky platform of sticks and marsh plants, with a shallow depression at center. Adults may continue adding to nest throughout the period of incubating the eggs and feeding the young.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -366,14 +709,33 @@
       {
         "sectionId": "about",
         "content":
-          "If someone at a park is feeding bread to ducks, chances are there are Mallards in the fray. Perhaps the most familiar of all ducks, Mallards occur throughout North America and Eurasia in ponds and parks as well as wilder wetlands and estuaries. The male’s gleaming green head, gray flanks, and black tail-curl arguably make it the most easily identified duck. Mallards have long been hunted for the table, and almost all domestic ducks come from this species.",
-        "source": "Cornell Lab of Ornithology"
+          "Abundant over most of the northern hemisphere, the Mallard is the most familiar wild duck to many people, and the ancestor of most strains of domesticated ducks. In many places this species has managed to domesticate itself, relying on handouts in city parks. Although barnyard and feral ducks may be dumpy and ungainly creatures, the ancestral wild Mallard is a trim, elegant, wary, fast-flying bird.",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Mallards can be found in almost any wetland habitats, including permanent wetlands such as marshes, bogs, riverine floodplains, beaver ponds, lakes, reservoirs, ponds, city parks, farms, and estuaries. They also occur in prairie potholes and ephemeral wetlands; they may be found feeding along roadside ditches, pastures, croplands and rice fields.",
+          "Mallards prefer calm, shallow sanctuaries, but can be found in almost any body of freshwater across Asia, Europe, and North America. They’re also found in saltwater and brackish water and are commonly found in wetlands. Most abundant in summer on prairie potholes and in semi-open country north of the prairies. Most abundant in winter on swamps and lakes in lower Mississippi Valley.",
+        "source": "National Geographic, National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Mallards are omnivorous, but the majority of their diet is plant material, including seeds, stems, and roots of a vast variety of different plants, especially sedges, grasses, pondweeds, smartweeds, and many others. They also eat insects, crustaceans, mollusks, tadpoles, frogs, earthworms, small fish. They don’t dive, but dabble to feed, tipping forward in the water to eat seeds and aquatic vegetation.",
+        "source":
+          "Nat'l Geographic, Nat'l Audubon Society, Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Mallards are an abundant city and suburban park duck and because of constant feedings by park visitors, they can become very tame and approachable. In more natural settings and where Mallards are heavily hunted, they can be very wary of approaching people. Mallards have a huge variety of displays that can be fascinating to watch and decipher.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Pairs form in fall and winter. Displays of male include dipping bill in water and then rearing up, giving whistle and grunt calls as he settles back on water; raising head and tail while giving sharp call; plunging forepart of body deep in water and then flinging up water with bill. Female, accompanied by male, seeks and chooses site for nest. The site may be more than 1 mile from water, and is usually on the ground among concealing vegetation.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -390,8 +752,26 @@
       {
         "sectionId": "habitat",
         "content":
-          "Herring Gulls' scavenging habits take them to open water, intertidal pools and shallows, mud flats, landfills, newly plowed fields, picnic grounds, and fish-processing plants. They roost and loaf, often in large mixed species groups, in open areas with good visibility for spotting predators, including agricultural and athletic fields, beaches, parking lots, airport runways, and garbage dumps. They breed near lakes in northern forests across Canada to Alaska and in some coastal areas.",
+          "Herring Gulls live on ocean coasts, bays, beaches, lakes, piers, farmlands, dumps. They have a wide variety of habitats, typically associated with water. They are most numerous along coasts and around large lakes, also along major river systems. Forages at sea, on beaches, mudflats, plowed fields, marshes, or where human activity provides food (garbage dumps, picnic grounds, docks, fishing operations). Nests on islands, sometimes on gravel roofs.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Herring Gulls are omnivores. Breeding brings special dietary challenges for Herring Gulls. During courtship, males feed their mates, losing fat reserves in the process. Then egg-laying reduces the females’ protein and bone calcium, and they seek out marine invertebrates and fish to replenish stores. After chicks hatch, both parents feed them day and night for up to 12 weeks, splitting foraging shifts to offer each chick up to half a pound of food per day as it nears fledging.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Herring Gulls patrol shorelines and open ocean in widely scattered groups, soaring raptor-like and spiraling down to pick scraps off the surface. Individuals plunge-dive from near the surface and dip while paddling to take shallow prey. Tighter groups follow foraging whales, groups of dolphins, or schools of large fish in open water, hovering to nab small prey driven to the surface. Their opportunistic scavenging punctuates hours of bathing, preening, and \"loafing\" near food sources.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "In courtship, the female Herring Gull approaches the male with hunched posture and begging calls; male displays with upright posture and \"choking\" motions, and often feeds female. Nest site on the ground, next to shrubs or rocks which protect from prevailing wind. The nest is built by both sexes and is a shallow scrape, usually lined with grass, feathers, and debris.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -402,14 +782,32 @@
       {
         "sectionId": "about",
         "content":
-          "The Wood Duck is one of the most stunningly pretty of all waterfowl. Males are iridescent chestnut and green, with ornate patterns on nearly every feather; the elegant females have a distinctive profile and delicate white pattern around the eye. These birds live in wooded swamps, where they nest in holes in trees or in nest boxes put up around lake margins. They are one of the few duck species equipped with strong claws that can grip bark and perch on branches.",
-        "source": "Cornell Lab of Ornithology"
+          "Beautiful and unique, this duck of woodland ponds and river swamps has no close relatives, except for the Mandarin Duck of eastern Asia. Abundant in eastern North America in Audubon's time, the Wood Duck population declined seriously during the late 19th century because of hunting and loss of nesting sites. Its recovery to healthy numbers was an early triumph of wildlife management.",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
           "Wood Ducks thrive in bottomland forests, swamps, freshwater marshes, and beaver ponds. They are also common along streams of all sizes, from creeks to rivers, and the sheer extent of these make them an important habitat. Wood Ducks seem to fare best when open water alternates with 50–75% vegetative cover that the ducks can hide and forage in. This cover can consist of downed trees, shrubs such as alder, willow, and buttonbush, as well as emergent herbaceous plants such as arrowhead and smartweeds.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Wood Ducks forage in water by taking food from surface, submerging head and neck, occasionally up-ending. They eat seeds, fruits, insects and other arthropods. When aquatic foods are unavailable they may take to dry land to eat acorns and other nuts from forests and grain from fields. Examples of food eaten include acorns, soybeans, smartweed, water primrose, panic grass, duckweed, millet, waterlily, blackberries and wild cherries, as well as flies, beetles, caterpillars, isopods, and snails.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "Northern Wood Ducks are migratory; southern females may be permanent residents. Movements of males is variable; pairs form on wintering grounds and male follows female to nesting range, so a male might migrate far north one spring and only a short distance the next, depending on the origin of his mate for that year. Wood Ducks can be found throughout the year in the U.S., with some individuals breeding in Canada, and some wintering in Mexico.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Wood Ducks pair up in January, and most birds arriving at the breeding grounds in the spring are already paired. The Wood Duck is the only North American duck that regularly produces two broods in one year. Courtship displays of male involve postures that show off colorful plumage. Natural cavities for nesting are scarce, and the Wood Duck readily uses nest boxes provided for it. If nest boxes are placed too close together, many females lay eggs in the nests of other females.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
       }
     ]
   },
@@ -428,6 +826,18 @@
         "content":
           "Starlings typically live around people, using mowed lawns, city streets, and agricultural fields for feeding; and trees, buildings, and other structures for nesting. Their main requirements are open, grassy areas in which to forage, a water source, and trees or buildings that contain suitable cavities or niches for nesting. They avoid large, unbroken stretches of forest, chaparral, and desert.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Forages mostly on the ground in open areas, often probing in soil with bill. Sometimes feeds on fruit up in trees, and sometimes catches flying insects in the air. Usually forages in flocks. Eats mostly insects when available, especially beetles, grasshoppers, flies, and caterpillars, also spiders, snails, earthworms, and other invertebrates. Especially in fall and winter, eats a wide variety of berries, fruits, and seeds.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Starlings are great vocal mimics: individuals can learn the calls of up to 20 different species. Birds whose songs starlings often copy include the Eastern Wood-Pewee, Killdeer, meadowlarks, Northern Bobwhite, Wood Thrush, Red-tailed Hawk, American Robin, Northern Flicker, and many others. They are strong fliers that can get up to speeds of 48 mph. Sociable at most seasons, Starlings may gather in immense flocks in fall and winter.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
       }
     ]
   },
@@ -438,7 +848,7 @@
       {
         "sectionId": "about",
         "content":
-          "One of the earliest-arriving migrant warblers, the Black-and-white Warbler’s thin, squeaky song is one of the first signs that spring birding has sprung. This crisply striped bundle of black and white feathers creeps along tree trunks and branches like a nimble nuthatch, probing the bark for insects with its slightly downcurved bill. Though you typically see these birds only in trees, they build their little cup-shaped nests in the leaf litter of forests across central and eastern North America.",
+          "One of the earliest-arriving migrant warblers, the Black-and-white Warbler’s thin, squeaky song is one of the first signs that spring birding has sprung. They creep along tree trunks and branches like a nimble nuthatch, probing the bark for insects with its slightly downcurved bill. Though you typically see these birds only in trees, they build their little cup-shaped nests in the leaf litter of forests across central and eastern North America.",
         "source": "Cornell Lab of Ornithology"
       },
       {
@@ -446,6 +856,24 @@
         "content":
           "Black-and-white Warblers typically use deciduous forests and mixed forests of deciduous trees and conifers. They can be found in many habitats during migration, especially woodlots and forests in riparian settings. On their tropical wintering grounds Black-and-white Warblers use an immense range of habitats, including lawns, gardens, and other urban settings, fruit orchards, shade-coffee plantations, wetlands, mangroves, and all types of forests.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Black-and-white Warblers eat mostly insects. Moth and butterfly larvae form the bulk of their diet during spring migration and throughout the breeding season. They are adapted to creeping along limbs and on tree trunks to feed. Switches body from side to side at each hop while foraging. In early spring, takes dormant insects from tree trunks and branches. Sometimes flies out after flying insects.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Male Black-and-white Warblers arrive in early spring on their forested breeding grounds and set up territories that they defend aggressively, often singing as they chase off intruders. These defensive displays extend well past the time when such behavior has tapered off for other species. Black-and-white Warblers have an extra-long hind claw and heavier legs than other wood-warblers, which help them hold onto and move around on bark.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Males arrive on breeding grounds in late April, before the females. During courtship, male chases female, with much singing and fluttering. The female Black-and-white Warbler selects a well-hidden nesting location at the base of a tree, rock, stump, or fallen log, or under a bush or shrub. Nests are usually built on the ground but occasionally are placed in a cavity atop a tree stump, in a rock crevice, or on a mossy bank up to six feet high.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
       }
     ]
   },
@@ -456,14 +884,32 @@
       {
         "sectionId": "about",
         "content":
-          "A bird of northern forests, the Northern Waterthrush sings its loud, ringing song from wooded swamps and bogs. It can be seen on migration bobbing its tail near wet spots in parks or backyards.",
-        "source": "Cornell Lab of Ornithology"
+          "The Northern Waterthrush is likely to be found around bogs and streams inside the forest. Often shy and hard to approach, it draws attention with its odd \"teetering\" behavior -- bobbing the rear half of its body up and down constantly as it walks -- and with its loud metallic callnote. It has a wide distribution in both summer (Alaska to New Jersey) and winter (Florida to South America).",
+        "source": "National Audubon Society"
       },
       {
         "sectionId": "habitat",
         "content":
-          "Breeds in thickets near slow-moving streams, ponds, swamps, and bogs; in migration and winter, uses a variety of wooded habitats, generally near water, often in mangroves.",
-        "source": "Cornell Lab of Ornithology"
+          "Swampy or wet woods, streamsides, lake shores; in migration, also thickets. Breeds mostly in coniferous forests with standing or sluggish water, as found in shrubby bogs and edges of northern lakes, less often along swift streams. In migration, may appear in any habitat; more frequent in thickets along edges of water. In winter in tropics, often in coastal mangrove swamps.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The Northern Waterthrush forages on the ground and wades in shallow water, often on half-submerged logs. It uncovers prey by tossing aside dead and soggy leaves found in rock crevices. It defends winter feeding territories against other waterthrushes. Feeds mainly on insects, including water beetles, water bugs, flea beetles, damselflies, weevils, mosquitoes, ants, fly pupae, caterpillars, and moth.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "The Northern Waterthrush is territorial in both winter and summer. On the breeding grounds the male proclaims its territory with its loud, ringing song. On the wintering grounds it uses its \"chink\" calls, together with chasing and fighting, to keep out intruders. It migrates mostly at night. As a migrant, common in the East, scarce in most parts of the West.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Males sing throughout the breeding season, not ceasing after pair formation; song apparently serves to defend territory. Sometimes sings in flight. Nest site is usually in a small hollow in a moss-covered stump, under a jutting bank, or 0-2' above the ground in roots of uprooted tree, typically very near water. The nest is constructed by the female of leaf skeletons, sphagnum moss, pine needles, twigs, inner bark, and lined with soft material such as red moss filaments.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -482,6 +928,24 @@
         "content":
           "Common Terns nest on rocky islands, barrier beaches, and saltmarshes and forage over open waters. Terns often gather over warmer waters with high densities of American sand lance (a small fish) in the spring, and tuna that help scare up smaller fish in the fall. During the winter, they gather primarily over marine habitats, foraging at sea and resting on boats and beaches.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Forages mostly by flying over water, hovering, and plunging to catch prey below surface. Sometimes dips down to take items from surface of water, or pursues flying insects in the air. Occasionally steals food from other terns. Feeds on a wide variety of small fish, focussing on whatever types most easily available, sometimes concentrating on shrimp instead. Also eats other crustaceans, insects, marine worms, small squid, leeches, marine worms.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "migration",
+        "content":
+          "After breeding, may move a short distance north before beginning southward migration. Almost none actually overwinters in North America, although fall migrants may linger to the beginning of January. Winter range is along tropical coasts as far south as Peru and Argentina. Stray Common Terns in Alaska are from a dark-billed race in eastern Asia.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "In aerial courtship, groups and pairs perform high flights. Male may fly over colony carrying fish; female follows. On ground, pair postures, bows, struts in circles; male presents fish to female. Nest site is on bare ground or surrounded by low vegetation; sometimes on floating mat of dead vegetation. Nest (built by both sexes) is shallow scrape in soil, usually lined with bits of plant material and debris.",
+        "source": "National Audubon Society"
       }
     ]
   },
@@ -500,6 +964,24 @@
         "content":
           "White-breasted Nuthatches are birds of mature woods, and they’re more often found in deciduous than coniferous forests (where Red-breasted Nuthatches are more likely). You can also find them at woodland edges and in open areas with large trees, such as parks, wooded suburbs, and yards.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The White-breasted Nuthatch forages mainly on trunk and larger limbs of trees, climbing about and exploring all surfaces. Sometimes feeds on ground. During fall and winter, regularly caches food items in bark crevices on territory. Eats mostly insects during summer, supplementing these with seeds in winter. It will also feed on suet and peanut-butter mixtures at feeders. Young are fed entirely on insects and spiders.",
+        "source": "National Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "The White-breasted Nuthatch is normally territorial throughout the year, with pairs staying together. The male has to spend more time looking out for predators when he’s alone than while he’s with his mate. That’s the pattern for most birds, and one reason why birds spend so much time in flocks. But the female nuthatch has to put up with the male pushing her aside from foraging sites, so she spends more time looking around (for him) when he’s around than when she is alone.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "Pairs remain together on nesting territory all year, may mate for life. Courtship behavior begins by late winter. In courtship display, male raises head, spreads tail, droops wings, sways back and forth, and bows deeply. Female builds nest in cavity, a simple cup of bark fibers, grasses, twigs, hair. Adults may spend minutes at a time sweeping the outside and inside of nest with a crushed insect held in bill; chemical secretions of insects may help repel predators.",
+        "source": "National Audubon Society"
       }
     ]
   },

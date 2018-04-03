@@ -10,5 +10,21 @@
   {
     "sectionId": "conservation",
     "title": "Conservation"
+  },
+  {
+    "sectionId": "migration",
+    "title": "Migration"
+  },
+  {
+    "sectionId": "diet",
+    "title": "Diet"
+  },
+  {
+    "sectionId": "nesting",
+    "title": "Nesting"
+  },
+  {
+    "sectionId": "behavior",
+    "title": "Behavior"
   }
 ]
