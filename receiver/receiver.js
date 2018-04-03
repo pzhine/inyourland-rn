@@ -1,6 +1,17 @@
-var BUFFER_WIDTH = 15; // 15 seconds
-var CHUNK_SIZE = Math.pow(2, 20) * 10; // 10 MB
-var BUFFER_POLL_FREQ = 1000; // 1 second
+const MEGABYTE = Math.pow(2, 20);
+
+var bufferSettings = {
+  audio: {
+    BUFFER_WIDTH: 10, // 10 seconds
+    CHUNK_SIZE: 1 * MEGABYTE, // 1 MB
+    BUFFER_POLL_FREQ: 1000 // 1 second
+  },
+  video: {
+    BUFFER_WIDTH: 15, // 15 seconds
+    CHUNK_SIZE: 10 * MEGABYTE, // 10 MB
+    BUFFER_POLL_FREQ: 1000 // 1 second
+  }
+};
 
 function getBufferEndTime(scope) {
   return scope.sourceBuffer.buffered.end(0);
@@ -8,8 +19,8 @@ function getBufferEndTime(scope) {
 
 function getChunk(scope, idx) {
   console.log('ℹ️  getChunk', idx);
-  var rangeStart = idx * CHUNK_SIZE;
-  var rangeEnd = rangeStart + CHUNK_SIZE - 1;
+  var rangeStart = idx * scope.config.CHUNK_SIZE;
+  var rangeEnd = rangeStart + scope.config.CHUNK_SIZE - 1;
 
   // if we've hit the end of the stream, adjust range and reset index to 0
   if (scope.rangeMax && rangeEnd >= scope.rangeMax) {
@@ -39,7 +50,10 @@ function getChunk(scope, idx) {
       );
     }
     scope.sourceBuffer.appendBuffer(xhr.response);
-    setTimeout(processNextSegment.bind(null, scope), BUFFER_POLL_FREQ);
+    setTimeout(
+      processNextSegment.bind(null, scope),
+      scope.config.BUFFER_POLL_FREQ
+    );
   };
   xhr.onerror = function (e) {
     console.log('❌  getChunk error', e);
@@ -66,6 +80,8 @@ function init(scope, cast) {
     scope.mediaSource = new MediaSource();
     scope.video.src = scope.URL.createObjectURL(scope.mediaSource);
     scope.mediaUrl = data.data.media.contentId;
+    scope.contentType = data.data.media.contentType;
+    scope.crossfadeWidth = data.data.media.crossfadeWidth;
 
     /**
      * Loads the video and kicks off the processing.
@@ -73,20 +89,27 @@ function init(scope, cast) {
     scope.mediaSource.addEventListener('sourceopen', function (args) {
       console.log('ℹ️  sourceopen', args);
 
-      scope.sourceBuffer = scope.mediaSource.addSourceBuffer(
-        'video/mp4; codecs="avc1.4D401E"'
-      );
+      if (scope.contentType.match('video')) {
+        scope.sourceBuffer = scope.mediaSource.addSourceBuffer(
+          'video/mp4; codecs="avc1.4D401E"'
+        );
+        scope.config = bufferSettings.video;
+      } else {
+        scope.sourceBuffer = scope.mediaSource.addSourceBuffer(
+          'audio/mp4; codecs="mp4a.40.2"'
+        );
+        scope.config = bufferSettings.audio;
+      }
 
       scope.sourceBuffer.addEventListener('updateend', function () {
         if (!scope.duration) {
           // save initial duration, as it increases after the 1st loop
           scope.duration = scope.mediaSource.duration;
         }
-        var bufferEndTime = getBufferEndTime(scope);
 
         if (scope.resetTimestamp) {
           console.log('ℹ️  timestamp reset');
-          scope.sourceBuffer.timestampOffset = bufferEndTime;
+          scope.sourceBuffer.timestampOffset = getBufferEndTime(scope);
           scope.resetTimestamp = false;
         }
       });
@@ -128,7 +151,7 @@ function processNextSegment(scope) {
 
     // Only push a new fragment if we are not updating and we have
     // less than BUFFER_WIDTH seconds in the pipeline
-    if (bufferRemaining < BUFFER_WIDTH) {
+    if (bufferRemaining < scope.config.BUFFER_WIDTH) {
       getChunk(scope, scope.chunkIndex);
       return;
     }
@@ -137,7 +160,10 @@ function processNextSegment(scope) {
       scope.video.play();
     }
   }
-  setTimeout(processNextSegment.bind(null, scope), BUFFER_POLL_FREQ);
+  setTimeout(
+    processNextSegment.bind(null, scope),
+    scope.config.BUFFER_POLL_FREQ
+  );
 }
 
 window.onload = function () {
