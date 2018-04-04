@@ -65,6 +65,7 @@ function playMedia(mediaEntry) {
           }
           if (status.playerState === 'PLAYING') {
             clearTimeout(timeout)
+            mediaEntry.isPlaying = true
             resolve()
           }
         })
