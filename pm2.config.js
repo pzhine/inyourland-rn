@@ -2,7 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'server-player',
-      script: './build/server/main.js',
+      interpreter: '/Users/paul/dev/node',
+      script: '/Users/paul/dev/inyourland-rn/build/server/main.js',
       args: 'startScenes',
       watch: true,
       env: {
