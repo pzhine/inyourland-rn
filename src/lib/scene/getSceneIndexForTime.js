@@ -1,12 +1,13 @@
-const getSceneIndexForTime = ({ scenes, time }) =>
-  scenes.reduce((sceneIndex, scene, idx) => {
+const getSceneIndexForTime = ({ scenes, time }) => {
+  for (let idx = 0; idx < scenes.length; idx += 1) {
     if (
-      (sceneIndex === null && idx === scenes.length - 1) ||
-      (time >= scene.startTime && time < scenes[idx + 1].startTime)
+      idx === scenes.length - 1 ||
+      (time >= scenes[idx].startTime && time < scenes[idx + 1].startTime)
     ) {
       return idx
     }
-    return sceneIndex
-  }, null)
+  }
+  throw new Error(`No scene found for time ${time}`)
+}
 
 export default getSceneIndexForTime

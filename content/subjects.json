@@ -456,7 +456,7 @@
       {
         "sectionId": "about",
         "content":
-          "The northern cardinal is so well loved that it has been named the official bird of no fewer than seven U.S. states. Bright red cardinals are easily identified by even casual bird watchers, and are often seen frequenting backyards and bird feeders. Cardinalsndo not migrate and have traditionally been more common in warmer climes such as the U.S. southeast. However, in recent decades they have expanded their common range north through the United States and even into Canada.",
+          "The northern cardinal is so well loved that it has been named the official bird of no fewer than seven U.S. states. Bright red cardinals are easily identified by even casual bird watchers, and are often seen frequenting backyards and bird feeders. Cardinals do not migrate and have traditionally been more common in warmer climes such as the U.S. southeast. However, in recent decades they have expanded their common range north through the United States and even into Canada.",
         "source": "National Geographic"
       },
       {
@@ -770,7 +770,7 @@
       {
         "sectionId": "nesting",
         "content":
-          "In courtship, the female Herring Gull approaches the male with hunched posture and begging calls; male displays with upright posture and \"choking\" motions, and often feeds female. Nest site on the ground, next to shrubs or rocks which protect from prevailing wind. The nest is built by both sexes and is a shallow scrape, usually lined with grass, feathers, and debris.",
+          "In courtship, the female Herring Gull approaches the male with hunched posture and begging calls; male displays with upright posture and \"choking\" motions, and often feeds female. The nest site is on the ground, next to shrubs or rocks which protect from prevailing wind. The nest is built by both sexes and is a shallow scrape, usually lined with grass, feathers, and debris.",
         "source": "National Audubon Society"
       }
     ]
@@ -981,7 +981,7 @@
         "sectionId": "nesting",
         "content":
           "Pairs remain together on nesting territory all year, may mate for life. Courtship behavior begins by late winter. In courtship display, male raises head, spreads tail, droops wings, sways back and forth, and bows deeply. Female builds nest in cavity, a simple cup of bark fibers, grasses, twigs, hair. Adults may spend minutes at a time sweeping the outside and inside of nest with a crushed insect held in bill; chemical secretions of insects may help repel predators.",
-        "source": "National Audubon Society"
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
       }
     ]
   },
@@ -1000,6 +1000,24 @@
         "content":
           "Year-round the Northern Mockingbird is found in areas with open ground and with shrubby vegetation like hedges, fruiting bushes, and thickets. When foraging on the ground, it prefers grassy areas, rather than bare spots. Common places to find Northern Mockingbirds include parkland, cultivated land, suburban areas and in second growth habitat at low elevations.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "The Northern Mockingbird captures insects mostly while walking and running on ground. Also watches from low perch and flies down to capture items on ground below. Perches in shrubs and trees to eat berries. Eats mainly insects in summer but switches to eating mostly fruit in fall and winter. Among their animal prey are beetles, earthworms, moths, butterflies, ants, bees, wasps, grasshoppers, and sometimes small lizards. They’ve been seen drinking sap from the cuts on recently pruned trees.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Northern Mockingbirds continue to add new sounds to their repertoires throughout their lives. A male may learn around 200 songs throughout its life. A male may have two distinct repertoires of songs: one for spring and another for fall. The female Northern Mockingbird sings too, although usually more quietly than the male does. She rarely sings in the summer, and usually only when the male is away from the territory. She sings more in the fall, perhaps to establish a winter territory.",
+        "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The male sings to defend territory and attract a mate, often leaping a few feet in the air and flapping his wings while singing. Early stage of courtship involves male and female chasing each other rapidly around territory. The male probably chooses the nest site and begins building several nests before the female chooses one to finish and lay eggs in. Females may start laying in a second nest while the male is still caring for fledglings from the previous one.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
       }
     ]
   },
@@ -1018,6 +1036,24 @@
         "content":
           "In summer, White-throated Sparrows are birds of forests across Canada, the northeastern U.S., and the northern Midwest. Look for them in either coniferous or deciduous forests up to treeline, especially around openings with low, dense vegetation; in areas regrowing after logging, fires, or insect damage; or edges of ponds, meadows, and bogs. During migration and winter, you’ll find White-throated Sparrows along edges of woodlots, hedgerows, thickets, weedy fields, suburbs, backyards, and city parks.",
         "source": "Cornell Lab of Ornithology"
+      },
+      {
+        "sectionId": "diet",
+        "content":
+          "Forages mostly on ground under or close to dense thickets. Often scratches briefly in leaf-litter with both feet. Feeds heavily on insects during breeding season, including damselflies, ants, wasps, true bugs, beetles, flies, caterpillars, and others. During winter, they readily visit bird feeders for millet and black oil sunflower seeds. In spring they eat the tender buds, blossoms, and young seeds of oak, apple, maple, beech, and elm. Young are fed mostly insects.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
+      },
+      {
+        "sectionId": "behavior",
+        "content":
+          "Both parents feed nestlings. Young usually leave nest 8-9 days after hatching, are tended by parents for at least 2 more weeks. 1-2 broods per year. A few differences between color morphs: White-striped males are usually more aggressive and do more singing than tan-striped males. White-striped females also sing, but tan-striped females usually do not. Pairs involving a tan-striped male and white-striped female usually form more quickly than those of the opposite combination.",
+        "source": " National Audubon Society"
+      },
+      {
+        "sectionId": "nesting",
+        "content":
+          "The two color morphs (with tan-striped and white-striped heads) may be either male or female; adults almost always mate with the opposite color morph. Male sings to defend nesting territory. Female White-throated Sparrows put their nests on or just above the ground, typically in level areas in clearings with dense ground vegetation. The nest is usually built under shrubs, grasses, or ferns, sometimes even beneath dead vegetation from the previous year.",
+        "source": "Cornell Lab of Ornithology, Nat'l Audubon Society"
       }
     ]
   }

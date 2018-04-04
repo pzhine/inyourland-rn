@@ -1,5 +1,5 @@
 import setTimer from './setTimer'
-import { getReceivers, playMedia } from '../cast'
+import { getReceivers, playMedia, restartIfInactive } from '../cast'
 
 async function start({ io, mediaList }) {
   console.log('scene startup')
@@ -11,11 +11,22 @@ async function start({ io, mediaList }) {
     })
   )
 
-  // start scene timers
+  // start scene/status timers
   mediaList.forEach(mediaEntry => {
+    // for audio streams, just check status
     if (mediaEntry.contentType.match('audio')) {
+      setInterval(
+        () =>
+          restartIfInactive({
+            mediaEntry,
+            currentSceneIndex: 0,
+            currentTime: 0,
+          }),
+        30000
+      )
       return
     }
+    // for video streams, set scene timers, which also check status
     const scenes = require(`../../../content/scenes/${mediaEntry.mediaId}.json`)
     setTimer({
       scenes,
