@@ -16,7 +16,13 @@ function getDeviceStatus(host) {
     client.connect(host, () => {
       client.getStatus((err, status) => {
         clearTimeout(timeout)
-        resolve(status.applications[0])
+        if (err) {
+          console.log('⚠️ getStatus returned error', err)
+          reject(err)
+          return
+        }
+        console.log('ℹ️  getStatus', status)
+        resolve(status.applications && status.applications[0])
       })
     })
   })

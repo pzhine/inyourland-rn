@@ -6,8 +6,9 @@ async function restartIfInactive({
   currentTime,
 }) {
   try {
+    console.log(`ℹ️  checking status on ${mediaEntry.deviceId}`)
     const status = await getDeviceStatus(mediaEntry.host)
-    if (status.isIdleScreen) {
+    if (!status || status.isIdleScreen) {
       try {
         await playMedia(mediaEntry)
         return {
