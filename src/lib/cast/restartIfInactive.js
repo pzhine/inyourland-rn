@@ -1,4 +1,4 @@
-import { getDeviceStatus, playMedia, getCurrentTime } from './'
+import { getReceiver, getDeviceStatus, playMedia, getCurrentTime } from './'
 
 async function restartIfInactive({
   mediaEntry,
@@ -7,8 +7,9 @@ async function restartIfInactive({
 }) {
   try {
     console.log(`ℹ️  checking status on ${mediaEntry.deviceId}`)
+    await getReceiver(mediaEntry)
     const status = await getDeviceStatus(mediaEntry.host)
-    if (!status || status.isIdleScreen) {
+    if (!status || status.isIdleScreen || !mediaEntry.isPlaying) {
       try {
         await playMedia(mediaEntry)
         return {
@@ -18,7 +19,7 @@ async function restartIfInactive({
         }
       } catch (err) {
         console.log(
-          `❌  restartIfInactive: restart media failed on ${mediaEntry.host}`,
+          `❌  restartIfInactive: restart failed on ${mediaEntry.deviceId}`,
           err
         )
       }

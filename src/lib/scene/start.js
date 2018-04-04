@@ -1,15 +1,8 @@
 import setTimer from './setTimer'
-import { getReceivers, playMedia, restartIfInactive } from '../cast'
+import { restartIfInactive } from '../cast'
 
 async function start({ io, mediaList }) {
   console.log('scene startup')
-  // scan the network for chromecast devices and start playing media
-  await getReceivers(mediaList)
-  await Promise.all(
-    mediaList.map(async mediaEntry => {
-      await playMedia(mediaEntry)
-    })
-  )
 
   // start scene/status timers
   mediaList.forEach(mediaEntry => {
