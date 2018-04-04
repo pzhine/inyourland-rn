@@ -10,6 +10,12 @@ import config from '../../config.json'
 
 const reducer = combineReducers({ app, scene })
 const ioClient = io(config.serverUrl)
+ioClient.on('disconnect', reason => {
+  console.log('⚠️  socket.io disconnect', reason)
+  if (reason === 'io server disconnect') {
+    ioClient.connect()
+  }
+})
 const middlewares = [
   thunk,
   createSocketIoMiddleware(ioClient, 'server/'),
