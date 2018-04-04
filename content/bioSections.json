@@ -9,7 +9,11 @@
   },
   {
     "sectionId": "conservation",
-    "title": "Conservation"
+    "title": "Population"
+  },
+  {
+    "sectionId": "history",
+    "title": "History"
   },
   {
     "sectionId": "migration",
