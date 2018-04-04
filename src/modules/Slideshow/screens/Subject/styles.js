@@ -37,9 +37,10 @@ const styles = {
   },
   source: {
     marginTop: 24,
-    fontSize: 18,
-    color: 'rgba(255,255,255,0.5)',
-    textAlign: 'right',
+    fontSize: 17,
+    lineHeight: 20,
+    color: 'rgba(255,255,255,0.3)',
+    width: '70%',
   },
 }
 
